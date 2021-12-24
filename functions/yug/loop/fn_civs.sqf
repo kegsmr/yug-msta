@@ -21,7 +21,7 @@ YUG_fnc_civs_flee = {
 	private _building_types = YUG_building_types;
 	private _vehicle_types = YUG_civ_vehicles;
 	private _search_radius = 500;
-	private _civ_radius = 2000 /*MALO_simulation_distance*/;
+	private _civ_radius = 500 /*MALO_simulation_distance*/;
 	private _delay = random [0, 45, 60];
 	
 	private _fear = _civ getVariable ["fear", 1];
@@ -216,7 +216,7 @@ remoteExec ["YUG_fnc_civs_targets", 0];
 // LOOP THROUGH NEARBY UNITS
 
 private _units = [];
-{_units append (nearestObjects [_x, ["MAN"], 2000 /*MALO_simulation_distance*/]);} forEach playableUnits;
+{_units append (nearestObjects [_x, ["MAN"], 1000 /*MALO_simulation_distance*/]);} forEach playableUnits;
 
 /*private _close_units = [];
 {_units append (nearestObjects [_x, ["MAN"], 10]);} forEach playableUnits;

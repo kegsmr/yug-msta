@@ -11,6 +11,7 @@ class yug
 	{
 		file = "functions\yug\loop"
 		class civs {};
+		class combat {};
 		class evacuation {};
 		class player {};
 		class spawns {};
@@ -20,6 +21,7 @@ class yug
 	{
 		file = "functions\yug\misc"
 		class callFunctions {};
+		class deleteObjects {};
 		class getNearestPlayer {};
 		class isArmed {};
 	};
