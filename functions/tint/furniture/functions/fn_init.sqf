@@ -1,4 +1,4 @@
-call compile preprocessFileLineNumbers "furniture\import.sqf";
+call compile preprocessFileLineNumbers "functions\tint\furniture\import.sqf";
 
 // no HC or dedicated server allowed
 if !(hasInterface) exitWith {

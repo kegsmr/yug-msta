@@ -9,11 +9,13 @@ _house setVariable ["tint_house_dressed", true];
 if (_house getVariable ["tint_house_initialized", false]) then {
   {
     _x params ["_type", "_pos", "_dir", "_up"];
-    private _obj = createSimpleObject [_type, [0,0,0], true];
-    _obj setVectorDirAndUp [_dir, _up];
-    _obj setPosWorld _pos;
-    _obj enableSimulation false;
-    _objects append [_obj];
+    if !(_type in MALO_hide_objects) then {
+      private _obj = createSimpleObject [_type, [0,0,0], true];
+      _obj setVectorDirAndUp [_dir, _up];
+      _obj setPosWorld _pos;
+      _obj enableSimulation false;
+      _objects append [_obj];
+    };
   } forEach (_house getVariable "tint_house_composition");
 } else {
 //If not, then we load and calculate compositions
@@ -51,21 +53,23 @@ if (_house getVariable ["tint_house_initialized", false]) then {
   for "_i" from (count _composition - 1) to 0 step -1 do {
     _cur = _composition#_i;
     _cur params ["_type", "_relPos", "_relDir", "_relUp"];
-    private _obj = createSimpleObject [_type, [0,0,0], true];
-    
-    _absDir = _house vectorModelToWorld _relDir;
-    _absUp = _house vectorModelToWorld _relUp;
-    _obj setVectorDirAndUp [_absDir, _absUp];
-    _cur set [2, _absDir];
-    _cur set [3, _absUp];
-    
-    _relPos = _relPos vectorDiff (boundingCenter _house);
-    _absPos = _house modelToWorldWorld _relPos;
-    _obj setPosWorld _abspos;
-    _cur set [1, _absPos];
-    
-    _obj enableSimulation false;
-    _objects append [_obj];
+    if !(_type in MALO_hide_objects) then {
+      private _obj = createSimpleObject [_type, [0,0,0], true];
+      
+      _absDir = _house vectorModelToWorld _relDir;
+      _absUp = _house vectorModelToWorld _relUp;
+      _obj setVectorDirAndUp [_absDir, _absUp];
+      _cur set [2, _absDir];
+      _cur set [3, _absUp];
+      
+      _relPos = _relPos vectorDiff (boundingCenter _house);
+      _absPos = _house modelToWorldWorld _relPos;
+      _obj setPosWorld _abspos;
+      _cur set [1, _absPos];
+      
+      _obj enableSimulation false;
+      _objects append [_obj];
+    };
   };
   
   //Send out calculations to other computers

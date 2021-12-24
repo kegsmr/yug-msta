@@ -1,10 +1,13 @@
 respawnOnStart = -1;
 
-class CfgFunctions {
-  #include "furniture\func.hpp"
+class CfgFunctions
+{
+  #include "functions\yug\cfgFunctions.hpp"
+  #include "functions\tint\cfgFunctions.hpp"
 };
+
 class Extended_PreInit_EventHandlers {
     class tinter_furniture_pre_init {
-        init = "call compile preprocessFileLineNumbers 'furniture\XEH_preInit.sqf'";
+        init = "call compile preprocessFileLineNumbers 'functions\tint\furniture\XEH_preInit.sqf'";
     };
 };

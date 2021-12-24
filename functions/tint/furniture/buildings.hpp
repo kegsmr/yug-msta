@@ -187,7 +187,7 @@ _validBuildings = [
   "Land_i_Shed_Ind_F",
   "Land_i_Shed_Ind_old_F",
   "Land_i_Shop_01_V1_F",
-  // "Land_i_Shop_02_V1_F",
+  "Land_i_Shop_02_V1_F",
   "Land_i_Stone_HouseBig_V1_F",
   "Land_i_Stone_HouseSmall_V1_F",
   // "Land_i_Stone_Shed_V1_F",

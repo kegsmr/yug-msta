@@ -1,5 +1,1 @@
-{
-	execVM _x;
-} forEach [
-	"spawns.sqf"
-];
+[] spawn YUG_fnc_main;
