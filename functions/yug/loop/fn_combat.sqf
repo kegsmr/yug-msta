@@ -86,9 +86,9 @@ YUG_fnc_combat_getInside = {
 
 		// ENABLE ALL AI IF ENEMY WITHIN TEN METERS
 
-		/*if ((_x distance (_x findNearestEnemy _x) < 10) && (typeOf _x != "LOP_UN_Infantry_Rifleman")) then {
+		if ((_x distance (_x findNearestEnemy _x) < 10) /*&& (typeOf _x != "LOP_UN_Infantry_Rifleman")*/) then {
 			_x enableAi "ALL";
-		};*/
+		};
 
 
 		// SURRENDER IF MORALE LOW ENOUGH
