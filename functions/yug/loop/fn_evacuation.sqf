@@ -1,6 +1,6 @@
 // DEALS WITH EVACUATION MISSION
 
-if (false) exitWith {};
+if (!isServer) exitWith {};
 
 if (isNil "YUG_evacuated_civs") then {
 	YUG_evacuated_civs = 0;
@@ -13,6 +13,8 @@ private _radius = 250;
 YUG_fnc_evacuated = {
 
 	private _unit = _this;
+	private _group = group _unit;
+	private _vehicle = assignedVehicle _unit;
 
 	private _index = YUG_msta_civs find _unit;
 	YUG_msta_civs deleteAt _index;
@@ -23,7 +25,8 @@ YUG_fnc_evacuated = {
 
 	[_unit] spawn YUG_fnc_deleteObjects;
 
-	unassignVehicle _unit;
+	[_unit] orderGetIn false;
+	_group leaveVehicle _vehicle;
 
 };
 
@@ -33,6 +36,8 @@ YUG_fnc_evacuated = {
 if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) then {
 
 	missionNamespace setVariable ["YUG_evacuation_started", true, true];
+
+	// east addScoreSide 30;
 
 	YUG_msta_civs = [];
 
@@ -46,12 +51,10 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 
 			YUG_msta_civs append [_unit];
 
-			if (isServer) then {
-				private _trigger = createTrigger ["EmptyDetector", getMarkerPos "refugee_marker", false];
-				_trigger setTriggerStatements [str _unit + " in thisList", str _unit + " spawn YUG_fnc_evacuated;", ""];
-				_trigger setTriggerActivation ["ANY", "PRESENT", false];
-				_trigger setTriggerArea [50, 50, 0, false, -1];
-			};
+			private _trigger = createTrigger ["EmptyDetector", getMarkerPos "refugee_marker", false];
+			_trigger setTriggerStatements [str _unit + " in thisList", str _unit + " spawn YUG_fnc_evacuated;", ""];
+			_trigger setTriggerActivation ["ANY", "PRESENT", false];
+			_trigger setTriggerArea [50, 50, 0, false, 20];
 
 		};
 
@@ -59,12 +62,16 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 
 };
 
+publicVariable "YUG_msta_civs";
+
 
 // KILLED MISSING EVACUATED REMAINING
 
 YUG_killed_civs = {!alive _x} count YUG_msta_civs;
 YUG_missing_civs = {_x distance2D _position > 500 && alive _x} count YUG_msta_civs;
 YUG_remaining_civs = {_x distance2D _position <= 500 && alive _x} count YUG_msta_civs;
+
+{publicVariable _x;} forEach ["YUG_killed_civs", "YUG_missing_civs", "YUG_evacuated_civs", "YUG_remaining_civs"]; 
 
 {
 	if ([_x] call BIS_fnc_taskExists) then {
@@ -80,44 +87,62 @@ YUG_remaining_civs = {_x distance2D _position <= 500 && alive _x} count YUG_msta
 } forEach ["un_civs", "serb_civs"];
 
 
+// END MISSION TRIGGER
+
+if (YUG_killed_civs > 20 || YUG_evacuated_civs >= 30) then {
+	trg_endMission setTriggerTimeout [0,0,0];
+};
+
+if (triggerTimeoutCurrent trg_endMission != -1) then {
+	private _time = round (triggerTimeoutCurrent trg_endMission);
+	private _minutes = floor (_time / 60);
+	private _seconds = str (_time - (60 * _minutes));
+	if (count _seconds < 2) then {
+		_seconds = "0" + _seconds;
+	};
+	(str _minutes + ":" + _seconds)remoteExec ["hintSilent", 0];
+};
+
+
 // LOOPING THROUGH CIVS
 
-if (isServer) then {
+{
 
-	{
+	private _unit = _x;
+	private _vehicles = ["CUP_I_UAZ_Unarmed_UN", "CUP_C_Ikarus_Chernarus", "LOP_UN_Ural"];
+	private _helis = ["CUP_I_Mi17_UN"];
 
-		private _unit = _x;
-		private _vehicles = ["CUP_I_Mi17_UN", "CUP_I_UAZ_Unarmed_UN", "CUP_C_Ikarus_Chernarus", "LOP_UN_Ural"];
+	if (alive _unit && (_unit distance2D (getMarkerPos "msta")) <= 500) then {
 
-		if (alive _unit && (_unit distance2D (getMarkerPos "msta")) <= 500) then {
+		private _position = position _unit;
+		private _radius = 50;
+		private _objects = nearestObjects [_position, _vehicles, _radius];
+		_objects append (nearestObjects [_position, _helis, _radius * 10]);
 
-			private _position = position _unit;
-			private _radius = 50;
-			private _objects = nearestObjects [_position, _vehicles, _radius];
-
-			{
-				private _object = _x;
-				if (!isNull (driver _object)) then {
-					if (side (driver _object) == independent) then {
-						private _group = group _unit;
-						_group addVehicle _object;
-						[_unit] orderGetIn true;
-						_unit enableAI "ALL";
-					}
+		{
+			private _object = _x;
+			if (!isNull (driver _object)) then {
+				if (side (driver _object) == independent) then {
+					private _group = group _unit;
+					_group addVehicle _object;
+					[_unit] orderGetIn true;
+					_unit enableAI "ALL";
+					/*if ((vehicle _unit != _unit) && (lifeState _unit in ["HEALTHY", "INJURED"])) then {
+						_unit switchMove "";
+					};*/
 				}
-			} forEach _objects;
+			}
+		} forEach _objects;
 
+	};
+
+	if (!isNull (assignedVehicle _unit)) then {
+		private _vehicle = assignedVehicle _unit;
+		if (isNull (driver _vehicle) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 50) then {
+			private _group = group _unit;
+			[_unit] orderGetIn false;
+			_group leaveVehicle _vehicle;
 		};
+	};
 
-		if (!isNull (assignedVehicle _unit)) then {
-			private _vehicle = assignedVehicle _unit;
-			if (isNull (driver _vehicle) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 50) then {
-				private _group = group _unit;
-				[_unit] orderGetIn false;
-				_group leaveVehicle _vehicle;
-			};
-		};
-
-	} forEach YUG_msta_civs;
-
-};
+} forEach YUG_msta_civs;

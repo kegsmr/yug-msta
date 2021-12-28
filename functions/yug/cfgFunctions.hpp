@@ -23,6 +23,7 @@ class yug
 		file = "functions\yug\misc"
 		class callFunctions {};
 		class deleteObjects {};
+		class endMission {};
 		class getNearestPlayer {};
 		class isArmed {};
 	};

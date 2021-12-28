@@ -11,3 +11,44 @@ class Extended_PreInit_EventHandlers {
         init = "call compile preprocessFileLineNumbers 'functions\tint\furniture\XEH_preInit.sqf'";
     };
 };
+
+class CfgDebriefing
+{  
+
+  class End1
+	{
+		title = "Humanitarian Victory";
+		subtitle = "";
+		description = "The UNPROFOR held off the Serbs long enough to evacuate the civilians from Msta. This proves the effectiveness of the United Nations to uphold international law.";
+		pictureBackground = "images\end1.jpg";
+		picture = "images\un_square.jpg";
+	};
+
+	class End2
+	{
+		title = "Successful Retreat";
+		subtitle = "";
+		description = "We have recaptured the Serbian village of Msta, but the United Nations had enough time to evacuate their war criminals safely. This is an embarassment for the Serbian nation.";
+		pictureBackground = "images\end2.jpg";
+		picture = "images\un_square.jpg";
+	};
+
+  class End3
+	{
+		title = "Serbian Massacre";
+		subtitle = "";
+		description = "The UNPROFOR failed to evacuate enough civilians from Msta, resulting in a genocidal massacre of the local population. This proves the ineffectiveness of the United Nations to uphold international law.";
+		pictureBackground = "images\end3.jpg";
+		picture = "images\srpska_square.jpg";
+	};
+
+  class End4
+	{
+		title = "Serbian Victory";
+		subtitle = "";
+		description = "We have heroically recaptured the Serbian village of Msta. The UNPROFOR was unable to evacuate their war criminals, and now they will be brought to justice.";
+		pictureBackground = "images\end4.jpg";
+		picture = "images\srpska_square.jpg";
+	};
+  
+};
