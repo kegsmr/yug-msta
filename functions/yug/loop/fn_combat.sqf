@@ -48,7 +48,7 @@ YUG_fnc_combat_getInside = {
 
 {
 	
-	if ((side _x in _sides) && (!isPlayer _x) && (vehicle _x == _x)) then {
+	if ((side _x in _sides) && (!isPlayer _x) && (!isPlayer leader group _x) && (vehicle _x == _x)) then {
 		
 
 		// CREATE GET IN BUILDING EVENT HANDLER

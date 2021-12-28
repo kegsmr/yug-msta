@@ -2,11 +2,30 @@
 
 if (false) exitWith {};
 
-YUG_evacuated_civs = 0;
+if (isNil "YUG_evacuated_civs") then {
+	YUG_evacuated_civs = 0;
+};
 
 private _marker = "msta";
 private _position = getMarkerPos _marker;
 private _radius = 250;
+
+YUG_fnc_evacuated = {
+
+	private _unit = _this;
+
+	private _index = YUG_msta_civs find _unit;
+	YUG_msta_civs deleteAt _index;
+
+	YUG_evacuated_civs = YUG_evacuated_civs + 1;
+
+	independent addScoreSide 1;
+
+	[_unit] spawn YUG_fnc_deleteObjects;
+
+	unassignVehicle _unit;
+
+};
 
 
 // RUNS ONCE
@@ -17,12 +36,25 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 
 	YUG_msta_civs = [];
 
-	private _objects = nearestObjects [_position, ["Man", "car", "tank", "turret"], _radius];
+	private _objects = nearestObjects [_position, ["LOP_CHR_Civ_Random"], _radius];
 	private _side = civilian;
 	{
-		if (side _x == _side) then {
-			YUG_msta_civs append [_x];
+		
+		private _unit = _x;
+
+		if (side _unit == _side) then {
+
+			YUG_msta_civs append [_unit];
+
+			if (isServer) then {
+				private _trigger = createTrigger ["EmptyDetector", getMarkerPos "refugee_marker", false];
+				_trigger setTriggerStatements [str _unit + " in thisList", str _unit + " spawn YUG_fnc_evacuated;", ""];
+				_trigger setTriggerActivation ["ANY", "PRESENT", false];
+				_trigger setTriggerArea [50, 50, 0, false, -1];
+			};
+
 		};
+
 	} forEach _objects;
 
 };
@@ -34,16 +66,18 @@ YUG_killed_civs = {!alive _x} count YUG_msta_civs;
 YUG_missing_civs = {_x distance2D _position > 500 && alive _x} count YUG_msta_civs;
 YUG_remaining_civs = {_x distance2D _position <= 500 && alive _x} count YUG_msta_civs;
 
-if (["un_civs"] call BIS_fnc_taskExists) then {
-	[
-		"un_civs",
+{
+	if ([_x] call BIS_fnc_taskExists) then {
 		[
-			str YUG_killed_civs + " killed, " + str YUG_missing_civs + " missing, " + str YUG_evacuated_civs + " evacuated, " + str YUG_remaining_civs + " remaining.",
-			("un_civs" call BIS_fnc_taskDescription) select 1,
-			("un_civs" call BIS_fnc_taskDescription) select 2
-		]
-	] call BIS_fnc_taskSetDescription;
-};
+			_x,
+			[
+				str YUG_killed_civs + " killed, " + str YUG_missing_civs + " missing, " + str YUG_evacuated_civs + " evacuated, " + str YUG_remaining_civs + " remaining.",
+				(_x call BIS_fnc_taskDescription) select 1,
+				(_x call BIS_fnc_taskDescription) select 2
+			]
+		] call BIS_fnc_taskSetDescription;
+	};
+} forEach ["un_civs", "serb_civs"];
 
 
 // LOOPING THROUGH CIVS
@@ -75,11 +109,12 @@ if (isServer) then {
 
 		};
 
-		if (vehicle _unit != _unit) then {
-			if (isNull (driver (vehicle _unit)) || ((driver (vehicle _unit)) == _unit && typeOf (vehicle _unit) in _vehicles)) then {
-				private _vehicle = vehicle _unit;
+		if (!isNull (assignedVehicle _unit)) then {
+			private _vehicle = assignedVehicle _unit;
+			if (isNull (driver _vehicle) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 50) then {
+				private _group = group _unit;
 				[_unit] orderGetIn false;
-				(group _unit) leaveVehicle _vehicle;
+				_group leaveVehicle _vehicle;
 			};
 		};
 

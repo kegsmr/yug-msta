@@ -13,6 +13,7 @@ class yug
 		class civs {};
 		class combat {};
 		class evacuation {};
+		class loadouts {};
 		class player {};
 		class spawns {};
 	};

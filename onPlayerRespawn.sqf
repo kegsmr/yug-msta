@@ -1,1 +1,1 @@
-[player, [missionNameSpace, "VirtualInventory"]] call BIS_fnc_loadInventory;
+[player, [missionNamespace, "VirtualInventory"]] call BIS_fnc_loadInventory;
