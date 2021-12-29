@@ -10,7 +10,7 @@ private _marker = "msta";
 private _position = getMarkerPos _marker;
 private _radius = 250;
 
-YUG_fnc_evacuated = {
+YUG_fnc_evacuation_evacuated = {
 
 	private _unit = _this;
 	private _group = group _unit;
@@ -27,6 +27,33 @@ YUG_fnc_evacuated = {
 
 	[_unit] orderGetIn false;
 	_group leaveVehicle _vehicle;
+
+};
+
+YUG_fnc_evacuation_timer = {
+
+	while {triggerTimeoutCurrent trg_endMission != -1} do {
+
+		private _time = ceil (triggerTimeoutCurrent trg_endMission);
+		
+		if (_time < 0) then {
+			_time = 0;
+		};
+		
+		private _minutes = floor (_time / 60);
+		private _seconds = str (_time - (60 * _minutes));
+
+		if (count _seconds < 2) then {
+			_seconds = "0" + _seconds;
+		};
+
+		(str _minutes + ":" + _seconds) remoteExec ["hintSilent", 0];
+
+		sleep .1;
+
+	};
+
+	YUG_timerActive = false;
 
 };
 
@@ -52,7 +79,7 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 			YUG_msta_civs append [_unit];
 
 			private _trigger = createTrigger ["EmptyDetector", getMarkerPos "refugee_marker", false];
-			_trigger setTriggerStatements [str _unit + " in thisList", str _unit + " spawn YUG_fnc_evacuated;", ""];
+			_trigger setTriggerStatements [str _unit + " in thisList", str _unit + " spawn YUG_fnc_evacuation_evacuated;", ""];
 			_trigger setTriggerActivation ["ANY", "PRESENT", false];
 			_trigger setTriggerArea [50, 50, 0, false, 20];
 
@@ -90,17 +117,16 @@ YUG_remaining_civs = {_x distance2D _position <= 500 && alive _x} count YUG_msta
 // END MISSION TRIGGER
 
 if (YUG_killed_civs > 20 || YUG_evacuated_civs >= 30) then {
-	trg_endMission setTriggerTimeout [0,0,0];
+	trg_endMission setTriggerTimeout [60, 60, 60, true];
 };
 
-if (triggerTimeoutCurrent trg_endMission != -1) then {
-	private _time = round (triggerTimeoutCurrent trg_endMission);
-	private _minutes = floor (_time / 60);
-	private _seconds = str (_time - (60 * _minutes));
-	if (count _seconds < 2) then {
-		_seconds = "0" + _seconds;
-	};
-	(str _minutes + ":" + _seconds)remoteExec ["hintSilent", 0];
+if (isNil "YUG_timerActive") then {
+	YUG_timerActive = false;
+};
+
+if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
+	YUG_timerActive = true;
+	[] spawn YUG_fnc_evacuation_timer;
 };
 
 

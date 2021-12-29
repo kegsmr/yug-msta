@@ -1,3 +1,7 @@
+// DETERMINES WHETHER A UNIT IS ARMED OR NOT
+
+if (false) exitWith {};
+
 params ["_unit"];
 
 private _safe_weapons = [];

@@ -1,10 +1,18 @@
 class yug
 {
+
 	class main
 	{
 		file = "functions\yug";
 		class main {};
+	};
 
+	class init
+	{
+		file = "functions\yug\init"
+		class briefings {};
+		class lists {};
+		class retainLoadouts {};
 	};
 
 	class loop
@@ -13,7 +21,6 @@ class yug
 		class civs {};
 		class combat {};
 		class evacuation {};
-		class loadouts {};
 		class player {};
 		class spawns {};
 	};

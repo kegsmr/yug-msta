@@ -1,6 +1,6 @@
-if (false) exitWith {};
-
 // ENDS THE MISSION
+
+if (false) exitWith {};
 
 private _condition1 = YUG_evacuated_civs >= 30;
 
