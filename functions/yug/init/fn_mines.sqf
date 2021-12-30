@@ -65,7 +65,8 @@ YUG_fnc_initMines_spawned = {
 
 	private _marker = createMarker [(_minefield + "_marker"), _position];
 	_marker setMarkerType "mil_warning";
-	_marker setMarkerColor "ColorRedAlpha";
+	_marker setMarkerColor "ColorRed";
+	_marker setMarkerAlpha .5;
 	_marker setMarkerSize [.5, .5];
 
 	// MALO_TIP_mines = true;

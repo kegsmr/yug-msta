@@ -24,7 +24,8 @@ if !(player getVariable ["killedMarkerEventCreated", false]) then {
 		private _marker = createMarkerLocal [((str (owner _player)) + "_death_t_" + (str time)), _position];
 		
 		_marker setMarkerTypeLocal "mil_destroy";
-		_marker setMarkerColorLocal "ColorBlackAlpha";
+		_marker setMarkerColorLocal "ColorBlack";
+		_marker setMarkerAlphaLocal .5;
 		_marker setMarkerDirLocal 45;
 		_marker setMarkerSizeLocal [.5, .5];
 
