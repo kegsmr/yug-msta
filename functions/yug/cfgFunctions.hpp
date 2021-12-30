@@ -12,17 +12,19 @@ class yug
 		file = "functions\yug\init"
 		class briefings {};
 		class lists {};
+		class mines {};
+		class respawnOnSL {};
 		class retainLoadouts {};
 	};
 
 	class loop
 	{
 		file = "functions\yug\loop"
+		class arty {};
 		class civs {};
 		class combat {};
 		class evacuation {};
 		class player {};
-		class spawns {};
 	};
 
 	class misc
@@ -33,6 +35,7 @@ class yug
 		class endMission {};
 		class getNearestPlayer {};
 		class isArmed {};
+		class setPosAGLS {};
 	};
 
 };

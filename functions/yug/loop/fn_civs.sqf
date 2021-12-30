@@ -1,4 +1,4 @@
-// DEALS WITH CIVILIAN BEHAVIOR
+// IMPROVES CIVILIAN BEHAVIOR
 
 if (!isServer) exitWith {};
 // if (!MALO_CFG_advanced_ai) exitWith {};

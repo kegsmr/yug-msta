@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20230;
+		nextID=20245;
 	};
 	class MarkerIDProvider
 	{
-		nextID=93;
+		nextID=95;
 	};
 	class LayerIndexProvider
 	{
-		nextID=73;
+		nextID=91;
 	};
 	class Camera
 	{
-		pos[]={4308.9893,540.2478,4531.3467};
-		dir[]={0.75793576,-0.58182627,0.29497734};
-		up[]={0.54221052,0.81331307,0.21102029};
-		aside[]={0.36268607,1.4901161e-008,-0.93191135};
+		pos[]={5103.667,19.497892,1554.0686};
+		dir[]={-0.2690219,-0.59194326,-0.75975686};
+		up[]={-0.19758032,0.80597967,-0.5579955};
+		aside[]={-0.9426502,0,0.33378252};
 	};
 };
 binarizationWanted=0;
@@ -836,8 +836,10 @@ randomSeed=15011716;
 class ScenarioData
 {
 	author="keg";
+	overviewText="Bosnia, 1995 - the Serbs are attacking the village of Msta in violation of international law. The Bosnian forces are weakened by the ongoing siege, and the village is expected to fall to the Serbs within the next day. Lead the UNPROFOR and evacuate the civilians from the village to prevent any potential ethnic cleansing.";
 	overViewPicture="images\overview.jpg";
 	overViewPictureLocked="images\overview.jpg";
+	onLoadMission="Bosnia, 1995 - the Serbs are attacking the village of Msta in violation of international law. The Bosnian forces are weakened by the ongoing siege, and the village is expected to fall to the Serbs within the next day. Lead the UNPROFOR and evacuate the civilians from the village to prevent any potential ethnic cleansing.";
 	loadScreen="images\loading.jpg";
 	debriefing=0;
 	saving=0;
@@ -1089,7 +1091,7 @@ class Mission
 {
 	class Intel
 	{
-		briefingName="Msta";
+		briefingName="Humanitarian Intervention";
 		timeOfChanges=1800.0002;
 		startWeather=0.55083036;
 		startFog=0.050000001;
@@ -1112,7 +1114,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1265;
+		items=1276;
 		class Item0
 		{
 			dataType="Logic";
@@ -6976,7 +6978,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5904.6572,254.00143,4685.5947};
+						position[]={5907.4185,254.00143,4683.9116};
 						angles[]={0,5.68784,0};
 					};
 					side="Civilian";
@@ -9114,7 +9116,7 @@ class Mission
 			};
 			id=17206;
 			type="Land_FoodSacks_01_large_brown_F";
-			atlOffset=9.1552734e-005;
+			atlOffset=0.00015258789;
 		};
 		class Item191
 		{
@@ -9132,6 +9134,7 @@ class Mission
 			};
 			id=17207;
 			type="Land_FoodSacks_01_large_brown_F";
+			atlOffset=6.1035156e-005;
 		};
 		class Item192
 		{
@@ -9149,6 +9152,7 @@ class Mission
 			};
 			id=17208;
 			type="Land_FoodSacks_01_cargo_white_idap_F";
+			atlOffset=6.1035156e-005;
 		};
 		class Item193
 		{
@@ -9166,6 +9170,7 @@ class Mission
 			};
 			id=17209;
 			type="Land_FoodSacks_01_cargo_white_idap_F";
+			atlOffset=6.1035156e-005;
 		};
 		class Item194
 		{
@@ -33526,7 +33531,6 @@ class Mission
 					{
 						skill=1;
 						description="Squad Leader";
-						isPlayer=1;
 						isPlayable=1;
 						class Inventory
 						{
@@ -42288,6 +42292,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
+						init="this assignAsCommander serb_tank;";
 						name="serb_tankC";
 						description="Tank Commander";
 						isPlayable=1;
@@ -42388,6 +42393,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
+						init="this assignAsDriver serb_tank;";
 						name="serb_tankD";
 						description="Tank Driver";
 						isPlayable=1;
@@ -42488,6 +42494,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.2;
+						init="this assignAsGunner serb_tank;";
 						name="serb_tankG";
 						description="Tank Gunner";
 						isPlayable=1;
@@ -51076,7 +51083,7 @@ class Mission
 			};
 			id=20144;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00044250488;
+			atlOffset=0.00050354004;
 		};
 		class Item1218
 		{
@@ -51095,7 +51102,7 @@ class Mission
 			};
 			id=20145;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00044250488;
+			atlOffset=0.00050354004;
 		};
 		class Item1219
 		{
@@ -51114,6 +51121,7 @@ class Mission
 			};
 			id=20146;
 			type="ACE_medicalSupplyCrate";
+			atlOffset=6.1035156e-005;
 		};
 		class Item1220
 		{
@@ -51132,6 +51140,7 @@ class Mission
 			};
 			id=20147;
 			type="ACE_medicalSupplyCrate";
+			atlOffset=6.1035156e-005;
 		};
 		class Item1221
 		{
@@ -51170,6 +51179,7 @@ class Mission
 			};
 			id=20150;
 			type="rhs_gear_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51212,6 +51222,7 @@ class Mission
 			};
 			id=20151;
 			type="rhs_gear_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51254,6 +51265,7 @@ class Mission
 			};
 			id=20152;
 			type="rhs_gear_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -51296,6 +51308,7 @@ class Mission
 			};
 			id=20153;
 			type="rhs_gear_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52403,6 +52416,7 @@ class Mission
 			};
 			id=20214;
 			type="rhs_mags_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52444,6 +52458,7 @@ class Mission
 			};
 			id=20215;
 			type="rhs_mags_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52485,6 +52500,7 @@ class Mission
 			};
 			id=20216;
 			type="rhs_mags_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52526,6 +52542,7 @@ class Mission
 			};
 			id=20217;
 			type="rhs_mags_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52567,6 +52584,7 @@ class Mission
 			};
 			id=20218;
 			type="rhs_mags_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52608,6 +52626,7 @@ class Mission
 			};
 			id=20219;
 			type="rhs_mags_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52649,6 +52668,7 @@ class Mission
 			};
 			id=20220;
 			type="rhs_mags_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52690,6 +52710,7 @@ class Mission
 			};
 			id=20221;
 			type="rhs_mags_crate";
+			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -52878,7 +52899,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5329.873,278.5723,4516.7466};
-						angles[]={0,6.2407994,-0};
+						angles[]={0,6.2407994,0};
 					};
 					side="West";
 					flags=5;
@@ -52974,7 +52995,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5333.2949,277.59811,4518.7637};
-						angles[]={0,6.0778928,-0};
+						angles[]={0,6.0778928,0};
 					};
 					side="West";
 					flags=5;
@@ -53100,7 +53121,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5341.6875,279.01535,4537.9497};
-						angles[]={0,4.7221622,-0};
+						angles[]={0,4.7221622,0};
 					};
 					side="West";
 					flags=5;
@@ -53259,6 +53280,297 @@ class Mission
 			id=20229;
 			type="RHS_HBZ_Flag";
 			atlOffset=-1.5258789e-005;
+		};
+		class Item1265
+		{
+			dataType="Trigger";
+			position[]={5890.3823,253.63304,4671.6689};
+			class Attributes
+			{
+				name="trg_serbsPresent";
+				text="active when serbs are within the area";
+				sizeA=100;
+				sizeB=100;
+				repeatable=1;
+				activationBy="EAST";
+			};
+			id=20230;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item1266
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={6079.2017,211.12036,6689.0708};
+						angles[]={6.2086568,2.7379987,6.2113123};
+					};
+					side="East";
+					flags=2;
+					class Attributes
+					{
+						name="serb_gunG";
+					};
+					id=20233;
+					type="O_Serbia_Rifleman_01";
+					atlOffset=1.5241241;
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=20233;
+						item1=20232;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=20231;
+			atlOffset=-0.0010681152;
+		};
+		class Item1267
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4950.1411,260.45273,7400.1973};
+				angles[]={6.2086568,2.7379987,6.2113123};
+			};
+			side="East";
+			flags=6;
+			class Attributes
+			{
+				name="serb_gun";
+			};
+			id=20232;
+			type="SRB_artil_2";
+			atlOffset=-0.0010681152;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_ammoslot_2_type";
+					expression="_this setVariable ['rhs_ammoslot_2_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_d462_2";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_ammoslot_1_type";
+					expression="_this setVariable ['rhs_ammoslot_1_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_3of56_10";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_ammoslot_4_type";
+					expression="_this setVariable ['rhs_ammoslot_4_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_3of69m_2";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_ammoslot_3_type";
+					expression="_this setVariable ['rhs_ammoslot_3_type', _value];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="rhs_mag_s463_2";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item1268
+		{
+			dataType="Marker";
+			position[]={5445.7329,337.8317,4853.606};
+			name="minefield_1";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			alpha=0;
+			a=100;
+			b=100;
+			angle=174.25789;
+			id=20234;
+		};
+		class Item1269
+		{
+			dataType="Marker";
+			position[]={5585.8877,272.5455,4068.4167};
+			name="minefield_2";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			alpha=0;
+			a=100;
+			b=100;
+			angle=174.25789;
+			id=20235;
+			atlOffset=-3.0144043;
+		};
+		class Item1270
+		{
+			dataType="Marker";
+			position[]={5852.0908,290.84698,3484.677};
+			name="castle_spawn";
+			type="Empty";
+			id=20237;
+			atlOffset=0.00018310547;
+		};
+		class Item1271
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5881.1392,254.40823,4693.5308};
+				angles[]={0.0013372133,0.458125,6.2805333};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20240;
+			type="Land_BagFence_Long_F";
+		};
+		class Item1272
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5885.2197,254.36607,4696.9629};
+				angles[]={0.0013372133,1.4866329,6.2818484};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20241;
+			type="Land_CncBlock";
+		};
+		class Item1273
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5883.9697,254.40402,4693.231};
+				angles[]={-0,2.8547325,6.2818937};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20242;
+			type="Land_BagFence_Long_F";
+		};
+		class Item1274
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5902.6953,254.41931,4685.8433};
+				angles[]={-0,2.8547325,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20243;
+			type="Land_BagFence_Long_F";
+		};
+		class Item1275
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5902.6592,255.13936,4685.8442};
+				angles[]={0,2.8547325,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20244;
+			type="Land_BagFence_Long_F";
+			atlOffset=0.720047;
 		};
 	};
 	class Connections

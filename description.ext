@@ -26,7 +26,7 @@ class CfgDebriefing
 
 	class End2
 	{
-		title = "Successful Retreat";
+		title = "The War Criminals Escaped";
 		subtitle = "";
 		description = "We have recaptured the Serbian village of Msta, but the United Nations had enough time to evacuate their war criminals safely. This is an embarassment for the Serbian nation.";
 		pictureBackground = "images\end2.jpg";

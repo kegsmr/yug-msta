@@ -53,6 +53,8 @@ YUG_fnc_evacuation_timer = {
 
 	};
 
+	"" remoteExec ["hintSilent", 0];
+
 	YUG_timerActive = false;
 
 };
@@ -90,6 +92,49 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 };
 
 publicVariable "YUG_msta_civs";
+
+
+// STOP SERBS FROM LEAVING AREA WHEN CAPPING
+
+if ((triggerTimeoutCurrent trg_endMission != -1) && !isPlayer kapetan) then {
+	kapetan disableAI "PATH";
+} else {
+	if !(kapetan checkAIFeature "PATH") then {
+		kapetan enableAI "PATH";
+	};
+};
+
+
+// TELEPORT UN GUYS IF THEYRE TOO FAR AWAY
+
+{
+
+	private _unit = _x;
+
+	if ((!isPlayer _unit) && ((_unit distance2D (getMarkerPos "msta")) > 1500) && ((_unit distance2D (getMarkerPos "respawn_guerilla")) > 500) && (vehicle _unit == _unit)) then {
+
+		_unit spawn {
+
+			private _unit = _this;
+
+			private _trigger = createTrigger ["EmptyDetector", position _unit];
+			_trigger setTriggerArea [500, 500, 0, false];
+			_trigger setTriggerActivation ["ANYPLAYER", "NOT PRESENT", true];
+			_trigger setTriggerStatements ["this", "", ""];
+
+			sleep 5;
+
+			if (triggerActivated _trigger) then {
+				_unit setPos (getMarkerPos "castle_spawn");
+			};
+
+			deleteVehicle _trigger;
+
+		};
+
+	};
+
+} forEach units un_squad;
 
 
 // KILLED MISSING EVACUATED REMAINING
