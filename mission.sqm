@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=94;
+		nextID=97;
 	};
 	class Camera
 	{
-		pos[]={4537.6309,270.54041,4645.0576};
-		dir[]={-0.75420004,-0.58536643,0.29754946};
-		up[]={-0.54452246,0.81076872,0.21482664};
-		aside[]={0.36699554,-2.2770837e-007,0.93022758};
+		pos[]={5617.4458,432.14264,4552.1377};
+		dir[]={0.7472747,-0.56605154,0.34812608};
+		up[]={0.51312095,0.82435566,0.23904276};
+		aside[]={0.42229065,-7.9395249e-008,-0.9064728};
 	};
 };
 binarizationWanted=0;
@@ -2815,7 +2815,7 @@ class Mission
 			flags=1;
 			id=14476;
 			type="ModuleHideTerrainObjects_F";
-			atlOffset=4.2186584;
+			atlOffset=4.2491913;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8013,7 +8013,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5861.939,255.69667,4672.6851};
+				position[]={5862.772,255.66617,4672.8906};
 				angles[]={0,2.9909346,0};
 			};
 			side="Empty";
@@ -14737,7 +14737,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5110.8281,6,1510.6356};
+				position[]={5110.8281,6,1510.6359};
 			};
 			areaSize[]={1,-1,1};
 			id=4404;
@@ -35568,8 +35568,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4520.1621,255.81445,4652.8418};
-				angles[]={0,1.6084026,0};
+				position[]={4520.4097,255.81445,4653.356};
+				angles[]={-0,1.5349338,0};
 			};
 			side="Empty";
 			flags=4;
@@ -37907,10 +37907,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -38010,17 +38015,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38106,17 +38116,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38201,17 +38216,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38297,17 +38317,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38393,17 +38418,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38488,17 +38518,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38585,17 +38620,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38719,17 +38759,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38814,17 +38859,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -38910,17 +38960,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -39006,17 +39061,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -39101,17 +39161,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -39205,10 +39270,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -39244,7 +39314,7 @@ class Mission
 									class Item0
 									{
 										name="rhs_rpg7_PG7V_mag";
-										count=1;
+										count=3;
 										ammoLeft=1;
 									};
 								};
@@ -39311,10 +39381,15 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -40666,10 +40741,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -40808,17 +40888,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41028,17 +41113,22 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_radio";
+								typeName="rhssaf_vest_md99_md2camo";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41188,17 +41278,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41336,17 +41431,22 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41477,17 +41577,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41599,17 +41704,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41721,17 +41831,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41843,17 +41958,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -41965,17 +42085,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -42087,17 +42212,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman_radio";
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -42171,7 +42301,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={4520.1621,254.48,4652.8408};
+					position[]={4520.4097,254.48,4653.355};
 					type="GetInNearest";
 					class Effects
 					{
@@ -44984,10 +45114,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -45086,17 +45221,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45181,17 +45321,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45276,17 +45421,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45371,17 +45521,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45467,17 +45622,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45562,17 +45722,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45659,17 +45824,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45792,17 +45962,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45887,17 +46062,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -45982,17 +46162,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -46078,17 +46263,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -46173,17 +46363,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -46277,10 +46472,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -46316,7 +46516,7 @@ class Mission
 									class Item0
 									{
 										name="rhs_rpg7_PG7V_mag";
-										count=1;
+										count=3;
 										ammoLeft=1;
 									};
 								};
@@ -46383,10 +46583,15 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -46516,10 +46721,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -46618,17 +46828,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -46713,17 +46928,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -46808,17 +47028,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -46903,17 +47128,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -46999,17 +47229,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -47094,17 +47329,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -47191,17 +47431,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -47324,17 +47569,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -47419,17 +47669,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -47514,17 +47769,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -47610,17 +47870,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -47705,17 +47970,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -47809,10 +48079,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -47848,7 +48123,7 @@ class Mission
 									class Item0
 									{
 										name="rhs_rpg7_PG7V_mag";
-										count=1;
+										count=3;
 										ammoLeft=1;
 									};
 								};
@@ -47915,10 +48190,15 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -48048,10 +48328,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -48150,17 +48435,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -48245,17 +48535,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -48340,17 +48635,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -48435,17 +48735,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -48530,17 +48835,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -48625,17 +48935,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -48722,17 +49037,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -48855,17 +49175,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -48950,17 +49275,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -49045,17 +49375,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -49140,17 +49475,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -49235,17 +49575,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -49339,10 +49684,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -49378,7 +49728,7 @@ class Mission
 									class Item0
 									{
 										name="rhs_rpg7_PG7V_mag";
-										count=1;
+										count=3;
 										ammoLeft=1;
 									};
 								};
@@ -49445,10 +49795,15 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -49578,10 +49933,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -49680,17 +50040,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -49775,17 +50140,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -49870,17 +50240,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -49965,17 +50340,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50061,17 +50441,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50156,17 +50541,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50253,17 +50643,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50386,17 +50781,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50481,17 +50881,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50576,17 +50981,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50672,17 +51082,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50767,17 +51182,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -50871,10 +51291,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -50910,7 +51335,7 @@ class Mission
 									class Item0
 									{
 										name="rhs_rpg7_PG7V_mag";
-										count=1;
+										count=3;
 										ammoLeft=1;
 									};
 								};
@@ -50977,10 +51402,15 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -52783,17 +53213,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -52917,17 +53352,22 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
 							};
 							class vest
 							{
-								typeName="rhssaf_vest_md99_woodland_rifleman_radio";
+								typeName="rhssaf_vest_md99_woodland_rifleman";
 								isBackpack=0;
 								class MagazineCargo
 								{
@@ -53021,10 +53461,15 @@ class Mission
 								};
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};
@@ -53060,7 +53505,7 @@ class Mission
 									class Item0
 									{
 										name="rhs_rpg7_PG7V_mag";
-										count=1;
+										count=3;
 										ammoLeft=1;
 									};
 								};
@@ -53129,10 +53574,15 @@ class Mission
 								isBackpack=0;
 								class ItemCargo
 								{
-									items=1;
+									items=2;
 									class Item0
 									{
 										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
 										count=1;
 									};
 								};

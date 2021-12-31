@@ -24,6 +24,7 @@ if (!isServer) exitWith {};
 				private _stance = stance _leader;
 
 				_position = [_position, _distance, _direction] call BIS_fnc_relPos;
+				
 				_unit setPos _position;
 				_unit setDir _direction;
 
@@ -38,7 +39,7 @@ if (!isServer) exitWith {};
 			} else {
 
 				_unit moveInAny _vehicle;
-				
+
 			};
 
 		};

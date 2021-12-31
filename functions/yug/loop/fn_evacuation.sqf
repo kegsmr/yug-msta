@@ -59,14 +59,27 @@ YUG_fnc_evacuation_timer = {
 
 };
 
+YUG_fnc_evacuation_helmets = {
+	private _unit = _this select 0;
+	private _headgear = headgear _unit;
+	private _in = "rhs_zsh7a_mike";
+	private _out = "LOP_H_6B27M_UN";
+	if ((typeof vehicle _unit == "CUP_I_Mi17_UN") && (_headgear == _out)) then {
+		_unit addHeadgear _in;
+	} else {
+		if (_headgear == _in) then {
+			_unit addHeadgear _out;
+		};
+	};
+};
 
-// RUNS ONCE
 
 if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) then {
 
 	missionNamespace setVariable ["YUG_evacuation_started", true, true];
 
-	// east addScoreSide 30;
+
+	// CREATE LIST OF MSTA CIVS
 
 	YUG_msta_civs = [];
 
@@ -88,6 +101,36 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 		};
 
 	} forEach _objects;
+
+
+	// CHANGE UN PILOT HELMETS ON EVENTS
+
+	{
+		private _unit = _x;
+		if (typeOf _unit == "LOP_UN_Infantry_Pilot") then {
+			{
+				private _name = _x;
+				_unit addEventHandler [_name, {
+					_this spawn YUG_fnc_evacuation_helmets;
+				}];
+			} forEach ["GetInMan", "GetOutMan", "Respawn"];
+		};
+	} forEach units un_squad;
+
+
+	// ADD WAYPOINTS FOR RESPAWNED SL'S
+
+	{
+		private _unit = _x;
+		if (_unit == leader group _unit) then {
+			_unit addEventHandler ["Respawn", {
+				private _unit = _this;
+				private _group = group _unit;
+				_group addWaypoint [getMarkerPos "msta", 1];
+			}];
+		};
+	} forEach playableUnits;
+
 
 };
 
@@ -111,7 +154,7 @@ if ((triggerTimeoutCurrent trg_endMission != -1) && !isPlayer kapetan) then {
 
 	private _unit = _x;
 
-	if ((!isPlayer _unit) && ((_unit distance2D (getMarkerPos "msta")) > 1500) && ((_unit distance2D (getMarkerPos "respawn_guerilla")) > 500) && (vehicle _unit == _unit)) then {
+	if ((!isPlayer _unit) && ((_unit distance2D (getMarkerPos "msta")) > 1500) && ((_unit distance2D (getMarkerPos "respawn_guerilla")) > 100) && (vehicle _unit == _unit)) then {
 
 		_unit spawn {
 
