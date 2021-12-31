@@ -16,11 +16,11 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=97;
+		nextID=100;
 	};
 	class Camera
 	{
-		pos[]={5617.4458,432.14264,4552.1377};
+		pos[]={5669.4067,378.73651,4576.3438};
 		dir[]={0.7472747,-0.56605154,0.34812608};
 		up[]={0.51312095,0.82435566,0.23904276};
 		aside[]={0.42229065,-7.9395249e-008,-0.9064728};
@@ -150,6 +150,7 @@ addons[]=
 	"rhs_c_troops",
 	"A3_Weapons_F_Items",
 	"ace_medical_engine",
+	"ace_compat_rhs_afrf3",
 	"KOS_YUG_T72",
 	"O_Serbia",
 	"O_RepublikaSrpska",
@@ -167,6 +168,7 @@ addons[]=
 	"A3_Modules_F_Supports",
 	"CRO_HV_M59_helmet",
 	"rhsgref_sounds",
+	"ace_compat_rhs_gref3",
 	"I_BIH_artillery",
 	"CUP_Weapons_AmmoBoxes"
 };
@@ -174,7 +176,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=105;
+		items=107;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -701,105 +703,119 @@ class AddonsMetaData
 		};
 		class Item88
 		{
+			className="ace_compat_rhs_afrf3";
+			name="ACE3 - RHS AFRF Compatibility";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item89
+		{
 			className="KOS_YUG_T72";
 			name="KOS_YUG_T72";
 		};
-		class Item89
+		class Item90
 		{
 			className="O_Serbia";
 			name="O_Serbia";
 			author="Por. Jox";
 		};
-		class Item90
+		class Item91
 		{
 			className="O_RepublikaSrpska";
 			name="O_RepublikaSrpska";
 			author="Por. Jox";
 		};
-		class Item91
+		class Item92
 		{
 			className="cba_modules";
 			name="Community Base Addons - Modules";
 			author="CBA Team";
 			url="https://www.github.com/CBATeam/CBA_A3";
 		};
-		class Item92
+		class Item93
 		{
 			className="I_BIH";
 			name="I_BIH";
 			author="Por. Jox";
 		};
-		class Item93
+		class Item94
 		{
 			className="rhssaf_c_weapons";
 			name="RHS: SAF Weapons configuration";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item94
+		class Item95
 		{
 			className="rhsgref_c_weapons";
 			name="GREF Weapons";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item95
+		class Item96
 		{
 			className="RHSGREF_weapon_sounds";
 			name="GREF Weapon Sounds";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item96
+		class Item97
 		{
 			className="YGO_Mod";
 			name="YGO_Mod";
 			author="Dropkiwi";
 		};
-		class Item97
+		class Item98
 		{
 			className="rhsgref_c_troops";
 			name="GREF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item98
+		class Item99
 		{
 			className="rhssaf_c_gear";
 			name="RHS: SAF gear configuration";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item99
+		class Item100
 		{
 			className="KOS_BLK_M59_helmet_camo";
 			name="KOS_BLK_M59_helmet_camo";
 		};
-		class Item100
+		class Item101
 		{
 			className="ace_compat_rhs_saf3";
 			name="ACE3 - RHS SAF Compatibility";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item101
+		class Item102
 		{
 			className="CRO_HV_M59_helmet";
 			name="CRO_HV_M59_helmet";
 		};
-		class Item102
+		class Item103
 		{
 			className="rhsgref_sounds";
 			name="GREF Sounds";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item103
+		class Item104
+		{
+			className="ace_compat_rhs_gref3";
+			name="ACE3 - RHS GREF Compatibility";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item105
 		{
 			className="I_BIH_artillery";
 			name="I_BIH_artillery";
 		};
-		class Item104
+		class Item106
 		{
 			className="CUP_Weapons_AmmoBoxes";
 			name="CUP_Weapons_AmmoBoxes";
@@ -14737,7 +14753,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5110.8281,6,1510.6359};
+				position[]={5110.8281,6,1510.6356};
 			};
 			areaSize[]={1,-1,1};
 			id=4404;
@@ -26191,7 +26207,7 @@ class Mission
 			};
 			id=5529;
 			type="Land_Bandage_F";
-			atlOffset=0.619627;
+			atlOffset=0.59772205;
 		};
 		class Item892
 		{
@@ -31631,7 +31647,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.049884945;
+			atlOffset=0.050000072;
 		};
 		class Item1108
 		{
@@ -35569,7 +35585,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4520.4097,255.81445,4653.356};
-				angles[]={-0,1.5349338,0};
+				angles[]={0,1.5349338,0};
 			};
 			side="Empty";
 			flags=4;

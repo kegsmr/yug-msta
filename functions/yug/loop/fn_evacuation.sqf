@@ -122,9 +122,9 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 
 	{
 		private _unit = _x;
-		if (_unit == leader group _unit) then {
-			_unit addEventHandler ["Respawn", {
-				private _unit = _this;
+		if ((_unit == leader group _unit) && (!isPlayer _unit)) then {
+			_unit addMPEventHandler ["MPRespawn", {
+				private _unit = _this select 0;
 				private _group = group _unit;
 				_group addWaypoint [getMarkerPos "msta", 1];
 			}];

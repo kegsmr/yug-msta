@@ -6,7 +6,7 @@ if (!isServer) exitWith {};
 	
 	private _unit = _x;
 	
-	_unit addEventHandler ["Respawn", {
+	_unit addMPEventHandler ["MPRespawn", {
 
 		private _unit = _this select 0;
 		private _group = group _unit;
