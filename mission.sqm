@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20245;
+		nextID=20246;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=100;
+		nextID=103;
 	};
 	class Camera
 	{
-		pos[]={5669.4067,378.73651,4576.3438};
-		dir[]={0.7472747,-0.56605154,0.34812608};
-		up[]={0.51312095,0.82435566,0.23904276};
-		aside[]={0.42229065,-7.9395249e-008,-0.9064728};
+		pos[]={5093.0083,24.613012,1519.8337};
+		dir[]={-0.19303298,-0.65500331,0.73055387};
+		up[]={-0.16732781,0.75562596,0.63326991};
+		aside[]={0.96681941,0,0.25546101};
 	};
 };
 binarizationWanted=0;
@@ -1130,7 +1130,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1276;
+		items=1277;
 		class Item0
 		{
 			dataType="Logic";
@@ -26207,7 +26207,7 @@ class Mission
 			};
 			id=5529;
 			type="Land_Bandage_F";
-			atlOffset=0.59772205;
+			atlOffset=0.619627;
 		};
 		class Item892
 		{
@@ -31647,7 +31647,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.050000072;
+			atlOffset=0.049884945;
 		};
 		class Item1108
 		{
@@ -53992,8 +53992,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5902.6953,254.41931,4685.8433};
-				angles[]={0,2.8547325,0};
+				position[]={5902.5391,254.41931,4685.5723};
+				angles[]={-0,2.8547325,0};
 			};
 			side="Empty";
 			flags=4;
@@ -54009,7 +54009,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5902.6592,255.13936,4685.8442};
+				position[]={5902.5029,255.13936,4685.5732};
 				angles[]={0,2.8547325,0};
 			};
 			side="Empty";
@@ -54020,6 +54020,229 @@ class Mission
 			id=20244;
 			type="Land_BagFence_Long_F";
 			atlOffset=0.720047;
+		};
+		class Item1276
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5085.0239,6,1535.558};
+			};
+			id=20245;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="kill";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Minimize the Amount of Peacekeeper Deaths";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="un_kia";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=6;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CREATED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
 		};
 	};
 	class Connections

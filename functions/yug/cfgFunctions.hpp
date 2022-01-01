@@ -35,7 +35,10 @@ class yug
 		class endMission {};
 		class getNearestPlayer {};
 		class isArmed {};
+		class setCombatMode {};
 		class setPosAGLS {};
+		class setTaskDescription {};
+		class subtractTime {};
 	};
 
 };

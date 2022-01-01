@@ -132,6 +132,22 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 	} forEach playableUnits;
 
 
+	// TIMER SUBTRACTING EVENT HANDLERS
+
+	YUG_peacekeepersKilled = 0;
+
+	{
+		private _unit = _x;
+		_unit addMPEventHandler ["MPKilled", {
+			private _unit = _this select 0;
+			5 spawn YUG_fnc_subtractTime;
+			if (side _unit == independent) then {
+				YUG_peacekeepersKilled = YUG_peacekeepersKilled + 1;
+			};
+		}];
+	} forEach units un_squad + YUG_msta_civs; 
+
+
 };
 
 publicVariable "YUG_msta_civs";
@@ -189,17 +205,12 @@ YUG_remaining_civs = {_x distance2D _position <= 500 && alive _x} count YUG_msta
 {publicVariable _x;} forEach ["YUG_killed_civs", "YUG_missing_civs", "YUG_evacuated_civs", "YUG_remaining_civs"]; 
 
 {
-	if ([_x] call BIS_fnc_taskExists) then {
-		[
-			_x,
-			[
-				str YUG_killed_civs + " killed, " + str YUG_missing_civs + " missing, " + str YUG_evacuated_civs + " evacuated, " + str YUG_remaining_civs + " remaining.",
-				(_x call BIS_fnc_taskDescription) select 1,
-				(_x call BIS_fnc_taskDescription) select 2
-			]
-		] call BIS_fnc_taskSetDescription;
-	};
+	private _task = _x;
+	private _description = str YUG_killed_civs + " killed, " + str YUG_missing_civs + " missing, " + str YUG_evacuated_civs + " evacuated, " + str YUG_remaining_civs + " remaining.";
+	[_task, _description] call YUG_fnc_setTaskDescription;
 } forEach ["un_civs", "serb_civs"];
+
+["un_kia", str YUG_peacekeepersKilled + " killed."] call YUG_fnc_setTaskDescription;
 
 
 // END MISSION TRIGGER
@@ -252,7 +263,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 
 	if (!isNull (assignedVehicle _unit)) then {
 		private _vehicle = assignedVehicle _unit;
-		if (isNull (driver _vehicle) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 50) then {
+		if (isNull (driver _vehicle) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 50 || (_vehicle distance getMarkerPos "refugee_marker" < 100)) then {
 			private _group = group _unit;
 			[_unit] orderGetIn false;
 			_group leaveVehicle _vehicle;

@@ -171,8 +171,7 @@ YUG_fnc_combat_getInside = {
 		if (_sniper || _in_vehicle) then {
 
 			_group setSpeedMode "FULL";
-			_group setCombatMode "RED";
-			
+			[_group, "RED"] call YUG_fnc_setCombatMode;
 
 		} else {
 
@@ -181,9 +180,9 @@ YUG_fnc_combat_getInside = {
 				_group setSpeedMode "NORMAL";
 
 				if (count waypoints _group > 1) then {
-					_group setCombatMode "GREEN";
+					[_group, "GREEN"] call YUG_fnc_setCombatMode;
 				} else {
-					_group setCombatMode "WHITE";
+					[_group, "WHITE"] call YUG_fnc_setCombatMode;
 				};
 
 			} else {
@@ -191,7 +190,7 @@ YUG_fnc_combat_getInside = {
 				if (_aggressive && _morale > 20) then {
 
 					_group setSpeedMode "FULL";
-					_group setCombatMode "RED";
+					[_group, "RED"] call YUG_fnc_setCombatMode;
 
 				} else {
 
@@ -230,27 +229,27 @@ YUG_fnc_combat_getInside = {
 						
 						case "close": {
 							if (_morale < 20) then {
-								_group setCombatMode "YELLOW";
+								[_group, "YELLOW"] call YUG_fnc_setCombatMode;
 								_unit enableAi "ALL";
 								_unit doMove (getMarkerPos "west_retreat_marker");
 							} else {
-								_group setCombatMode "RED";
+								[_group, "RED"] call YUG_fnc_setCombatMode;
 							};
 						};
 
 						case "mid": {
 							if (_morale < 40) then {
-								_group setCombatMode "BLUE";
+								[_group, "BLUE"] call YUG_fnc_setCombatMode;
 							} else {
-								_group setCombatMode "WHITE";
+								[_group, "WHITE"] call YUG_fnc_setCombatMode;
 							};
 						};
 						
 						case "far": {
 							if (_morale < 60) then {
-								_group setCombatMode "BLUE";
+								[_group, "BLUE"] call YUG_fnc_setCombatMode;
 							} else {
-								_group setCombatMode "WHITE";
+								[_group, "WHITE"] call YUG_fnc_setCombatMode;
 							};
 						};
 						
