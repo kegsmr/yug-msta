@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={4595.5313,275.05762,4676.7075};
-		dir[]={-0.85016996,-0.43079293,-0.3027404};
-		up[]={-0.40583599,0.90245098,-0.14451586};
-		aside[]={-0.33546376,2.6542693e-008,0.9420653};
+		pos[]={4542.2559,285.06256,4672.2817};
+		dir[]={-0.51379395,-0.59034687,-0.62250233};
+		up[]={-0.37578732,0.80714959,-0.45529619};
+		aside[]={-0.77123427,-1.0360964e-007,0.63655341};
 	};
 };
 binarizationWanted=0;
@@ -54828,7 +54828,6 @@ class Mission
 						skill=1;
 						init="this disableAi ""PATH""; this allowDamage false;";
 						description="Rifleman";
-						isPlayable=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -54991,7 +54990,6 @@ class Mission
 						skill=1;
 						init="this disableAi ""PATH""; this allowDamage false;";
 						description="Rifleman";
-						isPlayable=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -55155,7 +55153,6 @@ class Mission
 						skill=1;
 						init="this disableAi ""PATH""; this allowDamage false;";
 						description="Rifleman";
-						isPlayable=1;
 						class Inventory
 						{
 							class primaryWeapon
@@ -55319,7 +55316,6 @@ class Mission
 						skill=1;
 						init="this disableAi ""PATH""; this allowDamage false;";
 						description="Rifleman";
-						isPlayable=1;
 						class Inventory
 						{
 							class primaryWeapon
