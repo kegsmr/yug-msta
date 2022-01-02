@@ -30,14 +30,18 @@ class yug
 	class misc
 	{
 		file = "functions\yug\misc"
+		class addChildToTree {};
 		class callFunctions {};
 		class deleteObjects {};
 		class endMission {};
+		class findItemInTree {};
 		class getNearestPlayer {};
 		class isArmed {};
 		class setCombatMode {};
 		class setPosAGLS {};
 		class setTaskDescription {};
+		class setValueIfNil {};
+		class sideSpecificBriefing {};
 		class subtractTime {};
 	};
 

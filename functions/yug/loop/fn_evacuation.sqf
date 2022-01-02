@@ -213,6 +213,23 @@ YUG_remaining_civs = {_x distance2D _position <= 500 && alive _x} count YUG_msta
 ["un_kia", str YUG_peacekeepersKilled + " killed."] call YUG_fnc_setTaskDescription;
 
 
+// PASS/FAIL CONDITIONS FOR TASKS
+
+if (YUG_evacuated_civs >= 30) then {
+	["serb_civs", "FAILED"] call BIS_fnc_taskSetState;
+	["un_civs", "SUCCEEDED"] call BIS_fnc_taskSetState;
+} else {
+	if (YUG_killed_civs > 20) then {
+		["serb_civs", "SUCCEEDED"] call BIS_fnc_taskSetState;
+		["un_civs", "FAILED"] call BIS_fnc_taskSetState;
+	};
+};
+
+if (YUG_peacekeepersKilled > 20) then {
+	["un_kia", "FAILED"] call BIS_fnc_taskSetState;
+};
+
+
 // END MISSION TRIGGER
 
 if (YUG_killed_civs > 20 || YUG_evacuated_civs >= 30) then {
