@@ -73,6 +73,16 @@ YUG_fnc_evacuation_helmets = {
 	};
 };
 
+YUG_fnc_evacuation_supportChopper = {
+	private _vehicle = _this;
+	private _units = crew _vehicle;
+	_vehicle setVariable ["YUG_supportChopper", true, true];
+	{
+		private _unit = _x;
+		[_unit, [missionNamespace, "YUG_loadout_unPilot"]] call BIS_fnc_loadInventory;
+	} forEach _units;
+};
+
 
 if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) then {
 
@@ -126,6 +136,10 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 			_unit addMPEventHandler ["MPRespawn", {
 				private _unit = _this select 0;
 				private _group = group _unit;
+				if (_group == serb_tank_squad && alive serb_tank) then {
+					private _waypoint = _group addWaypoint [serb_tank, 0, 0];
+					_waypoint setWaypointType "GETIN";
+				};
 				_group addWaypoint [getMarkerPos "msta", 1];
 			}];
 		};
@@ -264,7 +278,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		{
 			private _object = _x;
 			if (!isNull (driver _object)) then {
-				if (side (driver _object) == independent) then {
+				if (side (driver _object) == independent && !(_object getVariable ["YUG_supportChopper", false])) then {
 					private _group = group _unit;
 					_group addVehicle _object;
 					[_unit] orderGetIn true;

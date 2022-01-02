@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=112;
+		nextID=118;
 	};
 	class Camera
 	{
-		pos[]={5972.2617,356.0741,4581.9565};
-		dir[]={0.60085416,-0.6919468,0.40026945};
-		up[]={0.57586932,0.72194463,0.38362551};
-		aside[]={0.55442166,-2.8591603e-007,-0.83225405};
+		pos[]={4595.5313,275.05762,4676.7075};
+		dir[]={-0.85016996,-0.43079293,-0.3027404};
+		up[]={-0.40583599,0.90245098,-0.14451586};
+		aside[]={-0.33546376,2.6542693e-008,0.9420653};
 	};
 };
 binarizationWanted=0;
@@ -870,7 +870,7 @@ randomSeed=15011716;
 class ScenarioData
 {
 	author="keg";
-	overviewText="Bosnia, 1995 - the Serbs are attacking the village of Msta in violation of international law. The Bosnian forces are weakened by the ongoing siege, and the village is expected to fall to the Serbs within the next day. Lead the UNPROFOR and evacuate the civilians from the village to prevent any potential ethnic cleansing.";
+	overviewText="Bosnia, 1995 - the Serbs are attacking the village of Msta in violation of international law. The Bosnian forces are weakened by the ongoing siege, and the village is expected to fall to the Serbs within the next day. Lead the UNPROFOR and evacuate the civilians from the village to prevent any potential ethnic cleansing. Play time: 30-60 minutes.";
 	overViewPicture="images\overview.jpg";
 	overViewPictureLocked="images\overview.jpg";
 	onLoadMission="Bosnia, 1995 - the Serbs are attacking the village of Msta in violation of international law. The Bosnian forces are weakened by the ongoing siege, and the village is expected to fall to the Serbs within the next day. Lead the UNPROFOR and evacuate the civilians from the village to prevent any potential ethnic cleansing.";
@@ -33727,6 +33727,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
+						init="[this, [missionNamespace, ""YUG_loadout_unPilot""]] call BIS_fnc_saveInventory;";
 						name="un_heliD";
 						description="Helicopter Pilot";
 						isPlayable=1;
@@ -40545,7 +40546,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="this spawn YUG_fnc_evacuation_supportChopper;";
 						};
 					};
 				};
@@ -42369,7 +42370,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={5021.7822,258.71085,4708.4341};
+					position[]={4932.6489,245.03104,4677.2163};
 					type="GetOut";
 					class Effects
 					{
@@ -56668,7 +56669,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6114.4971,241.32108,4689.3096};
-				angles[]={-0,4.3106618,-0};
+				angles[]={0,4.3106618,0};
 			};
 			side="Empty";
 			flags=4;
@@ -56707,7 +56708,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={6106.0879,241.32108,4702.6348};
-				angles[]={-0,5.6879082,-0};
+				angles[]={0,5.6879082,0};
 			};
 			side="Empty";
 			flags=4;
