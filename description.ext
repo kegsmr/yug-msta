@@ -12,6 +12,20 @@ class Extended_PreInit_EventHandlers {
     };
 };
 
+class CfgCommunicationMenu
+{
+	class endMission
+	{
+		text = "End Mission";
+		submenu = "";
+		expression = "if (triggerActivated trg_unPresent || player distance (getMarkerPos 'refugee_marker') > 100) exitWith {hint 'The UN must return to base before the mission can be ended.';}; remoteExec ['YUG_fnc_endMission', 0];";
+		icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+		cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+		enable = "1";
+		removeAfterExpressionCall = 0;
+	};
+};
+
 class CfgDebriefing
 {  
 

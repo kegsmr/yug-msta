@@ -1,6 +1,6 @@
 // RETAINS CUSTOM LOADOUTS AFTER RESPAWN FOR PLAYABLE UNITS
 
-if (!isServer) exitWith {};
+if (false /*!isServer*/) exitWith {};
 
 {
 	private _unit = _x;

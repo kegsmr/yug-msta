@@ -62,13 +62,27 @@ YUG_fnc_evacuation_timer = {
 YUG_fnc_evacuation_helmets = {
 	private _unit = _this select 0;
 	private _headgear = headgear _unit;
-	private _in = "rhs_zsh7a_mike";
-	private _out = "LOP_H_6B27M_UN";
-	if ((typeof vehicle _unit == "CUP_I_Mi17_UN") && (_headgear == _out)) then {
+	private _in = "";
+	private _out = "";
+	private _vehicleType = "";
+	if (typeOf _unit == "LOP_UN_Infantry_Pilot") then {
+		_in = "rhs_zsh7a_mike";
+		_out = "LOP_H_6B27M_UN";
+		_vehicleType = "CUP_I_Mi17_UN";
+	} else {
+		_in = "rhs_tsh4";
+		_out = "";
+		_vehicleType = "KOS_YUG_t72_grom";
+	};
+	if ((typeof vehicle _unit == _vehicleType) && (_headgear == _out)) then {
 		_unit addHeadgear _in;
 	} else {
 		if (_headgear == _in) then {
-			_unit addHeadgear _out;
+			if (_out == "") then {
+				removeHeadgear _unit;
+			} else {
+				_unit addHeadgear _out;
+			};
 		};
 	};
 };
@@ -117,7 +131,7 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 
 	{
 		private _unit = _x;
-		if (typeOf _unit == "LOP_UN_Infantry_Pilot") then {
+		if (typeOf _unit in ["LOP_UN_Infantry_Pilot", "O_Serbia_Crew_01"]) then {
 			{
 				private _name = _x;
 				_unit addEventHandler [_name, {
@@ -125,7 +139,7 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 				}];
 			} forEach ["GetInMan", "GetOutMan", "Respawn"];
 		};
-	} forEach units un_squad;
+	} forEach playableUnits;
 
 
 	// ADD WAYPOINTS FOR RESPAWNED SL'S
@@ -224,19 +238,35 @@ YUG_remaining_civs = {_x distance2D _position <= 500 && alive _x} count YUG_msta
 	[_task, _description] call YUG_fnc_setTaskDescription;
 } forEach ["un_civs", "serb_civs"];
 
-["un_kia", str YUG_peacekeepersKilled + " killed."] call YUG_fnc_setTaskDescription;
+["un_kia", "Peacekeeper casualties look bad on TV. Keep them at a minimum." /*str YUG_peacekeepersKilled + " killed."*/] call YUG_fnc_setTaskDescription;
 
 
 // PASS/FAIL CONDITIONS FOR TASKS
 
-if (YUG_evacuated_civs >= 30) then {
-	["serb_civs", "FAILED"] call BIS_fnc_taskSetState;
-	["un_civs", "SUCCEEDED"] call BIS_fnc_taskSetState;
-} else {
-	if (YUG_killed_civs > 20) then {
-		["serb_civs", "SUCCEEDED"] call BIS_fnc_taskSetState;
-		["un_civs", "FAILED"] call BIS_fnc_taskSetState;
+private _condition1 = YUG_evacuated_civs >= 30;
+private _condition2 = YUG_killed_civs > 20;
+if ((_condition1 || _condition2) && !(missionNamespace getVariable ["YUG_civTaskComplete", false])) then {
+	if (_condition1) then {
+		["serb_civs", "FAILED"] call BIS_fnc_taskSetState;
+		["un_civs", "SUCCEEDED"] call BIS_fnc_taskSetState;
+	} else {
+		if (_condition2) then {
+			["serb_civs", "SUCCEEDED"] call BIS_fnc_taskSetState;
+			["un_civs", "FAILED"] call BIS_fnc_taskSetState;
+		};
 	};
+	missionNamespace setVariable ["YUG_civTaskComplete", true, true];
+	private _leader = leader un_squad;
+	private _units = [];
+	if (!isPlayer _leader) then {
+		_units append (units un_squad);
+	} else {
+		_units append [_leader];
+	};
+	{
+		private _unit = _x;
+		[_unit, "endMission"] call BIS_fnc_addCommMenuItem;
+	} forEach _units;
 };
 
 if (YUG_peacekeepersKilled > 20) then {

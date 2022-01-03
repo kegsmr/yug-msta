@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=20277;
+		nextID=20278;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=118;
+		nextID=124;
 	};
 	class Camera
 	{
-		pos[]={4530.8765,265.16528,4666.02};
-		dir[]={-0.31738517,-0.57482022,-0.75422049};
-		up[]={-0.22295482,0.81827968,-0.52982026};
-		aside[]={-0.92171466,-1.4901161e-008,0.38786876};
+		pos[]={4226.48,598.78113,4586.5522};
+		dir[]={0.92983246,-0.36774284,-0.013394251};
+		up[]={0.3677063,0.92992711,-0.005296919};
+		aside[]={-0.014403536,4.9258233e-009,-0.99989754};
 	};
 };
 binarizationWanted=0;
@@ -1148,7 +1148,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1295;
+		items=1296;
 		class Item0
 		{
 			dataType="Logic";
@@ -36080,7 +36080,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="private _waypoint = serb_tank_squad addWaypoint [serb_tank, 0, 0];  _waypoint setWaypointType ""GETIN"";";
 						};
 					};
 				};
@@ -37654,12 +37654,13 @@ class Mission
 			{
 				name="trg_endMission";
 				text="end mission";
-				onActivation="[] spawn YUG_fnc_endMission;";
+				onActivation="remoteExec [""YUG_fnc_endMission"", 0];";
 				sizeA=150;
 				sizeB=75;
 				timeout[]={300,300,300};
 				interuptable=1;
 				activationBy="EAST SEIZED";
+				isServerOnly=1;
 			};
 			id=19850;
 			type="EmptyDetectorAreaR250";
@@ -39902,7 +39903,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -40125,7 +40126,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -40817,7 +40818,7 @@ class Mission
 							compass="ItemCompass";
 							watch="ItemWatch";
 							radio="ItemRadio";
-							headgear="rhssaf_beret_black";
+							headgear="rhssaf_beret_green";
 						};
 					};
 					id=19949;
@@ -42357,20 +42358,19 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={5017.4829,258.21533,4707.2988};
+					position[]={4933.0684,245.03551,4677.0068};
 					class Effects
 					{
 					};
 					showWP="NEVER";
 					id=19992;
 					type="Move";
-					atlOffset=3.0517578e-005;
 				};
 				class Item13
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={4932.6489,245.03104,4677.2163};
+					position[]={4945.479,245.4865,4684.8457};
 					type="GetOut";
 					class Effects
 					{
@@ -42461,6 +42461,61 @@ class Mission
 						name="serb_tankC";
 						description="Tank Commander";
 						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="rhs_weap_tt33";
+								class primaryMuzzleMag
+								{
+									name="rhs_mag_762x25_8";
+									ammoLeft=8;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_762x25_8";
+										count=3;
+										ammoLeft=8;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhssaf_beret_green";
+						};
 					};
 					id=19798;
 					type="O_Serbia_Crew_01";
@@ -42562,6 +42617,47 @@ class Mission
 						name="serb_tankD";
 						description="Tank Driver";
 						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_762x39mm";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhs_tsh4";
+						};
 					};
 					id=19938;
 					type="O_Serbia_Crew_01";
@@ -42663,6 +42759,47 @@ class Mission
 						name="serb_tankG";
 						description="Tank Gunner";
 						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_762x39mm";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhs_tsh4";
+						};
 					};
 					id=19964;
 					type="O_Serbia_Crew_01";
@@ -43964,7 +44101,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -52248,7 +52385,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -54202,7 +54339,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=0;
+							value=1;
 						};
 					};
 				};
@@ -56736,6 +56873,22 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item1295
+		{
+			dataType="Trigger";
+			position[]={5891.9639,253.59959,4671.313};
+			class Attributes
+			{
+				name="trg_unPresent";
+				text="active when un present";
+				sizeA=250;
+				sizeB=250;
+				repeatable=1;
+				activationBy="GUER";
+			};
+			id=20277;
+			type="EmptyDetectorAreaR250";
 		};
 	};
 	class Connections

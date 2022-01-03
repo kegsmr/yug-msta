@@ -4,6 +4,10 @@ if (false) exitWith {};
 
 private _condition1 = YUG_evacuated_civs >= 30;
 
+addMissionEventHandler ["Ended", {
+	// TODO: add end music
+}];
+
 if (!hasInterface) exitWith {
 
 	if (_condition1) then {
