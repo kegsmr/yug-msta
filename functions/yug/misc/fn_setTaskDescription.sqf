@@ -1,5 +1,12 @@
 // SETS A TASK'S DESCRIPTION, BUT ONLY THE DESCRIPTION
 
+// USAGE EXAMPLE
+/*
+	private _task = myTask;
+	private _description = "Do the thing please";
+	[_task, _description] call PREFIX_fnc_setTaskDescription;
+*/
+
 if (false) exitWith {};
 
 private _task = _this select 0;

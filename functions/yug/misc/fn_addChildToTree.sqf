@@ -9,9 +9,12 @@
 	private _path = ["category"];
 	private _tree = [_tree, _child, _path] call YUG_fnc_addChildToTree;
 
-	RETURNS [
-		["category", ["thing"]]
-	]
+	// RETURNS [["category", ["thing"]]]
+*/
+
+// ISSUES
+/*
+	- DOES NOT WORK
 */
 
 if (false) exitWith {};

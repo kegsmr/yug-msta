@@ -1,4 +1,11 @@
-// CALLS FUNCTIONS OF A GIVEN PREFIX AND CATEGORY
+// CALLS FUNCTIONS OF A GIVEN PREFIX AND CATEGORY AS DEFINED IN CFGFUNCTIONS
+
+// USAGE EXAMPLE
+/*
+	private _prefix = "PREFIX";
+	private _category = "category";
+	[_prefix, _category] call PREFIX_fnc_callFunctions;
+*/
 
 if (false) exitWith {};
 

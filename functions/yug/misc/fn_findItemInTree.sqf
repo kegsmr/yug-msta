@@ -8,8 +8,9 @@
 	private _item = "thing";
 	private _index = [_tree, _item] call YUG_fnc_findItemInTree;
 	
-	RETURNS 0
+	// RETURNS 0
 */
+
 
 if (false) exitWith {};
 

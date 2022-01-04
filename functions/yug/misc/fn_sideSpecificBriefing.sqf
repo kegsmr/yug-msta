@@ -2,7 +2,7 @@
 
 // USAGE EXAMPLE
 /*
-	TO CREATE A NEW DIARY SUBJECT
+	// TO CREATE A NEW DIARY SUBJECT
 
 	private _side = west;
 	private _subject = "killTheStuff";
@@ -12,13 +12,18 @@
 */
 // OR
 /*
-	TO CREATE A NEW DIARY ENTRY
+	// TO CREATE A NEW DIARY ENTRY
 
 	private _side = west;
 	private _subject = "killTheStuff";
 	private _title = "Kill the Stuff";
 	private _text = "Kill the stuff.";
 	[_side, _subject, [_title, _text]] call YUG_fnc_sideSpecificBriefing;
+*/
+
+// ISSUES 
+/*
+	- DOES NOT WORK
 */
 
 if (!isServer) exitWith {};

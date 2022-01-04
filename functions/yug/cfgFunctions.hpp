@@ -11,6 +11,7 @@ class yug
 	{
 		file = "functions\yug\init"
 		class briefings {};
+		class deathMarkers {};
 		class lists {};
 		class mines {};
 		class respawnOnSL {};
@@ -35,7 +36,7 @@ class yug
 		class deleteObjects {};
 		class endMission {};
 		class findItemInTree {};
-		class getNearestPlayer {};
+		class getNearestPlayableUnit {};
 		class isArmed {};
 		class setCombatMode {};
 		class setPosAGLS {};

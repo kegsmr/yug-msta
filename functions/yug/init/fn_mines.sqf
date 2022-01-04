@@ -1,8 +1,22 @@
 // SPAWNS MINEFIELDS WITHIN AREAS PLACED ON THE MAP
 
+// USAGE EXAMPLE
+/*
+	// CREATE AREA MAP MARKERS FOLLOWING THE NAME FORMAT "minefield_#" AND MINES WILL BE
+	// SPAWNED WITHIN THE AREA.
+
+	// RUN AT MISSION START
+
+	call PREFIX_fnc_mines;
+*/
+
+// PREFIX
+private _prefix = "YUG";
+//
+
 if (!isServer) exitWith {};
 
-YUG_fnc_initMines_spawned = {
+missionNamespace setVariable [_prefix + "_fnc_mines_spawned", {
 
 	if (!isServer) exitWith {};
 
@@ -71,7 +85,7 @@ YUG_fnc_initMines_spawned = {
 
 	// MALO_TIP_mines = true;
 
-};
+}];
 
 {
 
@@ -86,7 +100,7 @@ YUG_fnc_initMines_spawned = {
 		private _trigger = createTrigger ["EmptyDetector", _center, true];
 		_trigger setTriggerArea [_a * 1.5, _b * 1.5, _angle, _is_rectangle, 100];
 		_trigger setTriggerActivation ["ANYPLAYER", "PRESENT", false];
-		_trigger setTriggerStatements ["this", ("'" + _marker + "' spawn YUG_fnc_initMines_spawned;"), ""];
+		_trigger setTriggerStatements ["this", ("'" + _marker + "' spawn " + _prefix + "_fnc_mines_spawned;"), ""];
 
 	};
 

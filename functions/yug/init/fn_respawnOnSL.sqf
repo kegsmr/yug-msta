@@ -1,5 +1,12 @@
 // MAKES PLAYABLE UNITS RESPAWN ON SL WHEN POSSIBLE
 
+// USAGE EXAMPLE
+/*
+	// RUN AT MISSION START
+
+	call PREFIX_fnc_respawnOnSL;
+*/
+
 if (!isServer) exitWith {};
 
 {

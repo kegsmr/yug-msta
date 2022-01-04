@@ -32,9 +32,9 @@ YUG_fnc_combat_getInside = {
 	private _position = selectRandom _positions;
 	_unit doMove _position;
 
-	/*while {(_unit distance (_unit call MALO_fnc_getNearestPlayer)) < MALO_simulation_distance} do { 
+	/*while {(_unit distance (_unit call MALO_fnc_getNearestPlayableUnit)) < MALO_simulation_distance} do { 
 		_unit doMove _position;
-		waitUntil {(unitReady _unit) || ((_unit distance (_unit call MALO_fnc_getNearestPlayer)) > MALO_simulation_distance)};
+		waitUntil {(unitReady _unit) || ((_unit distance (_unit call MALO_fnc_getNearestPlayableUnit)) > MALO_simulation_distance)};
 	};*/
 	
 	sleep (random [0,300,600]);

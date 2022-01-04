@@ -80,7 +80,7 @@ YUG_fnc_civs_flee = {
 
 		sleep 5;
 		private _animation_state = animationState _civ;
-		waitUntil {(animationState _civ != _animation_state) || (_civ distance (_civ call YUG_fnc_getNearestPlayer) > _civ_radius) || (YUG_flee_count > YUG_flee_limit)};
+		waitUntil {(animationState _civ != _animation_state) || (_civ distance (_civ call YUG_fnc_getNearestPlayableUnit) > _civ_radius) || (YUG_flee_count > YUG_flee_limit)};
 
 		YUG_flee_count = YUG_flee_count - 1;
 

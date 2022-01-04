@@ -1,4 +1,12 @@
-// FINDS THE PLAYER CLOSEST TO THE OBJECT
+// FINDS THE PLAYABLE UNIT CLOSEST TO THE OBJECT
+
+// USAGE EXAMPLE
+/*
+	private _object = myObject;
+	private _distance = _object call PREFIX_fnc_getNearestPlayableUnit;
+
+	// RETURNS NEAREST PLAYABLE UNIT, RETURNS OBJNULL IF NONE IS FOUND
+*/
 
 if (false) exitWith {};
 
@@ -15,7 +23,7 @@ private _position = (
 );
 
 private _distance_1 = "None";
-private _player = objNull;
+private _unit = objNull;
 
 {
 
@@ -25,15 +33,15 @@ private _player = objNull;
 		_distance_1 = _distance_2;
 	};
 
-	if (_player isEqualTo objNull) then {
-		_player = _x;
+	if (_unit isEqualTo objNull) then {
+		_unit = _x;
 	};
 
 	if (_distance_1 > _distance_2) then {
 		_distance_1 = _distance_2;
-		_player = _x;
+		_unit = _x;
 	};
 
 } forEach playableUnits;
 
-_player
+_unit

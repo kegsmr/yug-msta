@@ -1,5 +1,18 @@
 // SETS POSITON ABOVE A SURFACE
 
+// USAGE EXAMPLE
+/*
+	private _object = myObject;
+	private _position = [1,2,3];
+		// WHERE '3' IS THE OFFSET ABOVE THE SURFACE
+	[_object, _position] call PREFIX_fnc_setPosAGLS;
+*/
+
+// ISSUES
+/*
+	- MAY OR MAY NOT WORK
+*/
+
 if (false) exitWith {};
 
 params ["_obj", "_pos"];
