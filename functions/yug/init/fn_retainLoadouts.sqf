@@ -12,6 +12,12 @@
 	- UNCERTAIN WHETHER THE SCRIPT WORKS WITH MULTIPLAYER CLIENTS
 */
 
+// PREFIX
+private _prefix = "YUG";
+private _script = "retainLoadouts";
+private _PS = _prefix + "_" + _script;
+//
+
 if (false /*!isServer*/) exitWith {};
 
 {

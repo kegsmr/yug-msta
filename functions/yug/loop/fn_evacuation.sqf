@@ -153,8 +153,15 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 				if (_group == serb_tank_squad && alive serb_tank) then {
 					private _waypoint = _group addWaypoint [serb_tank, 0, 0];
 					_waypoint setWaypointType "GETIN";
+				} else {
+					if (_group != serb_tank_squad) then {
+						private _waypoint = _group addWaypoint [position _unit, 0, 0];
+						_waypoint setWaypointType "GETIN NEAREST";
+					};
 				};
-				_group addWaypoint [getMarkerPos "msta", 1];
+				if ((side _unit != independent) || (YUG_evacuated_civs < 30 || YUG_killed_civs < 21)) then {
+					_group addWaypoint [getMarkerPos "msta", 1];
+				};
 			}];
 		};
 	} forEach playableUnits;
@@ -257,6 +264,14 @@ if ((_condition1 || _condition2) && !(missionNamespace getVariable ["YUG_civTask
 	};
 	missionNamespace setVariable ["YUG_civTaskComplete", true, true];
 	private _leader = leader un_squad;
+	if (_leader distance un_heli < 1000) then {
+		private _waypoint = un_squad addWaypoint [un_heli, 0];
+		_waypoint setWaypointType "GETIN";
+	} else {
+		private _waypoint = un_squad addWaypoint [position _leader, 0];
+		_waypoint setWaypointType "GETIN NEAREST";
+	};
+	un_squad addWaypoint [getMarkerPos "refugee_marker", 0];
 	private _units = [];
 	if (!isPlayer _leader) then {
 		_units append (units un_squad);
