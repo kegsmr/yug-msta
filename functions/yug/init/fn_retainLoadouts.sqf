@@ -1,4 +1,4 @@
-// RETAINS CUSTOM LOADOUTS AFTER RESPAWN FOR PLAYABLE UNITS
+// RETAINS CUSTOM LOADOUTS AFTER RESPAWN FOR NON-PLAYER PLAYABLE UNITS
 
 // USAGE EXAMPLE
 /*
@@ -7,24 +7,16 @@
 	call PREFIX_fnc_retainLoadouts;
 */
 
-// ISSUES
-/*
-	- UNCERTAIN WHETHER THE SCRIPT WORKS WITH MULTIPLAYER CLIENTS
-*/
 
-// PREFIX
-private _prefix = "YUG";
-private _script = "retainLoadouts";
-private _PS = _prefix + "_" + _script;
-//
-
-if (false /*!isServer*/) exitWith {};
+if (!isServer) exitWith {};
 
 {
 	private _unit = _x;
-	[_unit, [_unit, "YUG_startingInventory"]] call BIS_fnc_saveInventory;
-	_unit addMPEventHandler ["MPRespawn", {
-		private _unit = _this select 0;
-		[_unit, [_unit, "YUG_startingInventory"]] call BIS_fnc_loadInventory;
-	}];
+	if (!isPlayer) then {
+		[_unit, [_unit, "virtualInventory"]] call BIS_fnc_saveInventory;
+		_unit addMPEventHandler ["MPRespawn", {
+			private _unit = _this select 0;
+			[_unit, [_unit, "virtualInventory"]] call BIS_fnc_loadInventory;
+		}];
+	};
 } forEach playableUnits;

@@ -1,0 +1,1 @@
+[player, [player, "VirtualInventory"]] call BIS_fnc_loadInventory;
