@@ -1,58 +1,69 @@
 // ENDS THE MISSION
 
+// USAGE EXAMPLE
+/*
+	remoteExec ["PREFIX_fnc_endMission", 0]; 
+*/
+
 if (false) exitWith {};
 
-private _condition1 = YUG_evacuated_civs >= 30;
+[] spawn {
 
-addMissionEventHandler ["Ended", {
+	private _condition1 = YUG_evacuated_civs >= 30;
+
+	/*addMissionEventHandler ["Ended", {}];*/
+
+	if (!hasInterface) exitWith {
+
+		if (_condition1) then {
+
+			// UN VICTORY
+			endMission "END1";
+
+		} else {
+
+			// SERB VICTORY
+			endMission "END3";
+
+		};
+
+	};
+
 	// TODO: add end music
-}];
 
-if (!hasInterface) exitWith {
+	5 call YUG_fnc_desaturateOut;
+
+	private _condition2 = side player == independent;
 
 	if (_condition1) then {
 
 		// UN VICTORY
-		endMission "END1";
+		if (_condition2) then {
+
+			// UN PERSPECTIVE
+			endMission "END1";
+
+		} else {
+
+			// SERB PERSPECTIVE
+			endMission "END2";
+
+		}
 
 	} else {
 
 		// SERB VICTORY
-		endMission "END3";
+		if (_condition2) then {
 
+			// UN PERSPECTIVE
+			endMission "END3";
+		} else {
+
+			// SERB PERSPECTIVE
+			endMission "END4";
+
+		}
+		
 	};
 
-};
-
-private _condition2 = side player == independent;
-
-if (_condition1) then {
-
-	// UN VICTORY
-	if (_condition2) then {
-
-		// UN PERSPECTIVE
-		endMission "END1";
-
-	} else {
-
-		// SERB PERSPECTIVE
-		endMission "END2";
-
-	}
-
-} else {
-
-	// SERB VICTORY
-	if (_condition2) then {
-
-		// UN PERSPECTIVE
-		endMission "END3";
-	} else {
-
-		// SERB PERSPECTIVE
-		endMission "END4";
-
-	}
-	
 };

@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=133;
+		nextID=145;
 	};
 	class Camera
 	{
-		pos[]={5842.9038,360.39404,4443.2627};
-		dir[]={0.15876441,-0.56090003,0.8125177};
-		up[]={0.1075646,0.82788354,0.55048949};
-		aside[]={0.98143959,-7.4505806e-009,-0.19177142};
+		pos[]={4791.3315,315.86365,4564.4976};
+		dir[]={-0.31395009,-0.6383943,0.70277172};
+		up[]={-0.26038906,0.76970953,0.58287632};
+		aside[]={0.91303504,-1.4901161e-008,0.40788126};
 	};
 };
 binarizationWanted=0;
@@ -875,7 +875,6 @@ class ScenarioData
 	overViewPictureLocked="images\overview.jpg";
 	onLoadMission="Bosnia, 1995 - the Serbs are attacking the village of Msta in violation of international law. The Bosnian forces are weakened by the ongoing siege, and the village is expected to fall to the Serbs within the next day. Lead the UNPROFOR and evacuate the civilians from the village to prevent any potential ethnic cleansing.";
 	loadScreen="images\loading.jpg";
-	debriefing=0;
 	saving=0;
 	forceRotorLibSimulation=1;
 	aIKills=1;
@@ -1082,8 +1081,8 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
-			property="Init";
-			expression="if !(is3DEN) then {[] call compile _value;};";
+			property="cba_settings_hash";
+			expression="false";
 			class Value
 			{
 				class data
@@ -1092,10 +1091,134 @@ class CustomAttributes
 					{
 						type[]=
 						{
-							"STRING"
+							"ARRAY"
 						};
 					};
-					value="";
+					class value
+					{
+						items=4;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="#CBA_HASH#";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
+								class value
+								{
+									items=1;
+									class Item0
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"STRING"
+												};
+											};
+											value="ace_medical_treatment_mediciv";
+										};
+									};
+								};
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"ARRAY"
+									};
+								};
+								class value
+								{
+									items=1;
+									class Item0
+									{
+										class data
+										{
+											class type
+											{
+												type[]=
+												{
+													"ARRAY"
+												};
+											};
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=0;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														class type
+														{
+															type[]=
+															{
+																"SCALAR"
+															};
+														};
+														value=1;
+													};
+												};
+											};
+										};
+									};
+								};
+							};
+						};
+						class Item3
+						{
+							class data
+							{
+								nil=1;
+								class type
+								{
+									type[]=
+									{
+										"ANY"
+									};
+								};
+							};
+						};
+					};
 				};
 			};
 		};
@@ -1118,7 +1241,26 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		class Attribute2
+		{
+			property="Init";
+			expression="if !(is3DEN) then {[] call compile _value;};";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"STRING"
+						};
+					};
+					value="";
+				};
+			};
+		};
+		nAttributes=3;
 	};
 };
 class Mission

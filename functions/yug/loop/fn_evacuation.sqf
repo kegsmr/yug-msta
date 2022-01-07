@@ -41,7 +41,17 @@ YUG_fnc_evacuation_timer = {
 		};
 		
 		private _minutes = floor (_time / 60);
-		private _seconds = str (_time - (60 * _minutes));
+		private _seconds = _time - (60 * _minutes);
+
+		if (_minutes < 0) then {
+			_minutes = 0;
+		};
+
+		if (_seconds < 0) then {
+			_seconds = 0;
+		};
+
+		_seconds = str _seconds;
 
 		if (count _seconds < 2) then {
 			_seconds = "0" + _seconds;

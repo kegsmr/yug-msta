@@ -34,6 +34,7 @@ class yug
 		class addChildToTree {};
 		class callFunctions {};
 		class deleteObjects {};
+		class desaturateOut {};
 		class endMission {};
 		class findItemInTree {};
 		class getNearestPlayableUnit {};
