@@ -12,7 +12,7 @@ if (!isServer) exitWith {};
 
 {
 	private _unit = _x;
-	if (!isPlayer) then {
+	if (!isPlayer _unit) then {
 		[_unit, [_unit, "virtualInventory"]] call BIS_fnc_saveInventory;
 		_unit addMPEventHandler ["MPRespawn", {
 			private _unit = _this select 0;
