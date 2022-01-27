@@ -5,7 +5,18 @@
 	remoteExec ["PREFIX_fnc_endMission", 0]; 
 */
 
+
 if (false) exitWith {};
+
+
+// TASKS
+
+if (YUG_peacekeepersKilled > 20) then {
+	["un_kia", "SUCCEEDED"] call BIS_fnc_taskSetState;
+};
+
+
+// ENDINGS
 
 [] spawn {
 

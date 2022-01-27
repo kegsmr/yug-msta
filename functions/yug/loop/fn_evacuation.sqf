@@ -272,6 +272,8 @@ if ((_condition1 || _condition2) && !(missionNamespace getVariable ["YUG_civTask
 			["un_civs", "FAILED"] call BIS_fnc_taskSetState;
 		};
 	};
+	trg_rtb spawn YUG_fnc_activateTrigger;
+	["un_defend", "CANCELED"] call BIS_fnc_taskSetState;
 	missionNamespace setVariable ["YUG_civTaskComplete", true, true];
 	private _leader = leader un_squad;
 	if (_leader distance un_heli < 1000) then {

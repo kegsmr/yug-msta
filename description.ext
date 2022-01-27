@@ -1,3 +1,16 @@
+author			= "Keg";
+onLoadName		= "Humanitarian Intervention";
+briefingName 	= "Humanitarian Intervention";
+// onLoadMission	= "";
+loadScreen		= "images\loading.jpg";
+
+class Header
+{
+	gameType =  Coop;
+	minPlayers =  1;
+	maxPlayers = 24;
+};
+
 respawnOnStart = -1;
 
 class CfgFunctions
@@ -18,7 +31,7 @@ class CfgCommunicationMenu
 	{
 		text = "End Mission";
 		submenu = "";
-		expression = "if (triggerActivated trg_unPresent || player distance (getMarkerPos 'refugee_marker') > 100) exitWith {hint 'The UN must return to base before the mission can be ended.';}; remoteExec ['YUG_fnc_endMission', 0];";
+		expression = "if (triggerActivated trg_unPresent || player distance (getMarkerPos 'refugee_marker') > 100) exitWith {hint 'The UN must return to base before the mission can be ended.';}; ['un_rtb','SUCCEEDED'] call BIS_fnc_taskSetState; remoteExec ['YUG_fnc_endMission', 0];";
 		icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
 		cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
 		enable = "1";

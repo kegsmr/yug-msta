@@ -31,6 +31,7 @@ class yug
 	class misc
 	{
 		file = "functions\yug\misc"
+		class activateTrigger {};
 		class addChildToTree {};
 		class callFunctions {};
 		class deleteObjects {};
