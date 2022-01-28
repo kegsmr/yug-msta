@@ -11,7 +11,7 @@ if (false) exitWith {};
 
 // TASKS
 
-if (YUG_peacekeepersKilled > 20) then {
+if (YUG_peacekeepersKilled <= 20) then {
 	["un_kia", "SUCCEEDED"] call BIS_fnc_taskSetState;
 };
 

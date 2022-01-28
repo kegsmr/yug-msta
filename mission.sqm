@@ -21,9 +21,8 @@ class EditorData
 	class Camera
 	{
 		pos[]={5084.3418,302.07608,5115.8672};
-		dir[]={-1.2363449e-007,-0.70710683,0.70710683};
-		up[]={-1.2363449e-007,0.70710671,0.70710683};
-		aside[]={1,0,1.7484557e-007};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710671,0.70710683};
 	};
 };
 binarizationWanted=0;
@@ -40186,7 +40185,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="The Serbs are attacking Msta in violation of international law. Hold them off long enough to evacuate the civilians!";
+							value="The Serbs are attacking Msta in violation of international law. Hold them off long enough to evacuate the civilians.";
 						};
 					};
 				};
@@ -54603,7 +54602,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Minimize the Amount of Peacekeeper Deaths";
+							value="Minimize the Amount of Peacekeeper Casualties";
 						};
 					};
 				};
@@ -57334,7 +57333,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="We have orders to evacuate immediately. Return to base. Report to us when your team has safely returned.";
 						};
 					};
 				};
