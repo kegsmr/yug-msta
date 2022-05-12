@@ -34,8 +34,10 @@ class yug
 		class activateTrigger {};
 		class addChildToTree {};
 		class callFunctions {};
+		class civilianAirlift {};
 		class deleteObjects {};
 		class desaturateOut {};
+		class endCivilianAirlift {};
 		class endMission {};
 		class findItemInTree {};
 		class getNearestPlayableUnit {};
@@ -45,6 +47,7 @@ class yug
 		class setTaskDescription {};
 		class setValueIfNil {};
 		class sideSpecificBriefing {};
+		class startCivilianAirlift {};
 		class subtractTime {};
 	};
 

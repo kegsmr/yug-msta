@@ -29,7 +29,7 @@ class CfgCommunicationMenu
 {
 	class endMission
 	{
-		text = "End Mission";
+		text = "End mission";
 		submenu = "";
 		expression = "if (triggerActivated trg_unPresent || player distance (getMarkerPos 'refugee_marker') > 100) exitWith {hint 'The UN must return to base before the mission can be ended.';}; ['un_rtb','SUCCEEDED'] call BIS_fnc_taskSetState; remoteExec ['YUG_fnc_endMission', 0];";
 		icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
@@ -37,6 +37,29 @@ class CfgCommunicationMenu
 		enable = "1";
 		removeAfterExpressionCall = 0;
 	};
+
+	class startCivilianAirlift
+	{
+		text = "Start civilian airlift";
+		submenu = "";
+		expression = "[] spawn YUG_fnc_startCivilianAirlift;";
+		icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+		cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+		enable = "1";
+		removeAfterExpressionCall = 1;
+	};
+
+	class endCivilianAirlift
+	{
+		text = "End civilian airlift";
+		submenu = "";
+		expression = "[] spawn YUG_fnc_endCivilianAirlift;";
+		icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
+		cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+		enable = "1";
+		removeAfterExpressionCall = 1;
+	};
+
 };
 
 class CfgDebriefing

@@ -351,7 +351,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 
 	if (!isNull (assignedVehicle _unit)) then {
 		private _vehicle = assignedVehicle _unit;
-		if (isNull (driver _vehicle) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 50 || (_vehicle distance getMarkerPos "refugee_marker" < 100)) then {
+		if (isNull (driver _vehicle) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 50 || (_vehicle distance getMarkerPos "refugee_marker" < 150)) then {
 			private _group = group _unit;
 			[_unit] orderGetIn false;
 			_group leaveVehicle _vehicle;

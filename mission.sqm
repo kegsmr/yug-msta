@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=20375;
+		nextID=20376;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=157;
+		nextID=166;
 	};
 	class Camera
 	{
-		pos[]={5858.4487,289.5051,4604.4004};
-		dir[]={0.36597934,-0.57308185,0.73323685};
-		up[]={0.25593242,0.81949818,0.51275861};
-		aside[]={0.89473891,-2.9802322e-008,-0.44658962};
+		pos[]={5891.8159,275.82675,4665.0439};
+		dir[]={-0.35550135,-0.82705581,0.43544075};
+		up[]={-0.52304667,0.5621143,0.64066178};
+		aside[]={0.77462947,1.3876706e-007,0.63242024};
 	};
 };
 binarizationWanted=0;
@@ -910,7 +910,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1093,7 +1093,7 @@ class CustomAttributes
 		};
 		nAttributes=7;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1308,7 +1308,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1303;
+		items=1304;
 		class Item0
 		{
 			dataType="Logic";
@@ -26501,7 +26501,7 @@ class Mission
 			};
 			id=5529;
 			type="Land_Bandage_F";
-			atlOffset=0.59772205;
+			atlOffset=0.619627;
 		};
 		class Item892
 		{
@@ -31987,7 +31987,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.050000072;
+			atlOffset=0.049884945;
 		};
 		class Item1108
 		{
@@ -33417,29 +33417,31 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6007.7168,254.47783,4708.9604};
-				angles[]={0.0013372133,0,6.2458706};
+				position[]={6007.7168,254.47758,4708.96};
+				angles[]={0.0013439035,0,6.2458701};
 			};
 			side="Empty";
 			class Attributes
 			{
+				name="helipad_2";
 				dynamicSimulation=1;
 			};
 			id=19730;
 			type="Land_HelipadEmpty_F";
-			atlOffset=0.021224976;
+			atlOffset=0.020996094;
 		};
 		class Item1163
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5091.0327,6,1526.1287};
-				angles[]={0.0013372133,0,6.2458706};
+				position[]={5091.0332,6,1526.129};
+				angles[]={0.0013439035,0,6.2458701};
 			};
 			side="Empty";
 			class Attributes
 			{
+				name="helipad_1";
 				dynamicSimulation=1;
 			};
 			id=19731;
@@ -35603,7 +35605,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={6007.7168,254.97783,4708.9604};
+					position[]={6007.7168,254.97758,4708.96};
 					type="Land";
 					script="A3\functions_f\waypoints\fn_wpLand.sqf";
 					class Effects
@@ -35611,7 +35613,7 @@ class Mission
 					};
 					showWP="NEVER";
 					id=19815;
-					atlOffset=0.52122498;
+					atlOffset=0.52099609;
 					class AttachedTo
 					{
 						id=19730;
@@ -35636,7 +35638,7 @@ class Mission
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
 					position[]={5884.0752,253.91876,4677.7241};
-					type="Loiter";
+					type="SeekAndDestroy";
 					class Effects
 					{
 					};
@@ -57506,16 +57508,30 @@ class Mission
 			alpha=0;
 			id=20374;
 		};
+		class Item1303
+		{
+			dataType="Trigger";
+			position[]={5896.6509,253.41504,4670.1372};
+			class Attributes
+			{
+				text="civilian airlift";
+				onActivation="[] spawn YUG_fnc_civilianAirlift;";
+				sizeA=250;
+				sizeB=250;
+			};
+			id=20375;
+			type="EmptyDetectorAreaR250";
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=37;
+			nextID=38;
 		};
 		class Links
 		{
-			items=37;
+			items=38;
 			class Item0
 			{
 				linkID=0;
@@ -57884,6 +57900,16 @@ class Mission
 				class CustomData
 				{
 					type="Sync";
+				};
+			};
+			class Item37
+			{
+				linkID=37;
+				item0=20375;
+				item1=19741;
+				class CustomData
+				{
+					type="TriggerOwner";
 				};
 			};
 		};
