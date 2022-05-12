@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=166;
+		nextID=169;
 	};
 	class Camera
 	{
-		pos[]={5891.8159,275.82675,4665.0439};
-		dir[]={-0.35549936,-0.82705116,0.43543842};
-		up[]={-0.5230425,0.56212664,0.64065605};
-		aside[]={0.77462685,-1.4901161e-008,0.63241857};
+		pos[]={6071.48,264.91705,4657.2593};
+		dir[]={0.54192811,-0.5414418,0.64277112};
+		up[]={0.34900579,0.84073818,0.41394946};
+		aside[]={0.76453179,0,-0.64458597};
 	};
 };
 binarizationWanted=0;
@@ -36403,7 +36403,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="private _waypoint = serb_tank_squad addWaypoint [serb_tank, 0, 0];  _waypoint setWaypointType ""GETIN"";";
+							value="private _waypoint = serb_tank_squad addWaypoint [serb_tank, 0];  _waypoint setWaypointType ""GETIN"";";
 						};
 					};
 				};

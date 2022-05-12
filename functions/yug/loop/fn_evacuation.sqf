@@ -158,19 +158,36 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 		private _unit = _x;
 		if ((_unit == leader group _unit) && (!isPlayer _unit)) then {
 			_unit addMPEventHandler ["MPRespawn", {
-				private _unit = _this select 0;
-				private _group = group _unit;
-				if (_group == serb_tank_squad && alive serb_tank) then {
-					private _waypoint = _group addWaypoint [serb_tank, 0, 0];
-					_waypoint setWaypointType "GETIN";
-				} else {
-					if (_group != serb_tank_squad) then {
-						private _waypoint = _group addWaypoint [position _unit, 0, 0];
-						_waypoint setWaypointType "GETIN NEAREST";
+				_this spawn {
+					private _unit = _this select 0;
+					private _group = group _unit;
+					if (_group == serb_tank_squad) then {
+						waitUntil {alive serb_tank || !alive _unit};
+						if (alive _unit) then {
+							private _waypoint = _group addWaypoint [serb_tank, 0];
+							_waypoint setWaypointType "GETIN";
+							_group setCurrentWaypoint _waypoint;
+							waitUntil {sleep 1; (vehicle _unit != _unit) || (!alive _unit)};
+							if (alive _unit) then {
+								waypoint = _group addWaypoint [getMarkerPos "msta", 0];
+								_group setCurrentWaypoint _waypoint;
+							}
+						}
+					} else {
+						if (_group != serb_tank_squad) then {
+							private _waypoint = _group addWaypoint [position _unit, 0];
+							_waypoint setWaypointType "GETIN NEAREST";
+							_group setCurrentWaypoint _waypoint;
+							waitUntil {sleep 1; (vehicle _unit != _unit) || (!alive _unit)};
+							if (alive _unit) then {
+								waypoint = _group addWaypoint [getMarkerPos "msta", 0];
+								_group setCurrentWaypoint _waypoint;
+							}
+						};
 					};
-				};
-				if ((side _unit != independent) || (YUG_evacuated_civs < 30 || YUG_killed_civs < 21)) then {
-					_group addWaypoint [getMarkerPos "msta", 1];
+					if ((side _unit != independent) || (YUG_evacuated_civs < 30 || YUG_killed_civs < 21)) then {
+						_group addWaypoint [getMarkerPos "msta", 1];
+					};
 				};
 			}];
 		};
