@@ -164,12 +164,22 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 					if (_group == serb_tank_squad) then {
 						waitUntil {alive serb_tank || !alive _unit};
 						if (alive _unit) then {
-							private _waypoint = _group addWaypoint [serb_tank, 0];
-							_waypoint setWaypointType "GETIN";
-							_group setCurrentWaypoint _waypoint;
-							waitUntil {sleep 1; (vehicle _unit != _unit) || (!alive _unit)};
+							while {(vehicle _unit == _unit) && (alive _unit)} do {
+								private _waypoint = _group addWaypoint [serb_tank, 0];
+								_waypoint setWaypointType "GETIN";
+								_group setCurrentWaypoint _waypoint;
+								sleep 10;
+								if (!isPlayer _unit && _unit distance serb_tank < 50) then {
+									_unit moveInCommander serb_tank;
+									{
+										if (!isPlayer _x) then {
+											_x moveInAny serb_tank;
+										};
+									} forEach [serb_tankD, serb_tankG];
+								}
+							};
 							if (alive _unit) then {
-								waypoint = _group addWaypoint [getMarkerPos "msta", 0];
+								private _waypoint = _group addWaypoint [getMarkerPos "msta", 0];
 								_group setCurrentWaypoint _waypoint;
 							}
 						}
@@ -178,11 +188,20 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 							private _waypoint = _group addWaypoint [position _unit, 0];
 							_waypoint setWaypointType "GETIN NEAREST";
 							_group setCurrentWaypoint _waypoint;
-							waitUntil {sleep 1; (vehicle _unit != _unit) || (!alive _unit)};
+							_group addWaypoint [getMarkerPos "msta", 0];
+							/*waitUntil {sleep 1; (vehicle _unit != _unit) || (!alive _unit)};
 							if (alive _unit) then {
 								waypoint = _group addWaypoint [getMarkerPos "msta", 0];
 								_group setCurrentWaypoint _waypoint;
-							}
+							}*/
+							/*private _objects = nearestObjects [_unit, ["SRB_uaz_2", "O_ORepublikaSrpska_GAZ_66_01"], 500];
+							if (count _objects > 0) then {
+								private _object = _objects select 0;
+								private _waypoint = _group addWaypoint [_object, 0];
+								_waypoint setWaypointType "GETIN";
+								_group setCurrentWaypoint _waypoint;
+							};
+							_group addWaypoint [getMarkerPos "msta", 0];*/
 						};
 					};
 					if ((side _unit != independent) || (YUG_evacuated_civs < 30 || YUG_killed_civs < 21)) then {
@@ -256,6 +275,20 @@ if ((triggerTimeoutCurrent trg_endMission != -1) && !isPlayer kapetan) then {
 	};
 
 } forEach units un_squad;
+
+
+// GET UN SL TO LEAVE CHOPPER WHEN LANDED AT MSTA
+
+private _group = un_squad;
+private _leader = leader _group;
+if (vehicle _leader == un_heli && _leader distance (getMarkerPos "msta") < 500) then {
+	sleep 30;
+	if (vehicle _leader == un_heli && _leader distance (getMarkerPos "msta") < 500) then {
+		private _waypoint = _group addWaypoint [position _leader, 0, currentWaypoint _group];
+		_waypoint setWaypointType "GETOUT";
+		_group setCurrentWaypoint _waypoint;
+	};
+};
 
 
 // KILLED MISSING EVACUATED REMAINING

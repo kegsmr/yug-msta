@@ -38,7 +38,7 @@ while {YUG_civilianAirlift} do {
 	} else {
 		private _unit = un_heliD;
 		if (vehicle _unit == _unit && _unit distance (getMarkerPos "refugee_marker") > 1000) then {
-			private _objects = nearestObjects [player, ["LOP_UN_UAZ", "LOP_UN_Ural"], 500];
+			private _objects = nearestObjects [_unit, ["LOP_UN_UAZ", "LOP_UN_Ural"], 500];
 			if (count _objects > 0) then {
 				private _object = _objects select 0;
 				private _waypoint = un_airlift_squad addWaypoint [_object, 0];
