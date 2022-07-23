@@ -2,8 +2,7 @@
 
 // ISSUES
 /*
-	- needs to use all markers
-	- needs option to only show squads the player knows about
+	- needs to use all markers for all vehicle types
 */
 
 // USAGE EXAMPLE
@@ -112,7 +111,12 @@ if (!hasInterface) exitWith {};
 
 						_marker setMarkerTypeLocal _type;
 						if (alive player) then {
-							if (_playerSide knowsAbout _vehicle > _knowsAboutMinimum && alive _leader) then {
+							private _agent = (if (leader group player == player) then {
+								_playerSide
+							} else {
+								player
+							});
+							if (_agent knowsAbout _vehicle > _knowsAboutMinimum && alive _leader) then {
 								_marker setMarkerPosLocal _position;
 								_marker setMarkerAlphaLocal 1;
 							} else {
