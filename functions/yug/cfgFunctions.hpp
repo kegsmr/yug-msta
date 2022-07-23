@@ -12,6 +12,7 @@ class yug
 		file = "functions\yug\init"
 		class briefings {};
 		class deathMarkers {};
+		class groupMarkers {};
 		class lists {};
 		class mines {};
 		class respawnOnSL {};
