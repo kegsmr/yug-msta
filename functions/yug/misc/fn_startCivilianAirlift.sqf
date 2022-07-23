@@ -7,6 +7,7 @@ missionNamespace setVariable ["YUG_civilianAirlift", true, true];
 [leader un_squad, "endCivilianAirlift"] call BIS_fnc_addCommMenuItem;
 
 un_airlift_squad = createGroup independent;
+un_airlift_squad setGroupIdGlobal ["Alpha 1-2 (civilian airlift)"];
 [un_heliD, un_heliG] joinSilent un_airlift_squad;
 un_airlift_squad selectLeader un_heliD;
 

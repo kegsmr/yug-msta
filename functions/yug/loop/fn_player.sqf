@@ -12,7 +12,7 @@ if ((rating player < 0)) then {
 
 // UN CHOPPER MARKER
 
-private _vehicle = un_heli;
+/*private _vehicle = un_heli;
 private _marker = "un_heli";
 if (side player == independent && alive _vehicle) then {
 	private _position = _vehicle;
@@ -23,4 +23,4 @@ if (side player == independent && alive _vehicle) then {
 	_marker setMarkerTextLocal str _civsCount;
 } else {
 	_marker setMarkerAlphaLocal 0;
-};
+};*/
