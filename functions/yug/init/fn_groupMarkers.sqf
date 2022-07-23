@@ -76,7 +76,7 @@ private _knowsAboutMinimum = 0;
 
 				_marker setMarkerTypeLocal _type;
 				if (alive player) then {
-					if (_playerSide knowsAbout _leader > _knowsAboutMinimum && alive _leader) then {
+					if (_playerSide knowsAbout _vehicle > _knowsAboutMinimum && alive _leader) then {
 						_marker setMarkerPosLocal _position;
 						_marker setMarkerAlphaLocal 1;
 					} else {
