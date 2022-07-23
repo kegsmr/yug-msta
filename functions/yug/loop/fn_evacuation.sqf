@@ -265,7 +265,7 @@ if ((triggerTimeoutCurrent trg_endMission != -1) && !isPlayer kapetan) then {
 			sleep 5;
 
 			if (triggerActivated _trigger) then {
-				_unit setPos (getMarkerPos "castle_spawn");
+				_unit setPos (getMarkerPos "barn_spawn");
 			};
 
 			deleteVehicle _trigger;
