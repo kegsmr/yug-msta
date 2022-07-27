@@ -109,7 +109,6 @@ if (!hasInterface) exitWith {};
 
 						private _type = _prefix + _suffix;
 
-						_marker setMarkerTypeLocal _type;
 						if (alive player) then {
 							private _agent = (if (leader group player == player) then {
 								_playerSide
@@ -118,6 +117,7 @@ if (!hasInterface) exitWith {};
 							});
 							if (_agent knowsAbout _vehicle > _knowsAboutMinimum && alive _leader) then {
 								_marker setMarkerPosLocal _position;
+								_marker setMarkerTypeLocal _type;
 								_marker setMarkerAlphaLocal 1;
 							} else {
 								if ({alive _x} count units _group < 1) then {
