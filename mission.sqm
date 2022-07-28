@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=193;
+		nextID=196;
 	};
 	class Camera
 	{
-		pos[]={4944.8755,267.29413,7368.2544};
-		dir[]={0.16362637,-0.11161442,0.98018807};
-		up[]={0.018377895,0.99375159,0.11009102};
-		aside[]={0.98635119,1.8626451e-009,-0.16465521};
+		pos[]={4573.7007,293.4469,4662.0654};
+		dir[]={-0.86073357,-0.45649648,-0.22527483};
+		up[]={-0.44162154,0.88972521,-0.11558306};
+		aside[]={-0.25319597,7.4505806e-009,0.96741498};
 	};
 };
 binarizationWanted=0;
@@ -26501,7 +26501,7 @@ class Mission
 			};
 			id=5529;
 			type="Land_Bandage_F";
-			atlOffset=0.59772205;
+			atlOffset=0.619627;
 		};
 		class Item892
 		{
@@ -31987,7 +31987,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.050000072;
+			atlOffset=0.049884945;
 		};
 		class Item1108
 		{
@@ -35649,7 +35649,7 @@ class Mission
 			class Attributes
 			{
 				name="un_squad";
-				init="_this spawn {waitUntil {(leader _this) call BIS_fnc_enemyDetected;}; _this setBehaviour ""AWARE"";};";
+				init="{_x spawn {waitUntil {_this call BIS_fnc_enemyDetected;}; (group _this) setBehaviour ""AWARE"";};} forEach units _this;";
 				combatMode="GREEN";
 				behaviour="SAFE";
 				speedMode="FULL";

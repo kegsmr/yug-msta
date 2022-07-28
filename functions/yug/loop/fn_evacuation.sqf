@@ -380,7 +380,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		private _position = position _unit;
 		private _radius = 50;
 		private _objects = nearestObjects [_position, _vehicles, _radius];
-		_objects append (nearestObjects [_position, _helis, _radius * 10]);
+		_objects append (nearestObjects [_position, _helis, _radius * 14]);
 
 		{
 			private _object = _x;
@@ -390,9 +390,9 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 					_group addVehicle _object;
 					[_unit] orderGetIn true;
 					_unit enableAI "ALL";
-					/*if ((vehicle _unit != _unit) && (lifeState _unit in ["HEALTHY", "INJURED"])) then {
+					if ((vehicle _unit == _unit) && (lifeState _unit in ["HEALTHY", "INJURED"]) && (speed _unit < 1)) then {
 						_unit switchMove "";
-					};*/
+					};
 				}
 			}
 		} forEach _objects;
