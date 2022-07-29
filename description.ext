@@ -60,6 +60,17 @@ class CfgCommunicationMenu
 		removeAfterExpressionCall = 1;
 	};
 
+	class unAirSupport
+	{
+		text = "Call air support";
+		submenu = "";
+		expression = "[] spawn YUG_fnc_unAirSupport;";
+		icon = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\cas_ca.paa";
+		cursor = "\a3\Ui_f\data\IGUI\Cfg\Cursors\iconCursorSupport_ca.paa";
+		enable = "1";
+		removeAfterExpressionCall = 1;
+	};
+
 };
 
 class CfgDebriefing

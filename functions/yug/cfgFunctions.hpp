@@ -50,6 +50,7 @@ class yug
 		class sideSpecificBriefing {};
 		class startCivilianAirlift {};
 		class subtractTime {};
+		class unAirSupport {};
 	};
 
 };

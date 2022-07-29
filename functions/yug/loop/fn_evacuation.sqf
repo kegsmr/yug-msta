@@ -380,7 +380,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		private _position = position _unit;
 		private _radius = 50;
 		private _objects = nearestObjects [_position, _vehicles, _radius];
-		_objects append (nearestObjects [_position, _helis, _radius * 14]);
+		_objects append (nearestObjects [_position, _helis, _radius * 10]);
 
 		{
 			private _object = _x;
@@ -390,7 +390,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 					_group addVehicle _object;
 					[_unit] orderGetIn true;
 					_unit enableAI "ALL";
-					if ((vehicle _unit == _unit) && (lifeState _unit in ["HEALTHY", "INJURED"]) && (speed _unit < 1)) then {
+					if ((vehicle _unit == _unit) && (lifeState _unit in ["HEALTHY", "INJURED"]) && (speed _unit < 1) && (round (random [0,3,6]) == 3)) then {
 						_unit switchMove "";
 					};
 				}
@@ -401,7 +401,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 
 	if (!isNull (assignedVehicle _unit)) then {
 		private _vehicle = assignedVehicle _unit;
-		if (isNull (driver _vehicle) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 50 || (_vehicle distance getMarkerPos "refugee_marker" < 150)) then {
+		if ((isNull (driver _vehicle) /*&& !(_vehicle isKindOf "CUP_I_Mi17_UN")*/) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 500 || (_vehicle distance getMarkerPos "refugee_marker" < 150)) then {
 			private _group = group _unit;
 			[_unit] orderGetIn false;
 			_group leaveVehicle _vehicle;
