@@ -16,6 +16,7 @@ class yug
 		class lists {};
 		class mines {};
 		class respawnOnSL {};
+		class restrictVehicles {};
 		class retainLoadouts {};
 	};
 
@@ -36,6 +37,7 @@ class yug
 		class addChildToTree {};
 		class callFunctions {};
 		class civilianAirlift {};
+		class consolidateDefense {};
 		class deleteObjects {};
 		class desaturateOut {};
 		class endCivilianAirlift {};

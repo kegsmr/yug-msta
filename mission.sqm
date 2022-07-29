@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20411;
+		nextID=20413;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=196;
+		nextID=202;
 	};
 	class Camera
 	{
-		pos[]={6197.3252,380.55276,4551.2969};
-		dir[]={-0.87718791,-0.39420506,0.27413294};
-		up[]={-0.37626043,0.91902095,0.1175864};
-		aside[]={0.29828784,-5.0640665e-008,0.95447761};
+		pos[]={5832.394,735.61176,3966.7576};
+		dir[]={-0.088792205,-0.55308974,0.82837665};
+		up[]={-0.058947038,0.8331216,0.54993957};
+		aside[]={0.99430442,0,0.10657771};
 	};
 };
 binarizationWanted=0;
@@ -1341,7 +1341,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1313;
+		items=1315;
 		class Item0
 		{
 			dataType="Logic";
@@ -36479,7 +36479,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="private _waypoint = serb_tank_squad addWaypoint [serb_tank, 0];  _waypoint setWaypointType ""GETIN"";";
+							value="private _waypoint = serb_tank_squad addWaypoint [serb_tank, 0];  _waypoint setWaypointType ""GETIN""; private _vehicle = _this select 0; if (!isPlayer serb_tankD) then {serb_tankD moveInDriver _vehicle;}; if (!isPlayer serb_tankG) then {serb_tankG moveInGunner _vehicle;}; if (!isPlayer serb_tankC) then {serb_tankC moveInCommander _vehicle;};";
 						};
 					};
 				};
@@ -37141,7 +37141,7 @@ class Mission
 			};
 			class Attributes
 			{
-				name="un_squad_2";
+				name="un_check_a";
 				combatMode="RED";
 				behaviour="SAFE";
 				speedMode="FULL";
@@ -37165,7 +37165,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Alpha 1-3";
+							value="Bravo 1-1";
 						};
 					};
 				};
@@ -37504,7 +37504,7 @@ class Mission
 			};
 			class Attributes
 			{
-				name="un_squad_5";
+				name="un_check_b";
 				combatMode="RED";
 				behaviour="SAFE";
 				speedMode="FULL";
@@ -37528,7 +37528,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Alpha 1-4";
+							value="Bravo 1-2";
 						};
 					};
 				};
@@ -44280,7 +44280,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="";
+							value="private _vehicle = _this select 0; if (un_heliD == leader group un_heliD) then { if (!isPlayer un_heliD) then {un_heliD moveInDriver _vehicle;}; if (!isPlayer un_heliG) then {un_heliG moveInGunner _vehicle}};";
 						};
 					};
 				};
@@ -54363,6 +54363,7 @@ class Mission
 			};
 			class Attributes
 			{
+				name="bosnian_house_squad";
 				behaviour="COMBAT";
 				dynamicSimulation=1;
 			};
@@ -57643,11 +57644,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={5447.8354,251.41899,3247.9128};
-				angles[]={5.8389225,0,0.25935802};
+				position[]={5447.835,251.41908,3247.9131};
+				angles[]={5.8389292,0,0.25935593};
 			};
 			areaSize[]={1150,0,2250};
 			areaIsRectangle=1;
+			presence=0;
 			flags=1;
 			id=20283;
 			type="ModuleCoverMap_F";
@@ -58074,7 +58076,7 @@ class Mission
 			};
 			class Attributes
 			{
-				name="un_squad_14";
+				name="un_check_c";
 				combatMode="RED";
 				behaviour="SAFE";
 				speedMode="FULL";
@@ -58098,7 +58100,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Alpha 1-5";
+							value="Bravo 1-3";
 						};
 					};
 				};
@@ -58345,6 +58347,7 @@ class Mission
 			};
 			class Attributes
 			{
+				name="nato_plane_squad";
 				combatMode="RED";
 			};
 			class CrewLinks
@@ -58428,6 +58431,37 @@ class Mission
 			id=20407;
 			type="EmptyDetectorAreaR250";
 			atlOffset=-1.5258789e-005;
+		};
+		class Item1313
+		{
+			dataType="Trigger";
+			position[]={5887.9111,253.71112,4672.5439};
+			class Attributes
+			{
+				text="causes un troops and bosnian troops to return to the village";
+				onActivation="[] spawn YUG_fnc_consolidateDefense;";
+				sizeA=100;
+				sizeB=100;
+				timeout[]={60,60,60};
+				interuptable=1;
+				activationBy="EAST";
+			};
+			id=20411;
+			type="EmptyDetectorAreaR250";
+		};
+		class Item1314
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={5525.0068,284.30707,4647.605};
+				angles[]={6.0400882,0,0.12730642};
+			};
+			areaSize[]={1150,0,700};
+			areaIsRectangle=1;
+			flags=1;
+			id=20412;
+			type="ModuleCoverMap_F";
 		};
 	};
 	class Connections
