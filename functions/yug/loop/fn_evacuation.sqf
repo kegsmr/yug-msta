@@ -266,7 +266,7 @@ publicVariable "YUG_msta_civs";
 				[_group, ["KOS_YUG_t72_grom", "SRB_bmp", "SRB_btr"], 2000] call YUG_fnc_findNearbyVehicle;
 			};
 		};
-		_group addWaypoint [_position, 10];
+		_group addWaypoint [_position, 0];
 	};
 } forEach [un_squad, serb_squad, serb_tank_squad];
 
