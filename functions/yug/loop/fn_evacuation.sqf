@@ -422,7 +422,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		{
 			private _object = _x;
 			if (!isNull (driver _object)) then {
-				if (side (driver _object) == independent && !(_object getVariable ["YUG_supportChopper", false]) && ((crew _object) count {alive _x && side _x == independent < 4})) then {
+				if (side (driver _object) == independent && !(_object getVariable ["YUG_supportChopper", false]) && ({alive _x && side _x == independent < 4} count (crew _object))) then {
 					private _group = group _unit;
 					_group addVehicle _object;
 					[_unit] orderGetIn true;
