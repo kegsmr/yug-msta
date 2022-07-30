@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=202;
+		nextID=214;
 	};
 	class Camera
 	{
-		pos[]={5832.394,735.61176,3966.7576};
-		dir[]={-0.088792205,-0.55308974,0.82837665};
-		up[]={-0.058947038,0.8331216,0.54993957};
-		aside[]={0.99430442,0,0.10657771};
+		pos[]={4524.5728,290.49857,4675.9478};
+		dir[]={0.1035013,-0.58506858,-0.8043521};
+		up[]={0.074669011,0.81098384,-0.5802843};
+		aside[]={-0.99182272,-3.7252903e-009,-0.12762438};
 	};
 };
 binarizationWanted=0;
@@ -36479,7 +36479,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="private _waypoint = serb_tank_squad addWaypoint [serb_tank, 0];  _waypoint setWaypointType ""GETIN""; private _vehicle = _this select 0; if (!isPlayer serb_tankD) then {serb_tankD moveInDriver _vehicle;}; if (!isPlayer serb_tankG) then {serb_tankG moveInGunner _vehicle;}; if (!isPlayer serb_tankC) then {serb_tankC moveInCommander _vehicle;};";
+							value="private _vehicle = _this select 0; if (!isPlayer serb_tankD) then {serb_tankD moveInDriver _vehicle;}; if (!isPlayer serb_tankG) then {serb_tankG moveInGunner _vehicle;}; if (!isPlayer serb_tankC) then {serb_tankC moveInCommander _vehicle;}; trg_unAirSupport triggerAttachVehicle [_vehicle];";
 						};
 					};
 				};
@@ -58126,8 +58126,8 @@ class Mission
 					flags=6;
 					class Attributes
 					{
-						presence=0;
 						description="Journalist";
+						isPlayable=1;
 					};
 					id=20406;
 					type="C_journalist_F";
@@ -58422,6 +58422,7 @@ class Mission
 			position[]={5872.2271,254.02606,4661.6938};
 			class Attributes
 			{
+				name="trg_unAirSupport";
 				text="allow un air support";
 				condition="this && (independent knowsAbout serb_tank > 0)";
 				onActivation="private _leader = leader un_squad; " \n "if (isPlayer _leader) then { " \n " [_leader, ""unAirSupport""] call BIS_fnc_addCommMenuItem; " \n "} else { " \n " [] spawn YUG_fnc_unAirSupport; " \n "}";

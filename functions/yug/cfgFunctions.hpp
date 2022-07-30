@@ -43,6 +43,7 @@ class yug
 		class endCivilianAirlift {};
 		class endMission {};
 		class findItemInTree {};
+		class findNearbyVehicle {};
 		class getNearestPlayableUnit {};
 		class isArmed {};
 		class setCombatMode {};
@@ -53,6 +54,7 @@ class yug
 		class startCivilianAirlift {};
 		class subtractTime {};
 		class unAirSupport {};
+		class waypointsComplete {};
 	};
 
 };

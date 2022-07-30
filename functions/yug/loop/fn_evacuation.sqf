@@ -152,9 +152,9 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 	} forEach playableUnits;
 
 
-	// ADD WAYPOINTS FOR RESPAWNED SL'S
+	// ADD WAYPOINTS FOR SL's ON RESPAWN
 
-	{
+	/*{
 		private _unit = _x;
 		if ((_unit == leader group _unit) && (!isPlayer _unit)) then {
 			_unit addMPEventHandler ["MPRespawn", {
@@ -162,12 +162,16 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 					private _unit = _this select 0;
 					private _group = group _unit;
 					if (_group == serb_tank_squad) then {
+
+
+						// SERB TANK SQUAD
+
 						waitUntil {alive serb_tank || !alive _unit};
 						if (alive _unit) then {
+							private _waypoint = _group addWaypoint [serb_tank, 0];
+							_waypoint setWaypointType "GETIN";
 							while {(vehicle _unit == _unit) && (alive _unit)} do {
-								private _waypoint = _group addWaypoint [serb_tank, 0];
-								_waypoint setWaypointType "GETIN";
-								_group setCurrentWaypoint _waypoint;
+								// _group setCurrentWaypoint _waypoint;
 								sleep 10;
 								if (!isPlayer _unit && _unit distance serb_tank < 50) then {
 									_unit moveInCommander serb_tank;
@@ -180,37 +184,47 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 							};
 							if (alive _unit) then {
 								private _waypoint = _group addWaypoint [getMarkerPos "msta", 0];
-								_group setCurrentWaypoint _waypoint;
+								// _group setCurrentWaypoint _waypoint;
 							}
 						}
+
 					} else {
 						if (_group != serb_tank_squad) then {
+
+
+							// INFANTRY SQUADS
+
 							private _waypoint = _group addWaypoint [position _unit, 0];
 							_waypoint setWaypointType "GETIN NEAREST";
-							_group setCurrentWaypoint _waypoint;
-							_group addWaypoint [getMarkerPos "msta", 0];
+							// _group setCurrentWaypoint _waypoint;
+							// _group addWaypoint [getMarkerPos "msta", 0];
 							/*waitUntil {sleep 1; (vehicle _unit != _unit) || (!alive _unit)};
 							if (alive _unit) then {
 								waypoint = _group addWaypoint [getMarkerPos "msta", 0];
 								_group setCurrentWaypoint _waypoint;
-							}*/
-							/*private _objects = nearestObjects [_unit, ["SRB_uaz_2", "O_ORepublikaSrpska_GAZ_66_01"], 500];
+							}
+							private _objects = nearestObjects [_unit, ["SRB_uaz_2", "O_ORepublikaSrpska_GAZ_66_01"], 500];
 							if (count _objects > 0) then {
 								private _object = _objects select 0;
 								private _waypoint = _group addWaypoint [_object, 0];
 								_waypoint setWaypointType "GETIN";
 								_group setCurrentWaypoint _waypoint;
 							};
-							_group addWaypoint [getMarkerPos "msta", 0];*/
+							_group addWaypoint [getMarkerPos "msta", 0];
 						};
 					};
+
+
+					// ALL UNITS
+
 					if ((side _unit != independent) || (YUG_evacuated_civs < 30 || YUG_killed_civs < 21)) then {
 						_group addWaypoint [getMarkerPos "msta", 1];
 					};
+
 				};
 			}];
 		};
-	} forEach playableUnits;
+	} forEach playableUnits;*/
 
 
 	// TIMER SUBTRACTING EVENT HANDLERS
@@ -232,6 +246,29 @@ if (missionNamespace getVariable ["YUG_evacuation_started", false] == false) the
 };
 
 publicVariable "YUG_msta_civs";
+
+
+// ADD WAYPOINTS IF ALL ARE COMPLETED
+
+{
+	private _group = _x;
+	if (_group call YUG_fnc_waypointsComplete) then {
+		private _leader = leader _group;
+		private _position = getMarkerPos "msta";
+		if (_leader distance _position > 500) then {
+			if (_group == un_squad) then {
+				[_group, ["CUP_I_Mi17_UN", "CUP_I_M113A3_UN", "LOP_UN_Ural", "CUP_I_UAZ_Unarmed_UN"], 500] call YUG_fnc_findNearbyVehicle;
+			};
+			if (_group == serb_squad) then {
+				[_group, ["O_ORepublikaSrpska_GAZ_66_01", "SRB_bm21", "SRB_ural"], 500] call YUG_fnc_findNearbyVehicle;
+			};
+			if (_group == serb_tank_squad) then {
+				[_group, ["KOS_YUG_t72_grom", "SRB_bmp", "SRB_btr"], 2000] call YUG_fnc_findNearbyVehicle;
+			};
+		};
+		_group addWaypoint [_position, 10];
+	};
+} forEach [un_squad, serb_squad, serb_tank_squad];
 
 
 // STOP SERBS FROM LEAVING AREA WHEN CAPPING
