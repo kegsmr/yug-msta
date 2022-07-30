@@ -19,9 +19,9 @@ private _restrictions = [
 		["driver"]
 	],
 	[
-		["KOS_YUG_t72_grom"], 
+		["KOS_YUG_t72_grom", "SRB_bmp", "SRB_btr"], 
 		["O_Serbia_Crew_01"], 
-		["driver", "turret"]
+		["driver", "gunner", "turret"]
 	]
 ];
 //

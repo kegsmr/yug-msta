@@ -6,7 +6,8 @@ nato_plane enableSimulation true;
 driver nato_plane reveal serb_tank;
 driver nato_plane commandTarget serb_tank;
 
-waitUntil {east knowsAbout nato_plane > 0};
+waitUntil {missionNamespace getVariable ["YUG_civTaskComplete", false]};
+
 sleep 60;
 
-// allow serbs to call anti air?
+nato_plane setDamage .5;

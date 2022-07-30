@@ -3,6 +3,23 @@
 if (!isServer) exitWith {};
 
 
+// BOSNIAN PATROLS
+
+{
+	private _module = _x;
+	_module setPos (getMarkerPos "msta");
+} forEach entities "CBA_ModulePatrol";
+
+
+// BOSNIAN HOUSE SQUAD
+
+bosnian_house_squad addWaypoint [(getMarkerPos "msta"), 10];
+
+{
+	_x enableAi "ALL";
+} forEach units bosnian_house_squad;
+
+
 // UN
 
 private _group = createGroup independent;
@@ -20,19 +37,4 @@ _group setGroupId ["Charlie 1-1"];
 _group setCombatMode "AWARE";
 _group addWaypoint [getMarkerPos "msta", 10];
 
-
-// BOSNIAN PATROLS
-
-{
-	private _module = _x;
-	_module setPos (getMarkerPos "msta");
-} forEach entities "CBA_ModulePatrol";
-
-
-// BOSNIAN HOUSE SQUAD
-
-bosnian_house_squad addWaypoint [(getMarkerPos "msta"), 10];
-
-{
-	_x enableAi "ALL";
-} forEach units bosnian_house_squad;
+// make charlie 1-1 join un_squad when both pilots are also in squad

@@ -58424,7 +58424,7 @@ class Mission
 			{
 				name="trg_unAirSupport";
 				text="allow un air support";
-				condition="this && (independent knowsAbout serb_tank > 0)";
+				condition="this && (independent knowsAbout serb_tank > 0) && !(missionNamespace getVariable [""YUG_civTaskComplete"", false])";
 				onActivation="private _leader = leader un_squad; " \n "if (isPlayer _leader) then { " \n " [_leader, ""unAirSupport""] call BIS_fnc_addCommMenuItem; " \n "} else { " \n " [] spawn YUG_fnc_unAirSupport; " \n "}";
 				sizeA=250;
 				sizeB=250;
