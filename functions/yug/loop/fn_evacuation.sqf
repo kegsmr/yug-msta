@@ -266,7 +266,7 @@ publicVariable "YUG_msta_civs";
 				[_group, ["KOS_YUG_t72_grom", "SRB_bmp", "SRB_btr"], 2000] call YUG_fnc_findNearbyVehicle;
 			};
 		};
-		_group addWaypoint [_position, 10];
+		_group addWaypoint [_position, 0];
 	};
 } forEach [un_squad, serb_squad, serb_tank_squad];
 
@@ -422,7 +422,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		{
 			private _object = _x;
 			if (!isNull (driver _object)) then {
-				if (side (driver _object) == independent && !(_object getVariable ["YUG_supportChopper", false])) then {
+				if (side (driver _object) == independent && !(_object getVariable ["YUG_supportChopper", false]) && ({alive _x && side _x == independent} count (crew _object) < 4)) then {
 					private _group = group _unit;
 					_group addVehicle _object;
 					[_unit] orderGetIn true;

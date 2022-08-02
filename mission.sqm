@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=217;
+		nextID=220;
 	};
 	class Camera
 	{
-		pos[]={4865.7031,274.69492,4650.6035};
-		dir[]={0.9566561,-0.22388235,-0.18624187};
-		up[]={0.21975668,0.97461617,-0.042782243};
-		aside[]={-0.19109252,0,-0.98157215};
+		pos[]={5579.3179,416.66132,4648.752};
+		dir[]={0.83700579,-0.54717654,-0.0043711425};
+		up[]={0.54716903,0.83701718,-0.0028575116};
+		aside[]={-0.0052222847,0,-0.99998629};
 	};
 };
 binarizationWanted=0;
@@ -58424,7 +58424,7 @@ class Mission
 			{
 				name="trg_unAirSupport";
 				text="allow un air support";
-				condition="this && (independent knowsAbout serb_tank > 0)";
+				condition="this && (independent knowsAbout serb_tank > 0) && !(missionNamespace getVariable [""YUG_civTaskComplete"", false])";
 				onActivation="private _leader = leader un_squad; " \n "if (isPlayer _leader) then { " \n " [_leader, ""unAirSupport""] call BIS_fnc_addCommMenuItem; " \n "} else { " \n " [] spawn YUG_fnc_unAirSupport; " \n "}";
 				sizeA=250;
 				sizeB=250;
