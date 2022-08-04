@@ -257,13 +257,13 @@ publicVariable "YUG_msta_civs";
 		private _position = getMarkerPos "msta";
 		if (_leader distance _position > 500) then {
 			if (_group == un_squad) then {
-				[_group, ["CUP_I_Mi17_UN", "CUP_I_M113A3_UN", "LOP_UN_Ural", "CUP_I_UAZ_Unarmed_UN"], 500] call YUG_fnc_findNearbyVehicle;
+				[_group, ["CUP_I_Mi17_UN", "CUP_I_M113A3_UN", "LOP_UN_Ural", "CUP_I_UAZ_Unarmed_UN"], 500] spawn YUG_fnc_findNearbyVehicle;
 			};
 			if (_group == serb_squad) then {
-				[_group, ["O_ORepublikaSrpska_GAZ_66_01", "SRB_bm21", "SRB_ural"], 500] call YUG_fnc_findNearbyVehicle;
+				[_group, ["O_ORepublikaSrpska_GAZ_66_01", "SRB_bm21", "SRB_ural"], 500] spawn YUG_fnc_findNearbyVehicle;
 			};
 			if (_group == serb_tank_squad) then {
-				[_group, ["KOS_YUG_t72_grom", "SRB_bmp", "SRB_btr"], 2000] call YUG_fnc_findNearbyVehicle;
+				[_group, ["KOS_YUG_t72_grom", "SRB_bmp", "SRB_btr"], 2000] spawn YUG_fnc_findNearbyVehicle;
 			};
 		};
 		_group addWaypoint [_position, 0];
