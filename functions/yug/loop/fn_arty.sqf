@@ -26,10 +26,10 @@ private _infinite = true;
 
 private _timeVarname = _PS + "_lastArty";	
 	// VARIABLE NAME FOR THE TIME THAT THE LAST FIRING MISSION OCCURED
-private _delay = 600;
+private _delay = 900;
 	// MINIMUM DELAY BETWEEN FIRING MISSIONS
 
-private _targets = [getMarkerPos "msta"];	
+private _targets = [getMarkerPos "arty_1", getMarkerPos "arty_2", getMarkerPos "arty_3", getMarkerPos "arty_4", getMarkerPos "arty_5", getMarkerPos "arty_6"];	
 	// TARGET POSITIONS
 private _spread = 100;
 	// RADIUS IN WHICH THE TARGET MAY BE PLACED IN

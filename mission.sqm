@@ -8,11 +8,11 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20413;
+		nextID=20419;
 	};
 	class MarkerIDProvider
 	{
-		nextID=119;
+		nextID=120;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5622.4795,512.31104,4251.9385};
-		dir[]={0.42594773,-0.62918049,-0.65015429};
-		up[]={0.34479874,0.77725923,-0.52629077};
-		aside[]={-0.83647031,2.9802322e-008,-0.54801244};
+		pos[]={5586.1333,531.77716,4273.6694};
+		dir[]={0.42594805,-0.62918031,-0.65015411};
+		up[]={0.34479883,0.77725941,-0.52629042};
+		aside[]={-0.83647001,0,-0.54801273};
 	};
 };
 binarizationWanted=0;
@@ -964,7 +964,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1147,7 +1147,7 @@ class CustomAttributes
 		};
 		nAttributes=7;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -1362,7 +1362,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1315;
+		items=1321;
 		class Item0
 		{
 			dataType="Logic";
@@ -26597,7 +26597,7 @@ class Mission
 			};
 			id=5529;
 			type="Land_Bandage_F";
-			atlOffset=0.59772205;
+			atlOffset=0.619627;
 		};
 		class Item892
 		{
@@ -32083,7 +32083,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.050000072;
+			atlOffset=0.049884945;
 		};
 		class Item1108
 		{
@@ -40520,7 +40520,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=600;
+							value=900;
 						};
 					};
 				};
@@ -43476,11 +43476,12 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="rhs_weap_m4_carryhandle";
+								name="CUP_Famas_F1";
+								firemode="CUP_Famas_F1:Single";
 								class primaryMuzzleMag
 								{
-									name="rhs_mag_30Rnd_556x45_M855A1_Stanag";
-									ammoLeft=30;
+									name="CUP_25Rnd_556x45_Famas";
+									ammoLeft=25;
 								};
 							};
 							class secondaryWeapon
@@ -43494,24 +43495,8 @@ class Mission
 							};
 							class uniform
 							{
-								typeName="LOP_U_BH_Fatigue_OFI_FWDL";
+								typeName="R3F_uniform_f1";
 								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_mag_rgd5";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_rdg2_white";
-										count=1;
-										ammoLeft=1;
-									};
-								};
 								class ItemCargo
 								{
 									items=5;
@@ -43551,24 +43536,9 @@ class Mission
 									items=1;
 									class Item0
 									{
-										name="rhs_mag_30Rnd_556x45_M855A1_Stanag";
-										count=4;
-										ammoLeft=30;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="LOP_CDF_RPG_Pack";
-								isBackpack=1;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_rpg7_PG7VR_mag";
-										count=2;
-										ammoLeft=1;
+										name="CUP_25Rnd_556x45_Famas";
+										count=5;
+										ammoLeft=25;
 									};
 								};
 							};
@@ -43679,11 +43649,12 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="rhs_weap_m4_carryhandle";
+								name="CUP_Famas_F1";
+								firemode="CUP_Famas_F1:Single";
 								class primaryMuzzleMag
 								{
-									name="rhs_mag_30Rnd_556x45_M855A1_Stanag";
-									ammoLeft=30;
+									name="CUP_25Rnd_556x45_Famas";
+									ammoLeft=25;
 								};
 							};
 							class secondaryWeapon
@@ -43697,24 +43668,8 @@ class Mission
 							};
 							class uniform
 							{
-								typeName="LOP_U_BH_Fatigue_OFI_FWDL";
+								typeName="R3F_uniform_f1";
 								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_mag_rgd5";
-										count=1;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="rhs_mag_rdg2_white";
-										count=1;
-										ammoLeft=1;
-									};
-								};
 								class ItemCargo
 								{
 									items=5;
@@ -43754,24 +43709,9 @@ class Mission
 									items=1;
 									class Item0
 									{
-										name="rhs_mag_30Rnd_556x45_M855A1_Stanag";
-										count=4;
-										ammoLeft=30;
-									};
-								};
-							};
-							class backpack
-							{
-								typeName="LOP_CDF_RPG_Pack";
-								isBackpack=1;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_rpg7_PG7VR_mag";
-										count=2;
-										ammoLeft=1;
+										name="CUP_25Rnd_556x45_Famas";
+										count=5;
+										ammoLeft=25;
 									};
 								};
 							};
@@ -58418,6 +58358,54 @@ class Mission
 			flags=1;
 			id=20412;
 			type="ModuleCoverMap_F";
+		};
+		class Item1315
+		{
+			dataType="Marker";
+			position[]={5885.8838,253.7014,4666.9185};
+			name="arty_1";
+			type="Empty";
+			id=20413;
+		};
+		class Item1316
+		{
+			dataType="Marker";
+			position[]={5807.9189,254.77696,4575.582};
+			name="arty_2";
+			type="Empty";
+			id=20414;
+		};
+		class Item1317
+		{
+			dataType="Marker";
+			position[]={6108.2539,240.04688,4692.4858};
+			name="arty_3";
+			type="Empty";
+			id=20415;
+		};
+		class Item1318
+		{
+			dataType="Marker";
+			position[]={5324.0859,277.75714,4516.0083};
+			name="arty_4";
+			type="Empty";
+			id=20416;
+		};
+		class Item1319
+		{
+			dataType="Marker";
+			position[]={5742.7153,280.55292,4428.6777};
+			name="arty_5";
+			type="Empty";
+			id=20417;
+		};
+		class Item1320
+		{
+			dataType="Marker";
+			position[]={5974.5381,222.28841,4553.6509};
+			name="arty_6";
+			type="Empty";
+			id=20418;
 		};
 	};
 	class Connections

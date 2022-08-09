@@ -8,11 +8,10 @@
 // ISSUES
 /*
 	- CAUSES ERRORS
-	- MAY NOT WORK
+	- DOES NOT WORK
 */
 
-
-if (false) exitWith {};
+/*if (false) exitWith {};
 
 private _group = _this select 0;
 private _types = _this select 1;
@@ -37,4 +36,4 @@ if (count _vehicles < 1) exitWith {};
 
 	_exception
 
-// };
+// };*/

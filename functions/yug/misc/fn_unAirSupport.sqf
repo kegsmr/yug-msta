@@ -2,12 +2,16 @@
 
 if (!isServer) exitWith {};
 
-nato_plane enableSimulation true;
-driver nato_plane reveal serb_tank;
-driver nato_plane commandTarget serb_tank;
+{
 
-waitUntil {missionNamespace getVariable ["YUG_civTaskComplete", false]};
+	nato_plane enableSimulation true;
+	driver nato_plane reveal serb_tank;
+	driver nato_plane commandTarget serb_tank;
 
-sleep 60;
+	waitUntil {missionNamespace getVariable ["YUG_civTaskComplete", false]};
 
-nato_plane setDamage .5;
+	sleep 60;
+
+	nato_plane setDamage .5;
+
+} remoteExec ["spawn"];
