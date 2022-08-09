@@ -379,7 +379,7 @@ if ((_condition1 || _condition2) && !(missionNamespace getVariable ["YUG_civTask
 	};
 	{
 		private _unit = _x;
-		[_unit, "endMission"] call BIS_fnc_addCommMenuItem;
+		[_unit, "endMission"] call YUG_fnc_addCommMenuItem;
 	} forEach _units;
 };
 

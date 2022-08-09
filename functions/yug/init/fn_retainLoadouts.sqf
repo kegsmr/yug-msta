@@ -8,7 +8,7 @@
 */
 
 
-if (!isServer) exitWith {};
+if (false) exitWith {};
 
 {
 	private _unit = _x;

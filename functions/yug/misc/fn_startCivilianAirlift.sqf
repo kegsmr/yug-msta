@@ -4,7 +4,7 @@ if (!isServer) exitWith {};
 
 missionNamespace setVariable ["YUG_civilianAirlift", true, true];
 
-[leader un_squad, "endCivilianAirlift"] call BIS_fnc_addCommMenuItem;
+[leader un_squad, "endCivilianAirlift"] call YUG_fnc_addCommMenuItem;
 
 un_airlift_squad = createGroup independent;
 un_airlift_squad setGroupIdGlobal ["Alpha 1-2 (civilian airlift)"];
@@ -59,4 +59,4 @@ while {YUG_civilianAirlift} do {
 
 [un_heliD, un_heliG] joinSilent un_squad;
 
-[leader un_squad, "startCivilianAirlift"] call BIS_fnc_addCommMenuItem;
+[leader un_squad, "startCivilianAirlift"] call YUG_fnc_addCommMenuItem;

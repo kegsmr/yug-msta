@@ -35,6 +35,7 @@ class yug
 		file = "functions\yug\misc"
 		class activateTrigger {};
 		class addChildToTree {};
+		class addCommMenuItem {};
 		class callFunctions {};
 		class civilianAirlift {};
 		class consolidateDefense {};
