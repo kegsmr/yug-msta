@@ -13,7 +13,7 @@ if (!isServer) exitWith {};
 
 // BOSNIAN HOUSE SQUAD
 
-bosnian_house_squad addWaypoint [(getMarkerPos "msta"), 10];
+bosnian_house_squad addWaypoint [(getMarkerPos "msta"), 0];
 
 {
 	_x enableAi "ALL";
@@ -35,6 +35,6 @@ private _group = createGroup independent;
 _group setGroupId ["Charlie 1-1"];
 
 _group setCombatMode "AWARE";
-_group addWaypoint [getMarkerPos "msta", 10];
+_group addWaypoint [getMarkerPos "refugee_marker", 0];
 
 // make charlie 1-1 join un_squad when both pilots are also in squad

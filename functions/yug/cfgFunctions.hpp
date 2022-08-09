@@ -36,6 +36,7 @@ class yug
 		class activateTrigger {};
 		class addChildToTree {};
 		class addCommMenuItem {};
+		class ammoBoxMarkers {};
 		class callFunctions {};
 		class civilianAirlift {};
 		class consolidateDefense {};
