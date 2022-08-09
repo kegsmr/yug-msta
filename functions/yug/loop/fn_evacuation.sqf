@@ -422,27 +422,57 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		{
 			private _object = _x;
 			if (!isNull (driver _object)) then {
-				if (side (driver _object) == independent && !(_object getVariable ["YUG_supportChopper", false]) && ({alive _x && side _x == independent} count (crew _object) < 4)) then {
+				if ((_unit getVariable ["YUG_getIn", 0] == 0) && side (driver _object) == independent && !(_object getVariable ["YUG_supportChopper", false]) && ({alive _x && side _x == independent} count (crew _object) < 4) && (getPos _object select 2 < 10)) then {
+					
 					private _group = group _unit;
 					_group addVehicle _object;
 					[_unit] orderGetIn true;
 					_unit enableAI "ALL";
-					if ((vehicle _unit == _unit) && (lifeState _unit in ["HEALTHY", "INJURED"]) && (speed _unit < 1) && (round (random [0,3,6]) == 3)) then {
-						_unit switchMove "";
+					// _unit switchMove "";
+
+					_unit setVariable ["YUG_getIn", 1, true];
+					_unit spawn {
+						private _unit = _this;
+						sleep 60;
+						_unit setVariable ["YUG_getIn", 2, true];
 					};
-				}
-			}
+
+				};
+			};
 		} forEach _objects;
 
 	};
 
 	if (!isNull (assignedVehicle _unit)) then {
 		private _vehicle = assignedVehicle _unit;
-		if ((isNull (driver _vehicle) /*&& !(_vehicle isKindOf "CUP_I_Mi17_UN")*/) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 500 || (_vehicle distance getMarkerPos "refugee_marker" < 150)) then {
+		if ((isNull (driver _vehicle) /*&& !(_vehicle isKindOf "CUP_I_Mi17_UN")*/) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 500 || (_vehicle distance getMarkerPos "refugee_marker" < 150) || (getPos _vehicle select 2 > 10 && vehicle _unit != _unit)) then {
+			
 			private _group = group _unit;
 			[_unit] orderGetIn false;
 			_group leaveVehicle _vehicle;
+
+			_unit setVariable ["YUG_getIn", 3, true];
+			_unit spawn {
+				private _unit = _this;
+				sleep 60;
+				_unit setVariable ["YUG_getIn", 0, true];
+			};
+
 		};
+	} else {
+
+		if (_unit getVariable ["YUG_getIn", 0] == 2 && vehicle _unit == _unit) then {
+
+			[_unit] orderGetIn false;
+
+			_unit setVariable ["YUG_getIn", 3, true];
+			_unit spawn {
+				private _unit = _this;
+				sleep 180;
+				_unit setVariable ["YUG_getIn", 0, true];
+			};
+		};
+
 	};
 
 } forEach YUG_msta_civs;

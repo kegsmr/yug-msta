@@ -47,9 +47,12 @@ YUG_fnc_civs_flee = {
 			private _objects = nearestObjects [_civ, _building_types, _search_radius];
 
 			private _positions = [(getMarkerPos "refugee_marker")];
-			{
-				{_positions append [_x];} forEach (_x buildingPos -1);
-			} forEach _objects;
+			
+			if (selectRandom [true, false]) then {
+				{
+					{_positions append [_x];} forEach (_x buildingPos -1);
+				} forEach _objects;
+			};
 
 			private _position = selectRandom _positions;
 
