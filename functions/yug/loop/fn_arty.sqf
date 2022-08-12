@@ -4,7 +4,7 @@
 /*
 	while {true} do {
 		call PREFIX_fnc_arty;
-		sleep 1;
+		sleep _delay;
 	};
 */
 
