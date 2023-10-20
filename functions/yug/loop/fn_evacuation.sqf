@@ -419,7 +419,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		private _objects = nearestObjects [_position, _vehicles, _radius];
 		_objects append (nearestObjects [_position, _helis, _radius * 5]);
 
-		if (count _objects == 0) then {
+		if ((count _objects == 0) && (_unit getVariable ["YUG_getIn", 0] == 3)) then {
 			_unit setVariable ["YUG_getIn", 0, true];
 		}
 
