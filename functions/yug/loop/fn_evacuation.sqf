@@ -421,7 +421,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 
 		if ((count _objects == 0) && (_unit getVariable ["YUG_getIn", 0] == 3)) then {
 			_unit setVariable ["YUG_getIn", 0, true];
-		}
+		};
 
 		{
 			private _object = _x;
