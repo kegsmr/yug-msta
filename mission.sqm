@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5240.7236,356.67557,4562.9468};
-		dir[]={-0.71658665,-0.54189533,0.43918306};
-		up[]={-0.46203199,0.8404423,0.28317186};
-		aside[]={0.5225572,2.1420419e-008,0.85261941};
+		pos[]={5082.1543,21.716206,1504.1333};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -28765,7 +28765,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.050000072;
+			atlOffset=0.049884945;
 		};
 		class Item1108
 		{
@@ -30361,7 +30361,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="60";
+							value="0";
 						};
 					};
 				};
@@ -32216,7 +32216,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={4513.7427,253.97643,4659.2031};
+				position[]={4513.7432,253.97643,4659.2031};
 			};
 			id=19780;
 			type="ModuleRespawnVehicle_F";
@@ -32335,7 +32335,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="60";
+							value="0";
 						};
 					};
 				};
@@ -32414,7 +32414,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="50";
+							value="100";
 						};
 					};
 				};
@@ -32479,7 +32479,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="300";
+							value="0";
 						};
 					};
 				};
@@ -32492,7 +32492,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="1";
+							value="0";
 						};
 					};
 				};
@@ -39261,7 +39261,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="300";
+							value="0";
 						};
 					};
 				};
@@ -39274,7 +39274,7 @@ class Mission
 						class data
 						{
 							singleType="STRING";
-							value="1";
+							value="0";
 						};
 					};
 				};
