@@ -428,7 +428,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 					_group addVehicle _object;
 					[_unit] orderGetIn true;
 					_unit enableAI "ALL";
-					// _unit switchMove "";
+					_unit switchMove "";
 
 					_unit setVariable ["YUG_getIn", 1, true];
 					_unit spawn {
