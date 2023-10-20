@@ -415,9 +415,13 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 	if (alive _unit && (_unit distance2D (getMarkerPos "msta")) <= 500) then {
 
 		private _position = position _unit;
-		private _radius = 50;
+		private _radius = 50; //random [5, 10, 50];
 		private _objects = nearestObjects [_position, _vehicles, _radius];
-		_objects append (nearestObjects [_position, _helis, _radius * 4]);
+		_objects append (nearestObjects [_position, _helis, _radius * 5]);
+
+		if (count _objects == 0) then {
+			_unit setVariable ["YUG_getIn", 0, true];
+		}
 
 		{
 			private _object = _x;
@@ -425,10 +429,15 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 				if ((_unit getVariable ["YUG_getIn", 0] == 0) && side (driver _object) == independent && !(_object getVariable ["YUG_supportChopper", false]) && ({alive _x && side _x == independent} count (crew _object) < 4) && (getPos _object select 2 < 10)) then {
 					
 					private _group = group _unit;
-					_group addVehicle _object;
-					[_unit] orderGetIn true;
-					_unit enableAI "ALL";
-					_unit switchMove "";
+					if (_unit distance _object < 50) then {
+						_group addVehicle _object;
+						[_unit] orderGetIn true;
+					};
+					if (vehicle _unit == _unit) then {
+						_unit enableAI "ALL";
+						_unit switchMove "";
+						_unit doMove position driver _object;
+					};
 
 					_unit setVariable ["YUG_getIn", 1, true];
 					_unit spawn {
@@ -444,21 +453,25 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 	};
 
 	if (!isNull (assignedVehicle _unit)) then {
+
 		private _vehicle = assignedVehicle _unit;
-		if ((isNull (driver _vehicle) /*&& !(_vehicle isKindOf "CUP_I_Mi17_UN")*/) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 500 || (_vehicle distance getMarkerPos "refugee_marker" < 150) || (getPos _vehicle select 2 > 10 && vehicle _unit != _unit)) then {
+
+		if ((isNull (driver _vehicle)) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 500 || (_vehicle distance getMarkerPos "refugee_marker" < 150) || (getPos _vehicle select 2 > 10 && vehicle _unit == _unit) || ((vehicle _unit == _unit || (side driver vehicle _unit != independent)) && (_unit getVariable ["YUG_getIn", 0] == 2))) then {
 			
 			private _group = group _unit;
+
 			[_unit] orderGetIn false;
 			_group leaveVehicle _vehicle;
 
 			_unit setVariable ["YUG_getIn", 3, true];
 			_unit spawn {
 				private _unit = _this;
-				sleep 60;
+				sleep 180;
 				_unit setVariable ["YUG_getIn", 0, true];
 			};
 
 		};
+
 	} else {
 
 		if (_unit getVariable ["YUG_getIn", 0] == 2 && vehicle _unit == _unit) then {
