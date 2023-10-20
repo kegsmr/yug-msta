@@ -417,7 +417,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		private _position = position _unit;
 		private _radius = 50;
 		private _objects = nearestObjects [_position, _vehicles, _radius];
-		_objects append (nearestObjects [_position, _helis, _radius * 10]);
+		_objects append (nearestObjects [_position, _helis, _radius * 4]);
 
 		{
 			private _object = _x;
