@@ -31,7 +31,7 @@ private _delay = 900;
 
 private _targets = [getMarkerPos "arty_1", getMarkerPos "arty_2", getMarkerPos "arty_3", getMarkerPos "arty_4", getMarkerPos "arty_5", getMarkerPos "arty_6"];	
 	// TARGET POSITIONS
-private _spread = 100;
+private _spread = 50;
 	// RADIUS IN WHICH THE TARGET MAY BE PLACED IN
 
 private _checkForFriendlies = true;
