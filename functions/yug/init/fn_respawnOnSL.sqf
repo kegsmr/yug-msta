@@ -19,6 +19,8 @@ if (!isServer) exitWith {};
 		private _group = group _unit;
 		private _leader = leader _group;
 
+		[_unit] allowGetIn true;
+
 		if (lifeState _leader in ["HEALTHY", "INJURED"]) then {
 
 			private _vehicle = vehicle _leader;

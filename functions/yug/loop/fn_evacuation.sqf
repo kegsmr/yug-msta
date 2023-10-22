@@ -328,6 +328,15 @@ if (vehicle _leader == un_heli && _leader distance (getMarkerPos "msta") < 500) 
 };
 
 
+// LET UN SQUAD USE HELI WHEN NEARBY
+
+if (un_heli distance2D leader un_squad < 500) then {
+	un_squad addVehicle un_heli;
+} else {
+	un_squad leaveVehicle un_heli;
+};
+
+
 // KILLED MISSING EVACUATED REMAINING
 
 YUG_killed_civs = {!alive _x} count YUG_msta_civs;

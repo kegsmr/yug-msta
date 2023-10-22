@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20434;
+		nextID=20445;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=268;
+		nextID=271;
 	};
 	class Camera
 	{
-		pos[]={4605.9819,350.81259,4474.1597};
-		dir[]={0.80736047,-0.25793958,0.53069413};
-		up[]={0.21554402,0.96616107,0.14168137};
-		aside[]={0.54928124,-7.4505806e-009,-0.83563757};
+		pos[]={5125.127,78.617493,1579.1157};
+		dir[]={-0.41800961,-0.6968649,-0.5827927};
+		up[]={-0.40615624,0.71720243,-0.56626666};
+		aside[]={-0.81259167,1.4901161e-008,0.58283353};
 	};
 };
 binarizationWanted=0;
@@ -1266,7 +1266,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1322;
+		items=1332;
 		class Item0
 		{
 			dataType="Logic";
@@ -2794,8 +2794,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[""msta_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14471;
 			type="CUP_I_UAZ_Unarmed_UN";
@@ -3293,19 +3292,19 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5054.2559,263.32608,4712.8325};
-				angles[]={6.2605205,4.5678186,0.093064934};
+				position[]={5054.2563,263.32617,4712.8325};
+				angles[]={6.2605133,4.5678234,0.093060948};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[""un_check3_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14504;
 			type="LOP_UN_UAZ";
+			atlOffset=3.0517578e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3407,7 +3406,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14513;
 			type="LOP_UN_UAZ";
@@ -3494,7 +3493,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14522;
 			type="LOP_UN_UAZ";
@@ -3635,16 +3634,15 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5113.1592,290.72601,4996.8262};
-				angles[]={6.2805333,6.186986,0.10758245};
+				position[]={5113.1592,290.72601,4996.8267};
+				angles[]={6.2805324,6.1869826,0.10758209};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[""un_check4_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14561;
 			type="LOP_UN_UAZ";
@@ -3742,20 +3740,18 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={6453.8335,207.32977,4829.5361};
-				angles[]={0.090420879,5.6610875,6.213963};
+				position[]={6453.834,207.3299,4829.5361};
+				angles[]={0.090425514,5.6610799,6.2139654};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[""un_check5_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14582;
 			type="LOP_UN_UAZ";
-			atlOffset=-0.00015258789;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3857,7 +3853,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14594;
 			type="LOP_UN_UAZ";
@@ -5506,17 +5502,35 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5908.5947,255.51135,4685.7974};
-				angles[]={0,5.68784,0};
+				position[]={5908.5952,255.51135,4685.7974};
+				angles[]={0,5.6878362,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="un_squad addVehicle this;";
 				dynamicSimulation=1;
 			};
 			id=14759;
 			type="CUP_C_S1203_CIV_CR";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item116
 		{
@@ -5664,18 +5678,35 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5770.0601,263.53702,4595.5234};
-				angles[]={0.13647936,5.2513556,6.0947771};
+				position[]={5770.0601,263.5369,4595.5234};
+				angles[]={0.13648474,5.2513466,6.0947766};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="un_squad addVehicle this;";
 				dynamicSimulation=1;
 			};
 			id=14770;
 			type="CUP_C_Datsun";
-			atlOffset=0.00012207031;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[""CUP_B_AlicePack_Khaki""],[4]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item125
 		{
@@ -5707,8 +5738,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[""msta_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14775;
 			type="LOP_UN_Ural";
@@ -5794,8 +5824,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[""msta_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14776;
 			type="LOP_UN_Ural";
@@ -5881,8 +5910,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[""msta_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14777;
 			type="LOP_UN_Ural";
@@ -5969,8 +5997,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[""msta_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14798;
 			type="LOP_UN_UAZ";
@@ -6058,8 +6085,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[""msta_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14799;
 			type="LOP_UN_UAZ";
@@ -6147,8 +6173,7 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[""msta_objects_delete"", this] call MALO_fnc_append;";
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=14800;
 			type="LOP_UN_UAZ";
@@ -7744,7 +7769,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				init="serb_squad addVehicle this;";
 			};
 			id=17183;
 			type="SRB_ural";
@@ -7816,7 +7841,20 @@ class Mission
 						};
 					};
 				};
-				nAttributes=5;
+				class Attribute5
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=6;
 			};
 		};
 		class Item179
@@ -7831,7 +7869,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				init="serb_squad addVehicle this;";
 			};
 			id=17185;
 			type="SRB_ural";
@@ -7902,7 +7940,20 @@ class Mission
 						};
 					};
 				};
-				nAttributes=5;
+				class Attribute5
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=6;
 			};
 		};
 		class Item180
@@ -7917,7 +7968,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				init="serb_squad addVehicle this;";
 			};
 			id=17186;
 			type="SRB_ural";
@@ -7989,7 +8040,20 @@ class Mission
 						};
 					};
 				};
-				nAttributes=5;
+				class Attribute5
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit""],[10]],[[],[]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=6;
 			};
 		};
 		class Item181
@@ -8005,8 +8069,8 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="serb_squad addVehicle this;";
 				name="jeep_2";
-				dynamicSimulation=1;
 			};
 			id=17187;
 			type="SRB_uaz_2";
@@ -8229,7 +8293,7 @@ class Mission
 			};
 			id=17206;
 			type="Land_FoodSacks_01_large_brown_F";
-			atlOffset=0.00015258789;
+			atlOffset=9.1552734e-005;
 		};
 		class Item191
 		{
@@ -8247,7 +8311,6 @@ class Mission
 			};
 			id=17207;
 			type="Land_FoodSacks_01_large_brown_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item192
 		{
@@ -8265,7 +8328,6 @@ class Mission
 			};
 			id=17208;
 			type="Land_FoodSacks_01_cargo_white_idap_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item193
 		{
@@ -8283,7 +8345,6 @@ class Mission
 			};
 			id=17209;
 			type="Land_FoodSacks_01_cargo_white_idap_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item194
 		{
@@ -9066,7 +9127,6 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				dynamicSimulation=1;
 			};
 			id=17714;
 			type="SRB_uaz_2";
@@ -11331,7 +11391,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=1816;
 			type="CUP_I_UAZ_Unarmed_UN";
@@ -11463,18 +11523,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={4952.3799,6.3810039,1422.8473};
-				angles[]={0,5.9900317,0};
+				position[]={4952.3799,6.3810463,1422.847};
+				angles[]={0,5.9900398,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=1913;
 			type="CUP_I_UAZ_Unarmed_UN";
-			atlOffset=-4.2438507e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -11505,7 +11563,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=2002;
 			type="CUP_I_UAZ_Unarmed_UN";
@@ -11532,14 +11590,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5077.4619,6.3810463,1532.2422};
-				angles[]={0,1.8005804,0};
+				position[]={5080.2998,6.3810463,1533.988};
+				angles[]={-0,1.8005804,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
+				init="un_squad addVehicle this;";
 			};
 			id=2003;
 			type="CUP_I_UAZ_Unarmed_UN";
@@ -11577,6 +11635,23 @@ class Mission
 			};
 			id=2157;
 			type="CUP_C_Volha_Limo_TKCIV";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item369
 		{
@@ -11594,6 +11669,23 @@ class Mission
 			};
 			id=2160;
 			type="CUP_C_Volha_Blue_TKCIV";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item370
 		{
@@ -11611,6 +11703,23 @@ class Mission
 			};
 			id=2163;
 			type="CUP_C_S1203_CIV";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit"",""Medikit""],[10,1]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item371
 		{
@@ -12548,8 +12657,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5052.2603,7.8248777,1624.3784};
-				angles[]={6.2818484,1.4238418,6.2818484};
+				position[]={5052.2603,7.8248796,1624.3789};
+				angles[]={6.2818413,1.4238396,6.2818413};
 			};
 			side="Empty";
 			flags=4;
@@ -12559,7 +12668,7 @@ class Mission
 			};
 			id=3516;
 			type="LOP_AFR_Civ_Landrover";
-			atlOffset=-1.9073486e-006;
+			atlOffset=-4.7683716e-007;
 		};
 		class Item422
 		{
@@ -12600,7 +12709,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5218.0508,8.1790228,1491.5104};
+				position[]={5218.0508,8.1790247,1491.51};
 			};
 			side="Empty";
 			flags=4;
@@ -12610,7 +12719,23 @@ class Mission
 			};
 			id=3519;
 			type="CUP_C_Ural_Civ_03";
-			atlOffset=-1.9073486e-006;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit"",""Medikit""],[20,2]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item425
 		{
@@ -23171,8 +23296,8 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
+				init="un_squad addVehicle this;";
 				name="truck";
-				dynamicSimulation=1;
 			};
 			id=5484;
 			type="LOP_UN_Ural";
@@ -24076,8 +24201,8 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="un_squad addVehicle this;";
 				presence=0;
-				dynamicSimulation=1;
 			};
 			id=5580;
 			type="LOP_UN_UAZ";
@@ -24663,7 +24788,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=15256;
 			type="SRB_uaz_2";
@@ -24681,7 +24805,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=15257;
 			type="SRB_uaz_2";
@@ -25059,11 +25182,29 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="un_squad addVehicle this;";
 				name="bus";
 				dynamicSimulation=1;
 			};
 			id=16252;
 			type="CUP_C_Ikarus_Chernarus";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""FirstAidKit"",""Medikit""],[20,2]],[[""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2]],[[""ToolKit""],[1]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item958
 		{
@@ -25888,7 +26029,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=16790;
 			type="CUP_I_UAZ_Unarmed_UN";
@@ -25922,7 +26062,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=16791;
 			type="CUP_I_UAZ_Unarmed_UN";
@@ -28216,7 +28355,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=17104;
 			type="SRB_uaz_2";
@@ -29380,7 +29518,6 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				dynamicSimulation=1;
 			};
 			id=19144;
 			type="I_BIH_ural";
@@ -29671,7 +29808,6 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				dynamicSimulation=1;
 			};
 			id=19142;
 			type="I_BIH_ural";
@@ -29771,7 +29907,6 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				dynamicSimulation=1;
 			};
 			id=19143;
 			type="I_BIH_ural";
@@ -29871,7 +30006,6 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				dynamicSimulation=1;
 			};
 			id=19167;
 			type="I_BIH_ural";
@@ -30133,7 +30267,6 @@ class Mission
 			class Attributes
 			{
 				lock="UNLOCKED";
-				init="[""msta_objects_delete"", this] call MALO_fnc_append;";
 				name="un_heli";
 			};
 			id=19733;
@@ -31834,7 +31967,7 @@ class Mission
 			class Attributes
 			{
 				name="un_squad";
-				init="{_x spawn {waitUntil {_this call BIS_fnc_enemyDetected;}; (group _this) setBehaviour ""AWARE"";};} forEach units _this;";
+				init="{_x spawn {waitUntil {_this call BIS_fnc_enemyDetected;}; (group _this) setBehaviour ""AWARE"";};} forEach units _this; units this allowGetIn true;";
 				combatMode="GREEN";
 				behaviour="SAFE";
 				speedMode="FULL";
@@ -32054,6 +32187,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="serb_squad addVehicle this;";
 				dynamicSimulation=1;
 			};
 			id=19778;
@@ -32140,6 +32274,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="serb_squad addVehicle this;";
 				dynamicSimulation=1;
 			};
 			id=19779;
@@ -37934,7 +38069,7 @@ class Mission
 			class Attributes
 			{
 				name="serb_squad";
-				init="this setVariable [""aggressive"", true, true];";
+				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
 			};
@@ -38468,6 +38603,7 @@ class Mission
 			class Attributes
 			{
 				name="serb_tank_squad";
+				init="units this allowGetIn true;";
 				behaviour="SAFE";
 			};
 			class CrewLinks
@@ -46289,7 +46425,7 @@ class Mission
 			};
 			id=20144;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00050354004;
+			atlOffset=0.00044250488;
 		};
 		class Item1217
 		{
@@ -46308,7 +46444,7 @@ class Mission
 			};
 			id=20145;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00050354004;
+			atlOffset=0.00044250488;
 		};
 		class Item1218
 		{
@@ -46327,7 +46463,6 @@ class Mission
 			};
 			id=20146;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=6.1035156e-005;
 		};
 		class Item1219
 		{
@@ -46346,7 +46481,6 @@ class Mission
 			};
 			id=20147;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=6.1035156e-005;
 		};
 		class Item1220
 		{
@@ -46365,7 +46499,7 @@ class Mission
 			};
 			id=20148;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00047302246;
+			atlOffset=0.00044250488;
 		};
 		class Item1221
 		{
@@ -46385,7 +46519,6 @@ class Mission
 			};
 			id=20150;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46422,7 +46555,6 @@ class Mission
 			};
 			id=20151;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46459,7 +46591,6 @@ class Mission
 			};
 			id=20152;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46496,7 +46627,6 @@ class Mission
 			};
 			id=20153;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47432,7 +47562,6 @@ class Mission
 			};
 			id=20214;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47468,7 +47597,6 @@ class Mission
 			};
 			id=20215;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47504,7 +47632,6 @@ class Mission
 			};
 			id=20216;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47540,7 +47667,6 @@ class Mission
 			};
 			id=20217;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47576,7 +47702,6 @@ class Mission
 			};
 			id=20218;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47612,7 +47737,6 @@ class Mission
 			};
 			id=20219;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47648,7 +47772,6 @@ class Mission
 			};
 			id=20220;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47684,7 +47807,6 @@ class Mission
 			};
 			id=20221;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -49759,7 +49881,6 @@ class Mission
 					};
 					id=20260;
 					type="O_Serbia_Rifleman_01";
-					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -49813,7 +49934,6 @@ class Mission
 				formation="FILE";
 			};
 			id=20259;
-			atlOffset=6.1035156e-005;
 		};
 		class Item1283
 		{
@@ -49827,6 +49947,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="serb_tank_squad addVehicle this;";
 				presence=0.40000001;
 			};
 			id=20265;
@@ -50261,6 +50382,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="serb_tank_squad addVehicle this;";
 				presence=0.2;
 			};
 			id=20272;
@@ -50556,6 +50678,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="serb_squad addVehicle this;";
 				dynamicSimulation=1;
 			};
 			id=20273;
@@ -50970,7 +51093,7 @@ class Mission
 		class Item1303
 		{
 			dataType="Marker";
-			position[]={6125.6348,212,4212.375};
+			position[]={6302.4478,153.62488,3900.3462};
 			name="logs_spawn";
 			type="Empty";
 			id=20378;
@@ -51307,8 +51430,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5846.5371,291.2742,3481.7761};
-						angles[]={0,6.2041564,0};
+						position[]={5079.3174,6.1036558,1538.656};
+						angles[]={-0,2.0439405,-0};
 					};
 					side="Civilian";
 					flags=6;
@@ -51659,12 +51782,13 @@ class Mission
 			class PositionInfo
 			{
 				position[]={5867.6851,256.62036,4691.125};
-				angles[]={0.0039967569,4.4038858,6.2671909};
+				angles[]={0.0039968039,4.4038844,6.2671981};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
+				init="un_squad addVehicle this;";
 				presence=0.5;
 			};
 			id=20425;
@@ -51725,6 +51849,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				init="un_squad addVehicle this;";
 				presence=0.5;
 			};
 			id=20430;
@@ -51747,16 +51872,439 @@ class Mission
 				nAttributes=1;
 			};
 		};
+		class Item1322
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5077.0811,6.3810463,1531.8774};
+				angles[]={-0,2.4882162,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="un_squad addVehicle this;";
+			};
+			id=20434;
+			type="CUP_I_UAZ_Unarmed_UN";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""CUP_launch_RPG18"",""FirstAidKit"",""Medikit""],[1,10,1]],[[""CUP_RPG18_M"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2,2]],[[""ToolKit""],[1]],[[""CUP_B_AlicePack_Khaki""],[4]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1323
+		{
+			dataType="Marker";
+			position[]={5050.5811,5.98,1551.8051};
+			name="respawn_civilian";
+			type="respawn_unknown";
+			colorName="ColorCIV";
+			alpha=0;
+			id=20435;
+		};
+		class Item1324
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6301.748,152.74977,3919.9146};
+				angles[]={6.2778587,4.1453099,0.0080009829};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				lock="UNLOCKED";
+				init="un_squad addVehicle this;";
+				name="truck_1";
+			};
+			id=20436;
+			type="LOP_UN_Ural";
+			atlOffset=-0.0005645752;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Army";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Default";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="-1";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Army";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="-1";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item1325
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6316.249,151.25887,3930.8774};
+				angles[]={0.011995304,4.1215658,6.2738566};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="un_squad addVehicle this;";
+			};
+			id=20437;
+			type="CUP_I_UAZ_Unarmed_UN";
+			atlOffset=-3.0517578e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""CUP_launch_RPG18"",""FirstAidKit"",""Medikit""],[1,10,1]],[[""CUP_RPG18_M"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2,2]],[[""ToolKit""],[1]],[[""CUP_B_AlicePack_Khaki""],[4]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1326
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6282.7583,152.59746,3909.3049};
+				angles[]={0.0012918708,4.2977967,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				lock="UNLOCKED";
+				init="un_squad addVehicle this;";
+				name="truck_2";
+			};
+			id=20438;
+			type="LOP_UN_Ural";
+			atlOffset=-0.00018310547;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Army";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Default";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="-1";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Army";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="-1";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item1327
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6265.0771,152.73297,3900.938};
+				angles[]={0.0066682254,4.3098383,6.2711902};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				lock="UNLOCKED";
+				init="un_squad addVehicle this;";
+				name="truck_3";
+			};
+			id=20439;
+			type="LOP_UN_Ural";
+			atlOffset=-9.1552734e-005;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="rhs_decalArmy_type";
+					expression="_this setVariable ['rhs_decalArmy_type', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Army";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="rhs_decalNumber_type";
+					expression="_this setVariable ['rhs_decalNumber_type', _value];[_this,[['Number', cDecals4CarsNumberPlaces, _value]]] call rhs_fnc_decalsInit";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Default";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="rhs_decalArmy";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightArmyPlaces,  _this getVariable ['rhs_decalArmy_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="-1";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="rhs_decalPlatoon_type";
+					expression="_this setVariable ['rhs_decalPlatoon_type', _value];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Army";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="rhs_decalPlatoon";
+					expression="if(parseNumber _value >= 0)then{ [_this, [ [ 'Label', cDecalsCarsRightPlatoonPlaces,  _this getVariable ['rhs_decalPlatoon_type','Army'],call compile _value] ] ] call rhs_fnc_decalsInit};";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="-1";
+						};
+					};
+				};
+				nAttributes=5;
+			};
+		};
+		class Item1328
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={6249.8032,151.44466,3894.3806};
+				angles[]={0.0066682254,4.4593649,6.2685208};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="un_squad addVehicle this;";
+			};
+			id=20440;
+			type="CUP_I_UAZ_Unarmed_UN";
+			atlOffset=-0.00010681152;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[[[[""CUP_launch_RPG18"",""FirstAidKit"",""Medikit""],[1,10,1]],[[""CUP_RPG18_M"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[2,2,2,2]],[[""ToolKit""],[1]],[[""CUP_B_AlicePack_Khaki""],[4]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1329
+		{
+			dataType="Marker";
+			position[]={6488.9023,148.97844,4583.4927};
+			name="minefield_3";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			alpha=0;
+			a=100;
+			b=100;
+			angle=201.38866;
+			id=20441;
+		};
+		class Item1330
+		{
+			dataType="Marker";
+			position[]={6300.4199,140.49516,4321.3682};
+			name="minefield_4";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			alpha=0;
+			a=100;
+			b=100;
+			angle=315.52563;
+			id=20442;
+		};
+		class Item1331
+		{
+			dataType="Marker";
+			position[]={5678.1509,229.25322,5219.1675};
+			name="minefield_5";
+			markerType="RECTANGLE";
+			type="";
+			colorName="ColorRed";
+			alpha=0;
+			a=100;
+			b=100;
+			angle=176.87004;
+			id=20443;
+		};
 	};
 	class Connections
 	{
 		class LinkIDProvider
 		{
-			nextID=46;
+			nextID=52;
 		};
 		class Links
 		{
-			items=46;
+			items=52;
 			class Item0
 			{
 				linkID=0;
@@ -52212,6 +52760,66 @@ class Mission
 				linkID=45;
 				item0=19736;
 				item1=20430;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item46
+			{
+				linkID=46;
+				item0=19736;
+				item1=20434;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item47
+			{
+				linkID=47;
+				item0=20436;
+				item1=19736;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item48
+			{
+				linkID=48;
+				item0=20437;
+				item1=19736;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item49
+			{
+				linkID=49;
+				item0=20438;
+				item1=19736;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item50
+			{
+				linkID=50;
+				item0=20439;
+				item1=19736;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item51
+			{
+				linkID=51;
+				item0=20440;
+				item1=19736;
 				class CustomData
 				{
 					type="Sync";
