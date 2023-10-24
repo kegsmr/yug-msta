@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5848.7827,504.68286,4399.4546};
-		dir[]={-0.69530833,-0.48474798,0.53068608};
-		up[]={-0.38534737,0.87464666,0.29411101};
-		aside[]={0.60672861,-2.9779039e-007,0.79494703};
+		pos[]={6425.374,226.26276,4815.0229};
+		dir[]={0.62548578,-0.61996013,0.47372672};
+		up[]={0.49421331,0.78463328,0.37430432};
+		aside[]={0.60375547,-1.4901161e-008,-0.79716951};
 	};
 };
 binarizationWanted=0;
@@ -32670,7 +32670,6 @@ class Mission
 					class Attributes
 					{
 						init="this disableAi ""PATH"";";
-						stance="Up";
 						class Inventory
 						{
 							class primaryWeapon
@@ -32798,7 +32797,6 @@ class Mission
 					class Attributes
 					{
 						init="this disableAi ""PATH"";";
-						stance="Up";
 						class Inventory
 						{
 							class primaryWeapon
@@ -32926,7 +32924,6 @@ class Mission
 					class Attributes
 					{
 						init="this disableAi ""PATH"";";
-						stance="Up";
 						class Inventory
 						{
 							class primaryWeapon
@@ -33089,7 +33086,6 @@ class Mission
 					class Attributes
 					{
 						init="this disableAi ""PATH"";";
-						stance="Up";
 						class Inventory
 						{
 							class primaryWeapon
@@ -33217,7 +33213,6 @@ class Mission
 					class Attributes
 					{
 						init="this disableAi ""PATH"";";
-						stance="Up";
 						class Inventory
 						{
 							class primaryWeapon
@@ -51166,7 +51161,6 @@ class Mission
 					class Attributes
 					{
 						init="this disableAi ""PATH"";";
-						stance="Up";
 						class Inventory
 						{
 							class primaryWeapon
@@ -51294,7 +51288,6 @@ class Mission
 					class Attributes
 					{
 						init="this disableAi ""PATH"";";
-						stance="Up";
 						class Inventory
 						{
 							class primaryWeapon
