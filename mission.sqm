@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20452;
+		nextID=20462;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=274;
+		nextID=277;
 	};
 	class Camera
 	{
-		pos[]={6425.374,226.26276,4815.0229};
-		dir[]={0.62548578,-0.61996013,0.47372672};
-		up[]={0.49421331,0.78463328,0.37430432};
-		aside[]={0.60375547,-1.4901161e-008,-0.79716951};
+		pos[]={5104.3999,30.934782,1549.5051};
+		dir[]={-0.16172278,-0.87125057,-0.46344286};
+		up[]={-0.28705528,0.49083787,-0.82260412};
+		aside[]={-0.94416928,-2.0500738e-007,0.32947692};
 	};
 };
 binarizationWanted=0;
@@ -8293,7 +8293,7 @@ class Mission
 			};
 			id=17206;
 			type="Land_FoodSacks_01_large_brown_F";
-			atlOffset=0.00015258789;
+			atlOffset=9.1552734e-005;
 		};
 		class Item191
 		{
@@ -8311,7 +8311,6 @@ class Mission
 			};
 			id=17207;
 			type="Land_FoodSacks_01_large_brown_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item192
 		{
@@ -8329,7 +8328,6 @@ class Mission
 			};
 			id=17208;
 			type="Land_FoodSacks_01_cargo_white_idap_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item193
 		{
@@ -8347,7 +8345,6 @@ class Mission
 			};
 			id=17209;
 			type="Land_FoodSacks_01_cargo_white_idap_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item194
 		{
@@ -36567,6 +36564,791 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
+						position[]={4519.6206,253.99966,4643.207};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=1;
+						description="Rifleman";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								firemode="rhs_weap_m70b3n:Single";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_762x39mm";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=4;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=19804;
+					type="O_Serbia_Rifleman_01";
+					atlOffset=-1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4521.1104,254.00038,4642.939};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=1;
+						description="Rifleman";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								firemode="rhs_weap_m70b3n:Single";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_762x39mm";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=4;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=19802;
+					type="O_Serbia_Rifleman_01";
+					atlOffset=-1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4522.8096,254.00011,4642.876};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=1;
+						description="Rifleman";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								firemode="rhs_weap_m70b3n:Single";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_762x39mm";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=4;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=19800;
+					type="O_Serbia_Rifleman_01";
+					atlOffset=-4.5776367e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4522.7437,254.00116,4640.4971};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=1;
+						description="Rifleman";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								firemode="rhs_weap_m70b3n:Single";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_762x39mm";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=4;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=19968;
+					type="O_Serbia_Rifleman_01";
+					atlOffset=4.5776367e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4519.5547,254.00072,4640.8281};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=1;
+						description="Rifleman";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								firemode="rhs_weap_m70b3n:Single";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_762x39mm";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=4;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=19966;
+					type="O_Serbia_Rifleman_01";
+					atlOffset=-0.00071716309;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4521.0444,254.00143,4640.5601};
+					};
+					side="East";
+					flags=5;
+					class Attributes
+					{
+						skill=1;
+						description="Rifleman";
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								firemode="rhs_weap_m70b3n:Single";
+								class primaryMuzzleMag
+								{
+									name="rhs_30Rnd_762x39mm";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_30Rnd_762x39mm";
+										count=4;
+										ammoLeft=30;
+									};
+									class Item1
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=19967;
+					type="O_Serbia_Rifleman_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
 						position[]={4521.1851,253.98851,4647.3916};
 					};
 					side="East";
@@ -36773,7 +37555,7 @@ class Mission
 						nAttributes=4;
 					};
 				};
-				class Item2
+				class Item8
 				{
 					dataType="Object";
 					class PositionInfo
@@ -36907,7 +37689,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item3
+				class Item9
 				{
 					dataType="Object";
 					class PositionInfo
@@ -37076,7 +37858,7 @@ class Mission
 						nAttributes=3;
 					};
 				};
-				class Item4
+				class Item10
 				{
 					dataType="Object";
 					class PositionInfo
@@ -37209,791 +37991,6 @@ class Mission
 							};
 						};
 						nAttributes=3;
-					};
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4519.6206,253.99966,4643.207};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=1;
-						description="Rifleman";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m70b3n";
-								firemode="rhs_weap_m70b3n:Single";
-								class primaryMuzzleMag
-								{
-									name="rhs_30Rnd_762x39mm";
-									ammoLeft=30;
-								};
-							};
-							class uniform
-							{
-								typeName="VJ_OKLF_Camo";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=5;
-									class Item0
-									{
-										name="ACE_EntrenchingTool";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_fieldDressing";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACE_packingBandage";
-										count=1;
-									};
-									class Item3
-									{
-										name="ACE_morphine";
-										count=1;
-									};
-									class Item4
-									{
-										name="ACE_tourniquet";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=4;
-										ammoLeft=30;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=2;
-										ammoLeft=1;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=19804;
-					type="O_Serbia_Rifleman_01";
-					atlOffset=-1.5258789e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="RHS_Male01CZ";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ALiVE_OverrideLoadout";
-							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4521.1104,254.00038,4642.939};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=1;
-						description="Rifleman";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m70b3n";
-								firemode="rhs_weap_m70b3n:Single";
-								class primaryMuzzleMag
-								{
-									name="rhs_30Rnd_762x39mm";
-									ammoLeft=30;
-								};
-							};
-							class uniform
-							{
-								typeName="VJ_OKLF_Camo";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=5;
-									class Item0
-									{
-										name="ACE_EntrenchingTool";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_fieldDressing";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACE_packingBandage";
-										count=1;
-									};
-									class Item3
-									{
-										name="ACE_morphine";
-										count=1;
-									};
-									class Item4
-									{
-										name="ACE_tourniquet";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=4;
-										ammoLeft=30;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=2;
-										ammoLeft=1;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=19802;
-					type="O_Serbia_Rifleman_01";
-					atlOffset=-1.5258789e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="RHS_Male01CZ";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ALiVE_OverrideLoadout";
-							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item7
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4522.8096,254.00011,4642.876};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=1;
-						description="Rifleman";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m70b3n";
-								firemode="rhs_weap_m70b3n:Single";
-								class primaryMuzzleMag
-								{
-									name="rhs_30Rnd_762x39mm";
-									ammoLeft=30;
-								};
-							};
-							class uniform
-							{
-								typeName="VJ_OKLF_Camo";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=5;
-									class Item0
-									{
-										name="ACE_EntrenchingTool";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_fieldDressing";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACE_packingBandage";
-										count=1;
-									};
-									class Item3
-									{
-										name="ACE_morphine";
-										count=1;
-									};
-									class Item4
-									{
-										name="ACE_tourniquet";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=4;
-										ammoLeft=30;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=2;
-										ammoLeft=1;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=19800;
-					type="O_Serbia_Rifleman_01";
-					atlOffset=-4.5776367e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="RHS_Male01CZ";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ALiVE_OverrideLoadout";
-							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item8
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4522.7437,254.00116,4640.4971};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=1;
-						description="Rifleman";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m70b3n";
-								firemode="rhs_weap_m70b3n:Single";
-								class primaryMuzzleMag
-								{
-									name="rhs_30Rnd_762x39mm";
-									ammoLeft=30;
-								};
-							};
-							class uniform
-							{
-								typeName="VJ_OKLF_Camo";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=5;
-									class Item0
-									{
-										name="ACE_EntrenchingTool";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_fieldDressing";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACE_packingBandage";
-										count=1;
-									};
-									class Item3
-									{
-										name="ACE_morphine";
-										count=1;
-									};
-									class Item4
-									{
-										name="ACE_tourniquet";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=4;
-										ammoLeft=30;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=2;
-										ammoLeft=1;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=19968;
-					type="O_Serbia_Rifleman_01";
-					atlOffset=4.5776367e-005;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="RHS_Male01CZ";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ALiVE_OverrideLoadout";
-							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item9
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4519.5547,254.00072,4640.8281};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=1;
-						description="Rifleman";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m70b3n";
-								firemode="rhs_weap_m70b3n:Single";
-								class primaryMuzzleMag
-								{
-									name="rhs_30Rnd_762x39mm";
-									ammoLeft=30;
-								};
-							};
-							class uniform
-							{
-								typeName="VJ_OKLF_Camo";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=5;
-									class Item0
-									{
-										name="ACE_EntrenchingTool";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_fieldDressing";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACE_packingBandage";
-										count=1;
-									};
-									class Item3
-									{
-										name="ACE_morphine";
-										count=1;
-									};
-									class Item4
-									{
-										name="ACE_tourniquet";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=4;
-										ammoLeft=30;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=2;
-										ammoLeft=1;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=19966;
-					type="O_Serbia_Rifleman_01";
-					atlOffset=-0.00071716309;
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="RHS_Male01CZ";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ALiVE_OverrideLoadout";
-							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item10
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={4521.0444,254.00143,4640.5601};
-					};
-					side="East";
-					flags=5;
-					class Attributes
-					{
-						skill=1;
-						description="Rifleman";
-						isPlayable=1;
-						class Inventory
-						{
-							class primaryWeapon
-							{
-								name="rhs_weap_m70b3n";
-								firemode="rhs_weap_m70b3n:Single";
-								class primaryMuzzleMag
-								{
-									name="rhs_30Rnd_762x39mm";
-									ammoLeft=30;
-								};
-							};
-							class uniform
-							{
-								typeName="VJ_OKLF_Camo";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=1;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=2;
-										ammoLeft=30;
-									};
-								};
-								class ItemCargo
-								{
-									items=5;
-									class Item0
-									{
-										name="ACE_EntrenchingTool";
-										count=1;
-									};
-									class Item1
-									{
-										name="ACE_fieldDressing";
-										count=1;
-									};
-									class Item2
-									{
-										name="ACE_packingBandage";
-										count=1;
-									};
-									class Item3
-									{
-										name="ACE_morphine";
-										count=1;
-									};
-									class Item4
-									{
-										name="ACE_tourniquet";
-										count=1;
-									};
-								};
-							};
-							class vest
-							{
-								typeName="rhssaf_vest_md99_md2camo_rifleman";
-								isBackpack=0;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="rhs_30Rnd_762x39mm";
-										count=4;
-										ammoLeft=30;
-									};
-									class Item1
-									{
-										name="rhs_mag_m67";
-										count=2;
-										ammoLeft=1;
-									};
-								};
-							};
-							map="ItemMap";
-							compass="ItemCompass";
-							watch="ItemWatch";
-							radio="ItemRadio";
-						};
-					};
-					id=19967;
-					type="O_Serbia_Rifleman_01";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									singleType="STRING";
-									value="RHS_Male01CZ";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="ALiVE_OverrideLoadout";
-							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
-							class Value
-							{
-								class data
-								{
-									singleType="BOOL";
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
 					};
 				};
 				class Item11
@@ -46423,7 +46420,7 @@ class Mission
 			};
 			id=20144;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00050354004;
+			atlOffset=0.00044250488;
 		};
 		class Item1217
 		{
@@ -46442,7 +46439,7 @@ class Mission
 			};
 			id=20145;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00050354004;
+			atlOffset=0.00044250488;
 		};
 		class Item1218
 		{
@@ -46461,7 +46458,6 @@ class Mission
 			};
 			id=20146;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=6.1035156e-005;
 		};
 		class Item1219
 		{
@@ -46480,7 +46476,6 @@ class Mission
 			};
 			id=20147;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=6.1035156e-005;
 		};
 		class Item1220
 		{
@@ -46499,7 +46494,7 @@ class Mission
 			};
 			id=20148;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00047302246;
+			atlOffset=0.00044250488;
 		};
 		class Item1221
 		{
@@ -46519,7 +46514,6 @@ class Mission
 			};
 			id=20150;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46556,7 +46550,6 @@ class Mission
 			};
 			id=20151;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46593,7 +46586,6 @@ class Mission
 			};
 			id=20152;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46630,7 +46622,6 @@ class Mission
 			};
 			id=20153;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47566,7 +47557,6 @@ class Mission
 			};
 			id=20214;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47602,7 +47592,6 @@ class Mission
 			};
 			id=20215;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47638,7 +47627,6 @@ class Mission
 			};
 			id=20216;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47674,7 +47662,6 @@ class Mission
 			};
 			id=20217;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47710,7 +47697,6 @@ class Mission
 			};
 			id=20218;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47746,7 +47732,6 @@ class Mission
 			};
 			id=20219;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47782,7 +47767,6 @@ class Mission
 			};
 			id=20220;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47818,7 +47802,6 @@ class Mission
 			};
 			id=20221;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -49893,7 +49876,6 @@ class Mission
 					};
 					id=20260;
 					type="O_Serbia_Rifleman_01";
-					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -49947,7 +49929,6 @@ class Mission
 				formation="FILE";
 			};
 			id=20259;
-			atlOffset=6.1035156e-005;
 		};
 		class Item1283
 		{
