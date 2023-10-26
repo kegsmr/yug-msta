@@ -11,6 +11,7 @@ class yug
 	{
 		file = "functions\yug\init"
 		class briefings {};
+		class civilianVehicles {};
 		class deathMarkers {};
 		class groupMarkers {};
 		class lists {};

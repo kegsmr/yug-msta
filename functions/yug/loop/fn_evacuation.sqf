@@ -465,18 +465,23 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 
 		private _vehicle = assignedVehicle _unit;
 
-		if ((isNull (driver _vehicle)) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 500 || (_vehicle distance getMarkerPos "refugee_marker" < 150) || (getPos _vehicle select 2 > 10 && vehicle _unit == _unit) || ((vehicle _unit == _unit || (side driver vehicle _unit != independent)) && (_unit getVariable ["YUG_getIn", 0] == 2))) then {
-			
-			private _group = group _unit;
+		if !((isNull (driver _vehicle) || _unit == driver _vehicle) && typeOf _vehicle select [count typeOf _vehicle - 3, 3] == "CIV") then {
 
-			[_unit] orderGetIn false;
-			_group leaveVehicle _vehicle;
+			if ((isNull (driver _vehicle)) || ((driver _vehicle) == _unit && typeOf _vehicle in _vehicles) || !alive _vehicle || _unit distance _vehicle > 500 || (_vehicle distance getMarkerPos "refugee_marker" < 150) || (getPos _vehicle select 2 > 10 && vehicle _unit == _unit) || ((vehicle _unit == _unit || (side driver vehicle _unit != independent)) && (_unit getVariable ["YUG_getIn", 0] == 2))) then {
+				
+				private _group = group _unit;
 
-			_unit setVariable ["YUG_getIn", 3, true];
-			_unit spawn {
-				private _unit = _this;
-				sleep 180;
-				_unit setVariable ["YUG_getIn", 0, true];
+				[_unit] orderGetIn false;
+				[_unit] allowGetIn true;
+				_group leaveVehicle _vehicle;
+
+				_unit setVariable ["YUG_getIn", 3, true];
+				_unit spawn {
+					private _unit = _this;
+					sleep 180;
+					_unit setVariable ["YUG_getIn", 0, true];
+				};
+
 			};
 
 		};
@@ -486,6 +491,7 @@ if (!YUG_timerActive && (triggerTimeoutCurrent trg_endMission != -1)) then {
 		if (_unit getVariable ["YUG_getIn", 0] == 2 && vehicle _unit == _unit) then {
 
 			[_unit] orderGetIn false;
+			[_unit] allowGetIn true;
 
 			_unit setVariable ["YUG_getIn", 3, true];
 			_unit spawn {
