@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=20477;
+		nextID=20625;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=280;
+		nextID=283;
 	};
 	class Camera
 	{
-		pos[]={5863.8462,276.82996,4654.9775};
-		dir[]={-0.61735827,-0.76279545,-0.1924486};
-		up[]={-0.72823352,0.64663398,-0.2270115};
-		aside[]={-0.29760632,8.7427907e-008,0.95469844};
+		pos[]={711.31165,337.65805,7579.8096};
+		dir[]={-0.25854447,-0.43304753,-0.86353749};
+		up[]={-0.12421228,0.90135986,-0.41487098};
+		aside[]={-0.95801258,1.3713725e-007,0.28683108};
 	};
 };
 binarizationWanted=0;
@@ -188,13 +188,14 @@ addons[]=
 	"ace_compat_rhs_usf3",
 	"RHS_US_A2_AirImport",
 	"CUP_TrackedVehicles_NewM113",
-	"CUP_WheeledVehicles_BRDM2"
+	"CUP_WheeledVehicles_BRDM2",
+	"CUP_AirVehicles_AN2"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=123;
+		items=124;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -936,6 +937,11 @@ class AddonsMetaData
 			className="CUP_WheeledVehicles_BRDM2";
 			name="CUP_WheeledVehicles_BRDM2";
 		};
+		class Item123
+		{
+			className="CUP_AirVehicles_AN2";
+			name="CUP_AirVehicles_AN2";
+		};
 	};
 };
 class DynamicSimulation
@@ -1266,7 +1272,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1332;
+		items=1397;
 		class Item0
 		{
 			dataType="Logic";
@@ -8293,7 +8299,7 @@ class Mission
 			};
 			id=17206;
 			type="Land_FoodSacks_01_large_brown_F";
-			atlOffset=0.00015258789;
+			atlOffset=9.1552734e-005;
 		};
 		class Item191
 		{
@@ -8311,7 +8317,6 @@ class Mission
 			};
 			id=17207;
 			type="Land_FoodSacks_01_large_brown_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item192
 		{
@@ -8329,7 +8334,6 @@ class Mission
 			};
 			id=17208;
 			type="Land_FoodSacks_01_cargo_white_idap_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item193
 		{
@@ -8347,7 +8351,6 @@ class Mission
 			};
 			id=17209;
 			type="Land_FoodSacks_01_cargo_white_idap_F";
-			atlOffset=6.1035156e-005;
 		};
 		class Item194
 		{
@@ -9482,7 +9485,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5043.1782,261.93616,4719.6152};
+				position[]={5043.1782,261.93619,4719.6152};
 				angles[]={6.2578578,4.4687133,0.097025506};
 			};
 			side="Empty";
@@ -9494,7 +9497,6 @@ class Mission
 			};
 			id=19508;
 			type="Wire";
-			atlOffset=-3.0517578e-005;
 		};
 		class Item254
 		{
@@ -28909,7 +28911,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.050000072;
+			atlOffset=0.049884945;
 		};
 		class Item1108
 		{
@@ -38597,6 +38599,7 @@ class Mission
 			{
 				name="serb_tank_squad";
 				init="units this allowGetIn true;";
+				combatMode="RED";
 				behaviour="SAFE";
 			};
 			class CrewLinks
@@ -46418,7 +46421,7 @@ class Mission
 			};
 			id=20144;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00050354004;
+			atlOffset=0.00044250488;
 		};
 		class Item1217
 		{
@@ -46437,7 +46440,7 @@ class Mission
 			};
 			id=20145;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=0.00050354004;
+			atlOffset=0.00044250488;
 		};
 		class Item1218
 		{
@@ -46456,7 +46459,6 @@ class Mission
 			};
 			id=20146;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=6.1035156e-005;
 		};
 		class Item1219
 		{
@@ -46475,7 +46477,6 @@ class Mission
 			};
 			id=20147;
 			type="ACE_medicalSupplyCrate";
-			atlOffset=6.1035156e-005;
 		};
 		class Item1220
 		{
@@ -46514,7 +46515,6 @@ class Mission
 			};
 			id=20150;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46551,7 +46551,6 @@ class Mission
 			};
 			id=20151;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46588,7 +46587,6 @@ class Mission
 			};
 			id=20152;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -46625,7 +46623,6 @@ class Mission
 			};
 			id=20153;
 			type="rhs_gear_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47561,7 +47558,6 @@ class Mission
 			};
 			id=20214;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47597,7 +47593,6 @@ class Mission
 			};
 			id=20215;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47633,7 +47628,6 @@ class Mission
 			};
 			id=20216;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47669,7 +47663,6 @@ class Mission
 			};
 			id=20217;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47705,7 +47698,6 @@ class Mission
 			};
 			id=20218;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47741,7 +47733,6 @@ class Mission
 			};
 			id=20219;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47777,7 +47768,6 @@ class Mission
 			};
 			id=20220;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -47813,7 +47803,6 @@ class Mission
 			};
 			id=20221;
 			type="rhs_mags_crate";
-			atlOffset=6.1035156e-005;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -49888,7 +49877,6 @@ class Mission
 					};
 					id=20260;
 					type="O_Serbia_Rifleman_01";
-					atlOffset=6.1035156e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -49942,7 +49930,6 @@ class Mission
 				formation="FILE";
 			};
 			id=20259;
-			atlOffset=6.1035156e-005;
 		};
 		class Item1283
 		{
@@ -52301,6 +52288,8822 @@ class Mission
 			b=100;
 			angle=176.87004;
 			id=20443;
+		};
+		class Item1332
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5117.1265,278.29935,4772.9409};
+						angles[]={0,3.8641193,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20487;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20486;
+		};
+		class Item1333
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5113.1812,278.4415,4777.3057};
+						angles[]={0,4.0163693,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20489;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20488;
+		};
+		class Item1334
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5166.5439,292.96136,5021.2905};
+						angles[]={0,4.9014506,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20491;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20490;
+		};
+		class Item1335
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5178.667,265.37241,4603.7998};
+						angles[]={0,5.3090119,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Down";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20493;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20492;
+		};
+		class Item1336
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5160.582,281.41116,4753.9199};
+						angles[]={0,3.9550557,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20495;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20494;
+		};
+		class Item1337
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5153.876,281.03107,4758.0718};
+						angles[]={0,4.1767302,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20497;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20496;
+		};
+		class Item1338
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5165.7021,281.98621,4752.2168};
+						angles[]={0,3.8890822,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20499;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20498;
+		};
+		class Item1339
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5267.3657,278.17209,4532.8477};
+						angles[]={0,5.6072507,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20501;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20500;
+		};
+		class Item1340
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5307.3721,302.02322,4679.0459};
+						angles[]={0,4.6826658,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20505;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20504;
+		};
+		class Item1341
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5291.6089,300.32071,4664.3696};
+						angles[]={0,4.9026647,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20507;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20506;
+		};
+		class Item1342
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5299.23,301.00241,4681.1216};
+						angles[]={0,4.1383109,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20509;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20508;
+		};
+		class Item1343
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5302.0571,292.74933,5026.2373};
+						angles[]={0,3.6338103,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20511;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20510;
+		};
+		class Item1344
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5211.0752,296.14209,5001.0352};
+						angles[]={0,5.5142989,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20513;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20512;
+		};
+		class Item1345
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5573.9312,277.49524,5076.2793};
+						angles[]={0,3.1582394,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20515;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20514;
+		};
+		class Item1346
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5624.8462,278.03268,5066.9937};
+						angles[]={0,5.4633756,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20517;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20516;
+		};
+		class Item1347
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5252.2896,277.66766,4564.6255};
+						angles[]={0,4.9026647,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20519;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20518;
+		};
+		class Item1348
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5250.6602,277.84933,4570.3052};
+						angles[]={0,4.8484788,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Down";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20521;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20520;
+		};
+		class Item1349
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5251.2163,278.09366,4549.3335};
+						angles[]={0,4.9026647,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20523;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20522;
+		};
+		class Item1350
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5282.3052,294.85577,4647.6768};
+						angles[]={0,4.7731638,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20525;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20524;
+		};
+		class Item1351
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5271.3374,294.87793,4661.9805};
+						angles[]={0,4.7340789,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20527;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20526;
+		};
+		class Item1352
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5269.6743,289.74124,4632.4707};
+						angles[]={0,5.0603251,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20529;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=3.0517578e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20528;
+			atlOffset=3.0517578e-005;
+		};
+		class Item1353
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5482.812,278.22009,4619.936};
+						angles[]={0,3.0396409,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20531;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20530;
+		};
+		class Item1354
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5598.0596,282.31866,4669.0195};
+						angles[]={0,4.293117,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20533;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20532;
+		};
+		class Item1355
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5584.8027,281.90472,4658.7505};
+						angles[]={0,5.1926804,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20535;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20534;
+		};
+		class Item1356
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5593.915,284.68939,4682.5654};
+						angles[]={0,4.9026647,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20537;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20536;
+		};
+		class Item1357
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5386.2969,297.14243,4672.3208};
+						angles[]={0,4.2458973,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20539;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20538;
+		};
+		class Item1358
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5348.6519,301.80099,4662.9878};
+						angles[]={0,4.9026647,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20541;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20540;
+		};
+		class Item1359
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5544.439,287.63824,4672.6904};
+						angles[]={0,4.9026647,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20543;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20542;
+		};
+		class Item1360
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5695.6255,272.7049,4531.2969};
+						angles[]={0,6.0792966,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20545;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20544;
+		};
+		class Item1361
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5669.2578,275.51144,4515.6372};
+						angles[]={0,6.1086068,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20547;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20546;
+		};
+		class Item1362
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5684.7402,274.56931,4532.7949};
+						angles[]={0,5.8835282,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20549;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20548;
+		};
+		class Item1363
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5720.002,268.26837,4551.6299};
+						angles[]={0,4.9026647,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20551;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20550;
+		};
+		class Item1364
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5837.4697,291.96347,4810.5815};
+						angles[]={0,2.5270188,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20555;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20554;
+		};
+		class Item1365
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5364.5386,116.57834,2352.4653};
+						angles[]={0,1.1786435,-0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=1;
+						presence=0.25;
+						description="Sniper";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m76";
+								optics="rhs_acc_pso1m21";
+								firemode="rhs_weap_m76:Single";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_10Rnd_792x57_m76_tracer";
+									ammoLeft=10;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhssaf_10Rnd_792x57_m76_tracer";
+										count=10;
+										ammoLeft=10;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhssaf_helmet_m59_85_oakleaf";
+						};
+					};
+					id=20559;
+					type="O_Serbia_Sniper_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="serb_squad_5";
+				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
+				behaviour="SAFE";
+				formation="FILE";
+			};
+			id=20558;
+		};
+		class Item1366
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5393.9233,108.59364,2341.3442};
+						angles[]={0,1.758489,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=1;
+						presence=0.25;
+						description="Sniper";
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m76";
+								optics="rhs_acc_pso1m21";
+								firemode="rhs_weap_m76:Single";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_10Rnd_792x57_m76_tracer";
+									ammoLeft=10;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhssaf_10Rnd_792x57_m76_tracer";
+										count=10;
+										ammoLeft=10;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhssaf_helmet_m59_85_oakleaf";
+						};
+					};
+					id=20561;
+					type="O_Serbia_Sniper_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="serb_squad_6";
+				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
+				behaviour="SAFE";
+				formation="FILE";
+			};
+			id=20560;
+		};
+		class Item1367
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5470.1733,243.89601,3199.8083};
+						angles[]={0,4.5261574,-0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=1;
+						presence=0.25;
+						description="Sniper";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m76";
+								optics="rhs_acc_pso1m21";
+								firemode="rhs_weap_m76:Single";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_10Rnd_792x57_m76_tracer";
+									ammoLeft=10;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhssaf_10Rnd_792x57_m76_tracer";
+										count=10;
+										ammoLeft=10;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhssaf_helmet_m59_85_oakleaf";
+						};
+					};
+					id=20563;
+					type="O_Serbia_Sniper_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="serb_squad_7";
+				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
+				behaviour="SAFE";
+				formation="FILE";
+			};
+			id=20562;
+		};
+		class Item1368
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4752.6504,238.83759,4511.481};
+						angles[]={0,3.5217199,-0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=1;
+						presence=0.25;
+						description="Sniper";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m76";
+								optics="rhs_acc_pso1m21";
+								firemode="rhs_weap_m76:Single";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_10Rnd_792x57_m76_tracer";
+									ammoLeft=10;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhssaf_10Rnd_792x57_m76_tracer";
+										count=10;
+										ammoLeft=10;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhssaf_helmet_m59_85_oakleaf";
+						};
+					};
+					id=20565;
+					type="O_Serbia_Sniper_01";
+					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="serb_squad_8";
+				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
+				behaviour="SAFE";
+				formation="FILE";
+			};
+			id=20564;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1369
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={4778.6675,227.88858,4359.0591};
+						angles[]={0,1.404946,-0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=1;
+						presence=0.25;
+						description="Sniper";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m76";
+								optics="rhs_acc_pso1m21";
+								firemode="rhs_weap_m76:Single";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_10Rnd_792x57_m76_tracer";
+									ammoLeft=10;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhssaf_10Rnd_792x57_m76_tracer";
+										count=10;
+										ammoLeft=10;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhssaf_helmet_m59_85_oakleaf";
+						};
+					};
+					id=20567;
+					type="O_Serbia_Sniper_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="serb_squad_9";
+				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
+				behaviour="SAFE";
+				formation="FILE";
+			};
+			id=20566;
+		};
+		class Item1370
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5731.2554,301.20328,3323.9309};
+						angles[]={0,5.2136474,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=1;
+						presence=0.25;
+						description="Sniper";
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m76";
+								optics="rhs_acc_pso1m21";
+								firemode="rhs_weap_m76:Single";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_10Rnd_792x57_m76_tracer";
+									ammoLeft=10;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhssaf_10Rnd_792x57_m76_tracer";
+										count=10;
+										ammoLeft=10;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhssaf_helmet_m59_85_oakleaf";
+						};
+					};
+					id=20569;
+					type="O_Serbia_Sniper_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="serb_squad_10";
+				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
+				behaviour="SAFE";
+				formation="FILE";
+			};
+			id=20568;
+		};
+		class Item1371
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5782.207,234.79707,3793.9727};
+						angles[]={0,0.83171153,-0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=1;
+						presence=0.25;
+						description="Sniper";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m76";
+								optics="rhs_acc_pso1m21";
+								firemode="rhs_weap_m76:Single";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_10Rnd_792x57_m76_tracer";
+									ammoLeft=10;
+								};
+							};
+							class uniform
+							{
+								typeName="VJ_OKLF_Camo";
+								isBackpack=0;
+								class ItemCargo
+								{
+									items=5;
+									class Item0
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_fieldDressing";
+										count=1;
+									};
+									class Item2
+									{
+										name="ACE_packingBandage";
+										count=1;
+									};
+									class Item3
+									{
+										name="ACE_morphine";
+										count=1;
+									};
+									class Item4
+									{
+										name="ACE_tourniquet";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_md2camo_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="rhs_mag_m67";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item1
+									{
+										name="rhssaf_10Rnd_792x57_m76_tracer";
+										count=10;
+										ammoLeft=10;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							headgear="rhssaf_helmet_m59_85_oakleaf";
+						};
+					};
+					id=20571;
+					type="O_Serbia_Sniper_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male01CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.97000003;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				name="serb_squad_11";
+				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
+				behaviour="SAFE";
+				formation="FILE";
+			};
+			id=20570;
+		};
+		class Item1372
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5413.6411,275.19644,4579.9883};
+						angles[]={0,3.3571017,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20573;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20572;
+		};
+		class Item1373
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5389.7954,274.12686,4558.4575};
+						angles[]={0,3.3035507,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20575;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20574;
+		};
+		class Item1374
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5814.9517,267.6904,5046.4761};
+						angles[]={0,4.5984335,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20577;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20576;
+		};
+		class Item1375
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5815.1289,267.5697,5037.9775};
+						angles[]={0,5.2871737,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20579;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20578;
+		};
+		class Item1376
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5914.3125,263.87985,4970.6621};
+						angles[]={0,5.5214796,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20581;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20580;
+		};
+		class Item1377
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5918.7178,263.08359,4965.9063};
+						angles[]={0,5.9711809,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20583;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20582;
+		};
+		class Item1378
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5930.4141,261.35199,4958.0806};
+						angles[]={0,5.8238978,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20585;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20584;
+		};
+		class Item1379
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5771.6655,261.91034,4590.2451};
+						angles[]={0,5.7085991,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20587;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20586;
+		};
+		class Item1380
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5824.9648,256.77362,4661.5317};
+						angles[]={0,5.7086892,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20589;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20588;
+		};
+		class Item1381
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5788.0059,257.89764,4565.1353};
+						angles[]={0,5.9567685,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20591;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20590;
+		};
+		class Item1382
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5836.9463,252.62135,4610.1123};
+						angles[]={0,6.1086068,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20593;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20592;
+		};
+		class Item1383
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5828.353,255.29488,4603.3359};
+						angles[]={0,5.0578594,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20595;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20594;
+		};
+		class Item1384
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5828.8101,255.29504,4605.6128};
+						angles[]={0,5.0833411,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20597;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=0.00016784668;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20596;
+			atlOffset=0.00016784668;
+		};
+		class Item1385
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5796.5552,256.83121,4555.0537};
+						angles[]={0,4.5327206,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20599;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20598;
+		};
+		class Item1386
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5841.4277,253.99149,4652.8965};
+						angles[]={0,5.2205639,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20601;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20600;
+		};
+		class Item1387
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5881.5088,254.12543,4701.3857};
+						angles[]={0,5.1838026,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						skill=1;
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20603;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=0.14399719;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20602;
+			atlOffset=0.14399719;
+		};
+		class Item1388
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5897.8799,256.39505,4676.418};
+						angles[]={0,0.45430923,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20605;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=0.0002746582;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20604;
+			atlOffset=0.0002746582;
+		};
+		class Item1389
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5899.4883,256.39474,4683.5254};
+						angles[]={0,5.1030364,-0};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20607;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					atlOffset=2.3973236;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20606;
+			atlOffset=2.3973236;
+		};
+		class Item1390
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5896.6338,256.39478,4681.9888};
+						angles[]={0,1.6019919,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						stance="Middle";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20609;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20608;
+		};
+		class Item1391
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5922.6509,253.99414,4685.5278};
+						angles[]={0,3.5481601,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20611;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20610;
+		};
+		class Item1392
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5886.3379,251.5253,4625.2793};
+						angles[]={0,6.1086068,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20613;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20612;
+		};
+		class Item1393
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5901.7227,251.09552,4630.3423};
+						angles[]={0,0.28731793,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20615;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20614;
+		};
+		class Item1394
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5934.6851,252.0728,4645.3638};
+						angles[]={0,5.4534173,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20617;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20616;
+		};
+		class Item1395
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5971.9224,252.84116,4660.5488};
+						angles[]={0,4.9577146,-0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="this disableAi ""PATH"";";
+						presence=0.25;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="rhs_weap_m70b3n";
+								class primaryMuzzleMag
+								{
+									name="rhssaf_30Rnd_762x39mm_M67";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="rhsgref_uniform_woodland";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhs_mag_nspn_red";
+										count=1;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="ACE_EntrenchingTool";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="rhssaf_vest_md99_woodland_rifleman";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="rhssaf_30Rnd_762x39mm_M67";
+										count=2;
+										ammoLeft=30;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=20619;
+					type="I_Bosnia_and_Herzegovina_Rifleman_1_01";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="RHS_Male04CZ";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ALiVE_OverrideLoadout";
+							expression="_this setVariable ['ALiVE_OverrideLoadout',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+			};
+			class Attributes
+			{
+				dynamicSimulation=1;
+			};
+			id=20618;
+		};
+		class Item1396
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={702.06531,332.14355,7565.4824};
+				angles[]={0.021331646,2.0338757,0.037316564};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=20624;
+			type="CUP_O_AN2_TK";
 		};
 	};
 	class Connections
