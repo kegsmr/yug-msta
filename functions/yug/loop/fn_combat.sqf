@@ -1,12 +1,11 @@
 // IMPROVES COMBAT REALISM
 
 if (!isServer) exitWith {};
-// if (!MALO_CFG_advanced_ai) exitWith {};
 
 YUG_sniper_types = ["I_Bosnia_and_Herzegovina_Sniper_01", "O_Serbia_Sniper_01"];
 
 private _sides = [east, west, independent];
-private _radius = 500 /*MALO_simulation_distance*/;
+private _radius = 500;
 
 
 YUG_combat_units = [];
@@ -171,7 +170,7 @@ YUG_fnc_combat_getInside = {
 		if (_sniper || _in_vehicle) then {
 
 			_group setSpeedMode "FULL";
-			[_group, "RED"] call YUG_fnc_setCombatMode;
+			[_group, "YELLOW"] call YUG_fnc_setCombatMode;
 
 		} else {
 
