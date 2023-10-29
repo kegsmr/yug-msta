@@ -85,7 +85,7 @@ YUG_fnc_combat_getInside = {
 
 		// ENABLE ALL AI IF ENEMY WITHIN TEN METERS
 
-		if ((_x distance (_x findNearestEnemy _x) < 10) && !(isDamageAllowed _x) /*&& (typeOf _x != "LOP_UN_Infantry_Rifleman")*/) then {
+		if ((_x distance (_x findNearestEnemy _x) < 10) && (isDamageAllowed _x) /*&& (typeOf _x != "LOP_UN_Infantry_Rifleman")*/) then {
 			_x enableAi "ALL";
 		};
 
@@ -229,7 +229,9 @@ YUG_fnc_combat_getInside = {
 						case "close": {
 							if (_morale < 20) then {
 								[_group, "YELLOW"] call YUG_fnc_setCombatMode;
-								_unit enableAi "ALL";
+								if (isDamageAllowed _unit) then {
+									_unit enableAi "ALL";
+								};
 								_unit doMove (getMarkerPos "west_retreat_marker");
 							} else {
 								[_group, "RED"] call YUG_fnc_setCombatMode;
