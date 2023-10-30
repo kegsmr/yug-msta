@@ -43,7 +43,7 @@ private _side = east;
 private _distance = 100;
 	// SAFE DISTANCE
 
-private _condition = !isPlayer kapetan;
+private _condition = !isPlayer (missionNamespace getVariable ["kapetan", allUnits select 0]);
 	// CONDITION THAT MUST BE TRUE FOR THE FIRING MISSION TO BEGIN
 //
 

@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=286;
+		nextID=292;
 	};
 	class Camera
 	{
-		pos[]={4534.4316,281.69687,4655.1157};
-		dir[]={-0.7374236,-0.67360926,0.049568146};
-		up[]={-0.67209262,0.7390877,0.045176726};
-		aside[]={0.067066669,0,0.99774849};
+		pos[]={5875.0767,277.52191,4616.9727};
+		dir[]={0,-0.70710701,0.70710659};
+		up[]={0,0.70710653,0.70710695};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -5516,7 +5516,6 @@ class Mission
 			class Attributes
 			{
 				init="un_squad addVehicle this;";
-				dynamicSimulation=1;
 			};
 			id=14759;
 			type="CUP_C_S1203_CIV_CR";
@@ -5550,7 +5549,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=14760;
 			type="CUP_C_Volha_CR_CIV";
@@ -5567,7 +5565,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=14761;
 			type="CUP_C_Tractor_Old_CIV";
@@ -5602,7 +5599,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=14763;
 			type="CUP_C_Tractor_Old_CIV";
@@ -5638,7 +5634,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=14765;
 			type="CUP_C_Tractor_Old_CIV";
@@ -5656,7 +5651,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=14766;
 			type="CUP_C_Volha_Blue_TKCIV";
@@ -5674,7 +5668,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=14769;
 			type="CUP_C_Lada_CIV";
@@ -5726,7 +5719,6 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				dynamicSimulation=1;
 			};
 			id=14771;
 			type="CUP_C_Lada_GreenTK_CIV";
@@ -33048,6 +33040,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=19832;
 			class CustomAttributes
@@ -33337,6 +33330,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=19840;
 			class CustomAttributes
@@ -33500,6 +33494,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=19844;
 			class CustomAttributes
@@ -33663,6 +33658,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=19846;
 			class CustomAttributes
@@ -33826,6 +33822,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=19848;
 		};
@@ -38858,6 +38855,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=19986;
 		};
@@ -39008,6 +39006,7 @@ class Mission
 			};
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=19988;
 		};
@@ -39154,6 +39153,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=19989;
 		};
@@ -39725,6 +39725,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20005;
 		};
@@ -39871,6 +39872,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20007;
 		};
@@ -48990,6 +48992,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20247;
 		};
@@ -49138,6 +49141,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20249;
 			atlOffset=0.00044631958;
@@ -49287,6 +49291,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20251;
 			atlOffset=2.5170631;
@@ -49449,6 +49454,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true];";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20253;
 			atlOffset=1.5258789e-005;
@@ -49611,6 +49617,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true];";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20257;
 		};
@@ -49772,6 +49779,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true];";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20259;
 		};
@@ -51236,6 +51244,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20384;
 			class CustomAttributes
@@ -56754,6 +56763,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20558;
 		};
@@ -56909,6 +56919,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20560;
 			atlOffset=7.6293945e-006;
@@ -57063,6 +57074,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20562;
 		};
@@ -57217,6 +57229,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20564;
 			atlOffset=1.5258789e-005;
@@ -57371,6 +57384,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20566;
 		};
@@ -57525,6 +57539,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20568;
 		};
@@ -57678,6 +57693,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20570;
 		};
@@ -61230,6 +61246,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=20633;
 			type="Land_Posed";
@@ -61297,6 +61314,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
+				dynamicSimulation=1;
 			};
 			id=20635;
 			type="Land_Posed";
@@ -61332,7 +61350,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4518.5122,257.87601,4562.6392};
-						angles[]={0,2.6221299,-0};
+						angles[]={0,2.6221299,0};
 					};
 					side="East";
 					flags=7;
@@ -61477,6 +61495,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true];";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20639;
 		};
@@ -61493,7 +61512,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4530.7212,254.27444,4647.4946};
-						angles[]={0,0.98623312,-0};
+						angles[]={0,0.98623312,0};
 					};
 					side="East";
 					flags=3;
@@ -61640,6 +61659,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true];";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20643;
 			atlOffset=0.28300476;
@@ -61657,7 +61677,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4489.646,254.24843,4577.2095};
-						angles[]={0,4.5906916,-0};
+						angles[]={0,4.5906916,0};
 					};
 					side="East";
 					flags=7;
@@ -61803,6 +61823,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true];";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20647;
 			atlOffset=4.5776367e-005;
@@ -61820,7 +61841,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4515.3433,254.00143,4637.9209};
-						angles[]={0,1.7034024,-0};
+						angles[]={0,1.7034024,0};
 					};
 					side="East";
 					flags=7;
@@ -61965,6 +61986,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true];";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20649;
 		};
@@ -61981,7 +62003,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4493.9014,254.12071,4570.6602};
-						angles[]={0,3.2455335,-0};
+						angles[]={0,3.2455335,0};
 					};
 					side="East";
 					flags=7;
@@ -62126,6 +62148,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true];";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20651;
 		};
@@ -62142,7 +62165,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4535.3774,258.01422,4638.1587};
-						angles[]={0,1.2554733,-0};
+						angles[]={0,1.2554733,0};
 					};
 					side="East";
 					flags=7;
@@ -62312,6 +62335,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20653;
 		};
@@ -62328,7 +62352,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4502.0269,254.00136,4647.9966};
-						angles[]={0,0.5661028,-0};
+						angles[]={0,0.5661028,0};
 					};
 					side="East";
 					flags=7;
@@ -62498,6 +62522,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20655;
 		};
@@ -62514,7 +62539,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4477.6118,258.11511,4641.499};
-						angles[]={0,0.54981637,-0};
+						angles[]={0,0.54981637,0};
 					};
 					side="East";
 					flags=7;
@@ -62684,6 +62709,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20657;
 		};
@@ -63226,7 +63252,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4491.6406,254.08987,4648.4194};
-				angles[]={-0,0,6.2817621};
+				angles[]={0,0,6.2817621};
 			};
 			areaSize[]={1,-1,1};
 			id=20665;
@@ -63368,7 +63394,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4511.0142,254.08603,4637.1738};
-						angles[]={0,1.1780999,-0};
+						angles[]={0,1.1780999,0};
 					};
 					side="East";
 					flags=7;
@@ -63480,6 +63506,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20670;
 			atlOffset=3.0517578e-005;
@@ -63490,7 +63517,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={4511.4248,254.32901,4638.9951};
-				angles[]={-0,0.16187933,0};
+				angles[]={0,0.16187933,0};
 			};
 			side="Empty";
 			flags=4;
@@ -63514,7 +63541,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={4504.8608,254.08359,4640.96};
-						angles[]={0,1.5640548,-0};
+						angles[]={0,1.5640548,0};
 					};
 					side="East";
 					flags=7;
@@ -63626,6 +63653,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20676;
 			atlOffset=0.089187622;
@@ -63756,6 +63784,7 @@ class Mission
 				init="this setVariable [""aggressive"", true, true]; units this allowGetIn true;";
 				behaviour="SAFE";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20678;
 			atlOffset=0.013442993;
@@ -63773,7 +63802,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={5095.9805,6.0014391,1551.1028};
-						angles[]={0,3.2152197,-0};
+						angles[]={0,3.2152197,0};
 					};
 					side="Independent";
 					flags=7;
@@ -63903,6 +63932,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20680;
 		};
@@ -64061,6 +64091,7 @@ class Mission
 				behaviour="SAFE";
 				speedMode="FULL";
 				formation="FILE";
+				dynamicSimulation=1;
 			};
 			id=20682;
 			atlOffset=2.4993782;

@@ -273,11 +273,13 @@ publicVariable "YUG_msta_civs";
 
 // STOP SERBS FROM LEAVING AREA WHEN CAPPING
 
-if ((triggerTimeoutCurrent trg_endMission != -1) && !isPlayer kapetan) then {
-	kapetan disableAI "PATH";
-} else {
-	if !(kapetan checkAIFeature "PATH") then {
-		kapetan enableAI "PATH";
+if (!isNil "kapetan") then {
+	if ((triggerTimeoutCurrent trg_endMission != -1) && !isPlayer kapetan) then {
+		kapetan disableAI "PATH";
+	} else {
+		if !(kapetan checkAIFeature "PATH") then {
+			kapetan enableAI "PATH";
+		};
 	};
 };
 
