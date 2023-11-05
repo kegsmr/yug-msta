@@ -34,6 +34,7 @@ while {YUG_civilianAirlift} do {
 		} else {
 			private _waypoint = un_airlift_squad addWaypoint [un_heli, 0];
 			_waypoint setWaypointType "GETIN";
+			_waypoint setWaypointTimeout [185, 185, 185];
 			un_airlift_squad setCurrentWaypoint _waypoint;
 		};
 	} else {

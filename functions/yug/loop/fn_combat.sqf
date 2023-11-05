@@ -52,7 +52,7 @@ YUG_fnc_combat_getInside = {
 
 		// CREATE GET IN BUILDING EVENT HANDLER
 
-		if !(_x getVariable ["willGetInside", false]) then {
+		if !(_x getVariable ["willGetInside", false] || ((group _x) getVariable ["aggressive", false])) then {
 			
 			_x setVariable ["willGetInside", true, true];
 

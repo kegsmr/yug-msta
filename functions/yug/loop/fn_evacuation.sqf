@@ -254,19 +254,37 @@ publicVariable "YUG_msta_civs";
 	private _group = _x;
 	if (_group call YUG_fnc_waypointsComplete) then {
 		private _leader = leader _group;
-		private _position = getMarkerPos "msta";
-		if (_leader distance _position > 500) then {
+		if (!isPlayer _leader) then {
+			private _position = getMarkerPos "msta";
 			if (_group == un_squad) then {
-				[_group, ["CUP_I_Mi17_UN", "CUP_I_M113A3_UN", "LOP_UN_Ural", "CUP_I_UAZ_Unarmed_UN"], 500] spawn YUG_fnc_findNearbyVehicle;
+				private _closest_distance = 1000;
+				private _closest_position = _position;
+				{
+					private _unit = _x;
+					private _distance = _position distance _unit; 
+					if (((west knowsAbout _unit) + (independent knowsAbout _unit) > 2) && (_distance < _closest_distance)) then {
+						_closest_distance = _distance;
+						_closest_position = position _unit;
+					};
+				} forEach units east;
+				_position = _closest_position;
 			};
-			if (_group == serb_squad) then {
-				[_group, ["O_ORepublikaSrpska_GAZ_66_01", "SRB_bm21", "SRB_ural"], 500] spawn YUG_fnc_findNearbyVehicle;
-			};
-			if (_group == serb_tank_squad) then {
-				[_group, ["KOS_YUG_t72_grom", "SRB_bmp", "SRB_btr"], 2000] spawn YUG_fnc_findNearbyVehicle;
-			};
+			/*if ((_group == un_squad) and (count units serb_squad > 0) and ((west knowsAbout leader serb_squad) + (independent knowsAbout leader serb_squad) > 2)) then {
+				_position = position leader serb_squad;
+			};*/
+			/*if (_leader distance _position > 500) then {
+				if (_group == un_squad) then {
+					[_group, ["CUP_I_Mi17_UN", "CUP_I_M113A3_UN", "LOP_UN_Ural", "CUP_I_UAZ_Unarmed_UN"], 500] spawn YUG_fnc_findNearbyVehicle;
+				};
+				if (_group == serb_squad) then {
+					[_group, ["O_ORepublikaSrpska_GAZ_66_01", "SRB_bm21", "SRB_ural"], 500] spawn YUG_fnc_findNearbyVehicle;
+				};
+				if (_group == serb_tank_squad) then {
+					[_group, ["KOS_YUG_t72_grom", "SRB_bmp", "SRB_btr"], 2000] spawn YUG_fnc_findNearbyVehicle;
+				};
+			};*/
+			_group addWaypoint [_position, 0];
 		};
-		_group addWaypoint [_position, 0];
 	};
 } forEach [un_squad, serb_squad, serb_tank_squad];
 
