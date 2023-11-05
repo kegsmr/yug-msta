@@ -11,7 +11,6 @@ class yug
 	{
 		file = "functions\yug\init"
 		class briefings {};
-		class civilianVehicles {};
 		class deathMarkers {};
 		class groupMarkers {};
 		class lists {};
@@ -19,6 +18,7 @@ class yug
 		class respawnOnSL {};
 		class restrictVehicles {};
 		class retainLoadouts {};
+		class sounds {};
 	};
 
 	class loop

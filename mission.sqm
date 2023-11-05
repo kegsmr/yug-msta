@@ -8,22 +8,22 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=20684;
+		nextID=20713;
 	};
 	class MarkerIDProvider
 	{
-		nextID=124;
+		nextID=125;
 	};
 	class LayerIndexProvider
 	{
-		nextID=292;
+		nextID=301;
 	};
 	class Camera
 	{
-		pos[]={5875.0767,277.52191,4616.9727};
-		dir[]={-1.2363444e-007,-0.70710695,0.70710659};
-		up[]={-1.2363449e-007,0.70710659,0.70710689};
-		aside[]={0.99999988,0,1.7484554e-007};
+		pos[]={5855.0859,311.46942,4635.3218};
+		dir[]={0.23329946,-0.72359174,0.6496141};
+		up[]={0.24457397,0.69022691,0.68100852};
+		aside[]={0.94115424,2.643792e-007,-0.33800212};
 	};
 };
 binarizationWanted=0;
@@ -1272,7 +1272,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1420;
+		items=1447;
 		class Item0
 		{
 			dataType="Logic";
@@ -64114,6 +64114,294 @@ class Mission
 			};
 			id=20682;
 			atlOffset=2.4993782;
+		};
+		class Item1420
+		{
+			dataType="Marker";
+			position[]={5786.0854,77.537491,5788.7349};
+			name="sound_1";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20686;
+			atlOffset=-7.6293945e-006;
+		};
+		class Item1421
+		{
+			dataType="Marker";
+			position[]={3744.249,223.77802,3072.7769};
+			name="sound_2";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight3.wss";
+			type="Empty";
+			alpha=0;
+			id=20687;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1422
+		{
+			dataType="Marker";
+			position[]={7409.0029,174.85522,3609.0356};
+			name="sound_3";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight4.wss";
+			type="Empty";
+			alpha=0;
+			id=20688;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1423
+		{
+			dataType="Marker";
+			position[]={3023.0891,253.5535,3584.8611};
+			name="sound_4";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_explosions1.wss";
+			type="Empty";
+			alpha=0;
+			id=20689;
+		};
+		class Item1424
+		{
+			dataType="Marker";
+			position[]={4180.3677,202,5770.5688};
+			name="sound_5";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_explosions2.wss";
+			type="Empty";
+			alpha=0;
+			id=20690;
+		};
+		class Item1425
+		{
+			dataType="Marker";
+			position[]={4944.7915,47.321079,2804.9624};
+			name="sound_6";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_explosions3.wss";
+			type="Empty";
+			alpha=0;
+			id=20691;
+		};
+		class Item1426
+		{
+			dataType="Marker";
+			position[]={3732.7366,343.33371,5367.6421};
+			name="sound_7";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_explosions4.wss";
+			type="Empty";
+			alpha=0;
+			id=20692;
+		};
+		class Item1427
+		{
+			dataType="Marker";
+			position[]={5221.605,120.40782,3676.2634};
+			name="sound_8";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_explosions5.wss";
+			type="Empty";
+			alpha=0;
+			id=20693;
+		};
+		class Item1428
+		{
+			dataType="Marker";
+			position[]={6730.3955,190.20175,6471.7295};
+			name="sound_9";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20694;
+			atlOffset=-1.5258789e-005;
+		};
+		class Item1429
+		{
+			dataType="Marker";
+			position[]={7056.8564,44.537811,4577.2598};
+			name="sound_10";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20695;
+			atlOffset=-7.6293945e-006;
+		};
+		class Item1430
+		{
+			dataType="Marker";
+			position[]={4513.8936,77.326286,3613.5718};
+			name="sound_11";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20696;
+			atlOffset=-7.6293945e-006;
+		};
+		class Item1431
+		{
+			dataType="Marker";
+			position[]={6418.5718,134.1077,4336.8154};
+			name="sound_12";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20697;
+			atlOffset=-1.5258789e-005;
+		};
+		class Item1432
+		{
+			dataType="Marker";
+			position[]={4949.4092,229.32339,4212.9614};
+			name="sound_13";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20698;
+		};
+		class Item1433
+		{
+			dataType="Marker";
+			position[]={4902.4297,271.38272,5314.834};
+			name="sound_14";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20699;
+		};
+		class Item1434
+		{
+			dataType="Marker";
+			position[]={5252.064,98.017151,5950.146};
+			name="sound_15";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20700;
+			atlOffset=-7.6293945e-006;
+		};
+		class Item1435
+		{
+			dataType="Marker";
+			position[]={6685.6748,6.3878083,2683.6367};
+			name="sound_16";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20701;
+			atlOffset=-7.6293945e-006;
+		};
+		class Item1436
+		{
+			dataType="Marker";
+			position[]={2912.804,356.892,5965.1577};
+			name="sound_17";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight2.wss";
+			type="Empty";
+			alpha=0;
+			id=20702;
+		};
+		class Item1437
+		{
+			dataType="Marker";
+			position[]={4164.0972,211.86772,4620.8052};
+			name="sound_18";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight3.wss";
+			type="Empty";
+			alpha=0;
+			id=20703;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1438
+		{
+			dataType="Marker";
+			position[]={4605.4893,177.20309,4088.6902};
+			name="sound_19";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight3.wss";
+			type="Empty";
+			alpha=0;
+			id=20704;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1439
+		{
+			dataType="Marker";
+			position[]={5640.022,232.82875,5227.2881};
+			name="sound_20";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight3.wss";
+			type="Empty";
+			alpha=0;
+			id=20705;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1440
+		{
+			dataType="Marker";
+			position[]={6288.9004,163.7482,4113.1758};
+			name="sound_21";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight3.wss";
+			type="Empty";
+			alpha=0;
+			id=20706;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1441
+		{
+			dataType="Marker";
+			position[]={6555.1855,154.23001,5184.4375};
+			name="sound_22";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight3.wss";
+			type="Empty";
+			alpha=0;
+			id=20707;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1442
+		{
+			dataType="Marker";
+			position[]={5501.5176,204.9501,3827.7329};
+			name="sound_23";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight4.wss";
+			type="Empty";
+			alpha=0;
+			id=20708;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1443
+		{
+			dataType="Marker";
+			position[]={6664.499,150.07285,3582.7126};
+			name="sound_24";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight4.wss";
+			type="Empty";
+			alpha=0;
+			id=20709;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1444
+		{
+			dataType="Marker";
+			position[]={4990.1475,160.02118,6043.0078};
+			name="sound_25";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight4.wss";
+			type="Empty";
+			alpha=0;
+			id=20710;
+			atlOffset=1.5258789e-005;
+		};
+		class Item1445
+		{
+			dataType="Marker";
+			position[]={4677.9639,281.98981,5163.4653};
+			name="sound_26";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight4.wss";
+			type="Empty";
+			alpha=0;
+			id=20711;
+		};
+		class Item1446
+		{
+			dataType="Marker";
+			position[]={3024.9106,214.64713,4648.1357};
+			name="sound_27";
+			text="A3\Sounds_F\ambient\battlefield\battlefield_firefight4.wss";
+			type="Empty";
+			alpha=0;
+			id=20712;
+			atlOffset=1.5258789e-005;
 		};
 	};
 	class Connections
