@@ -77,11 +77,11 @@ missionNamespace setVariable [_prefix + "_fnc_mines_spawned", {
 		]
 	] call BIS_fnc_randomPos;
 
-	private _marker = createMarker [(_minefield + "_marker"), _position];
-	_marker setMarkerType "mil_warning";
-	_marker setMarkerColor "ColorRed";
-	_marker setMarkerAlpha .5;
-	_marker setMarkerSize [.5, .5];
+	// private _marker = createMarker [(_minefield + "_marker"), _position];
+	// _marker setMarkerType "mil_warning";
+	// _marker setMarkerColor "ColorRed";
+	// _marker setMarkerAlpha .5;
+	// _marker setMarkerSize [.5, .5];
 
 	// MALO_TIP_mines = true;
 
@@ -98,8 +98,8 @@ missionNamespace setVariable [_prefix + "_fnc_mines_spawned", {
 		_area params ["_center", "_a", "_b", "_angle", "_is_rectangle"];
 
 		private _trigger = createTrigger ["EmptyDetector", _center, true];
-		_trigger setTriggerArea [_a * 1.5, _b * 1.5, _angle, _is_rectangle, 100];
-		_trigger setTriggerActivation ["ANYPLAYER", "PRESENT", false];
+		_trigger setTriggerArea [_a * 1.5, _b * 1.5, _angle, _is_rectangle, 50];
+		_trigger setTriggerActivation ["ANY", "PRESENT", false];
 		_trigger setTriggerStatements ["this", ("'" + _marker + "' spawn " + _prefix + "_fnc_mines_spawned;"), ""];
 
 	};

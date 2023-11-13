@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=307;
+		nextID=310;
 	};
 	class Camera
 	{
@@ -23891,7 +23891,7 @@ class Mission
 			};
 			id=5529;
 			type="Land_Bandage_F";
-			atlOffset=0.619627;
+			atlOffset=0.59772205;
 		};
 		class Item892
 		{
@@ -28904,7 +28904,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.049884945;
+			atlOffset=0.050000072;
 		};
 		class Item1108
 		{

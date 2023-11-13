@@ -20,47 +20,70 @@ private _delay = [5, 25, 225];
 
 if (!isServer) exitWith {};
 
-missionNamespace setVariable [_prefix + "_fnc_sounds_sound", {
+missionNamespace setVariable [_prefix + "_fnc_sounds_loop", {
 
 	if (!isServer) exitWith {};
 
-	private _marker = _this select 0;
+	private _markers = _this select 0;
 	private _radius = _this select 1;
 	private _delay = _this select 2;
 
-	private _position = getMarkerPos _marker;
-	private _filename = markerText _marker;
-
-	private _center = createCenter sideLogic;
-	private _group = createGroup _center;
-	private _logic = _group createUnit ["LOGIC", [0,0,0], [], 0, ""];
-
-	_logic setPos _position;
-
 	while {true} do {
-
-		sleep (random _delay);
-
-		_play = true;
 
 		{
 
-			private _unit = _x;
+			private _marker = _x;
 
-			if (_unit distance _position < _radius) then {
-				_play = false;
+			private _marker_delay = missionNamespace getVariable [_marker + "_delay", random _delay];
+
+			if (_marker_delay > 0) then {
+
+				missionNamespace setVariable [_marker + "_delay", _marker_delay - 1, true];
+
+			} else {
+
+				missionNamespace setVariable [_marker + "_delay", random _delay, true];
+
+				private _position = getMarkerPos _marker;
+				private _filename = markerText _marker;
+
+				private _play = true;
+
+				{
+
+					private _unit = _x;
+
+					if (_unit distance _position < _radius) then {
+						_play = false;
+					};
+
+				} forEach playableUnits;
+
+				if (_play) then {
+
+					private _center = createCenter sideLogic;
+					private _group = createGroup _center;
+					private _logic = _group createUnit ["LOGIC", [0,0,0], [], 0, ""];
+
+					_logic setPos _position;
+
+					playSound3D [_filename, _logic, false, _position, 5];
+
+					deleteVehicle _logic;
+
+				};
+
 			};
 
-		} forEach playableUnits;
+			sleep (1 / (count _markers));
 
-		if (_play) then {
-			playSound3D [_filename, _logic, false, _position, 5];
-			// hintSilent ('Sound played: "' + _filename + '"');
-		};
+		} forEach _markers;
 
 	};
 
 }];
+
+private _markers = [];
 
 {
 
@@ -68,7 +91,9 @@ missionNamespace setVariable [_prefix + "_fnc_sounds_sound", {
 	private _selection = _marker select [0,5];
 
 	if (_selection == "sound") then {
-		[_marker, _radius, _delay] spawn (missionNamespace getVariable (_prefix + "_fnc_sounds_sound"));
+		_markers append [_marker];
 	};
 
 } forEach allMapMarkers;
+
+[_markers, _radius, _delay] spawn (missionNamespace getVariable (_prefix + "_fnc_sounds_loop"))
