@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=310;
+		nextID=313;
 	};
 	class Camera
 	{
-		pos[]={4891.5654,336.39423,4655.4771};
-		dir[]={0.64380461,-0.73882109,0.19914585};
-		up[]={0.70582473,0.67390162,0.21833032};
-		aside[]={0.29551178,0,-0.95533913};
+		pos[]={5040.1025,315.32907,4664.7456};
+		dir[]={0.64486688,-0.57150954,0.50747097};
+		up[]={0.44912106,0.82059419,0.35343099};
+		aside[]={0.61841798,3.4458935e-008,-0.78585166};
 	};
 };
 binarizationWanted=0;
@@ -23891,7 +23891,7 @@ class Mission
 			};
 			id=5529;
 			type="Land_Bandage_F";
-			atlOffset=0.59772205;
+			atlOffset=0.619627;
 		};
 		class Item892
 		{
@@ -28904,7 +28904,7 @@ class Mission
 			};
 			id=18871;
 			type="CUP_C_Zodiac_CIV";
-			atlOffset=0.050000072;
+			atlOffset=0.049884945;
 		};
 		class Item1108
 		{
@@ -38566,6 +38566,7 @@ class Mission
 					loiterAltitude=-3.4028235e+038;
 					position[]={5110.1631,266.73053,4714.8711};
 					completitionRadius=5;
+					speed="LIMITED";
 					class Effects
 					{
 					};
@@ -38580,7 +38581,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={5326.6611,303.16235,4671.1338};
+					position[]={5340.6001,302.77713,4669.396};
 					completitionRadius=5;
 					visible=0;
 					class Effects
@@ -38592,13 +38593,12 @@ class Mission
 					showWP="NEVER";
 					id=20419;
 					type="Move";
-					atlOffset=3.0517578e-005;
 				};
 				class Item6
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={5475.2251,296.51544,4687.5278};
+					position[]={5484.2534,296.29269,4689.3608};
 					completitionRadius=5;
 					visible=0;
 					class Effects
@@ -38615,7 +38615,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+038;
-					position[]={5679.3198,288.69437,4629.438};
+					position[]={5688.333,283.84222,4626.6138};
 					completitionRadius=5;
 					visible=0;
 					class Effects
@@ -38627,7 +38627,7 @@ class Mission
 					showWP="NEVER";
 					id=19962;
 					type="Move";
-					atlOffset=2.5870056;
+					atlOffset=3.0517578e-005;
 				};
 			};
 			class Attributes
