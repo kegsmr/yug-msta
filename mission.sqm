@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5040.1025,315.32907,4664.7456};
-		dir[]={0.64486688,-0.57150954,0.50747097};
-		up[]={0.44912106,0.82059419,0.35343099};
-		aside[]={0.61841798,3.4458935e-008,-0.78585166};
+		pos[]={4526.6694,367.0993,4652.9312};
+		dir[]={0.86168373,-0.50684041,-0.024782643};
+		up[]={0.50663096,0.86203986,-0.014571071};
+		aside[]={-0.028748833,0,-0.99958676};
 	};
 };
 binarizationWanted=0;
@@ -38583,6 +38583,7 @@ class Mission
 					loiterAltitude=-3.4028235e+038;
 					position[]={5340.6001,302.77713,4669.396};
 					completitionRadius=5;
+					speed="LIMITED";
 					visible=0;
 					class Effects
 					{
@@ -38600,6 +38601,7 @@ class Mission
 					loiterAltitude=-3.4028235e+038;
 					position[]={5484.2534,296.29269,4689.3608};
 					completitionRadius=5;
+					speed="LIMITED";
 					visible=0;
 					class Effects
 					{
@@ -38617,6 +38619,7 @@ class Mission
 					loiterAltitude=-3.4028235e+038;
 					position[]={5688.333,283.84222,4626.6138};
 					completitionRadius=5;
+					speed="LIMITED";
 					visible=0;
 					class Effects
 					{
